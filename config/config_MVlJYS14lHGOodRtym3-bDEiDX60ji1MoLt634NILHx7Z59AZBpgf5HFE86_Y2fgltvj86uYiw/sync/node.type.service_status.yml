@@ -1,0 +1,18 @@
+uuid: 41a7066b-8394-45ed-97c4-4e7d1d95c7c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Service Status'
+type: service_status
+description: "Information about a service and its current status.\r\n\r\nCurrently doesn't appear on any page. "
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,11 @@
+/**
+ * Styles for (My Account -> Edit) form
+ */
+
+ @use "../abstracts" as *;
+
+#edit-account {
+  .form-item {
+    margin: 1rem 0;
+  }
+}

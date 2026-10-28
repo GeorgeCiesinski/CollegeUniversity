@@ -1,0 +1,28 @@
+/**
+ * Styles embedded remote videos
+ */
+
+ @use "../abstracts" as *;
+
+.media--type-remote-video, .field--name-field-media-oembed-video {
+  width: 100%;
+}
+	
+/* Then style the iframe to fit in the container div with full height and width */
+.media-oembed-content {
+  width: 100%;
+  height: 55vw;
+}
+
+@include breakpoint(sm) {
+  .field--name-field-media-oembed-video {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .media-oembed-content {
+    width: 32rem;
+    height: 18rem;
+  }
+}

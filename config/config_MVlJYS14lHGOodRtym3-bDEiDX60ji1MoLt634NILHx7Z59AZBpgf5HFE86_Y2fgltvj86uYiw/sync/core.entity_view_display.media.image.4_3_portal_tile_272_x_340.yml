@@ -1,0 +1,44 @@
+uuid: 9379719b-b25c-4868-a762-9d62b33508d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.4_3_portal_tile_272_x_340
+    - field.field.media.image.field_media_image
+    - image.style.4_3_portal_tile_272_x_340
+    - media.type.image
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.4_3_portal_tile_272_x_340
+targetEntityType: media
+bundle: image
+mode: 4_3_portal_tile_272_x_340
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: 4_3_portal_tile_272_x_340
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

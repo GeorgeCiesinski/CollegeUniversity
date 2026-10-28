@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * Questionnaire form partial.
+ * This template defines the questionnaire form for the individual reflection page, 
+ * allowing respondents to answer questions and select their desired proficiency levels.
+ *
+ * The form is built programmatically using the indicators and sections defined in the 
+ * preprocess function of the module,
+ */
+#}
+<section id="training-recommender">
+    <form id="questionnaire-form" class="questionnaire">
+        
+        {% for indicator in indicators %}
+            <h2 class="indicator-title">{{ indicator.title }}</h2>
+
+            {% for section in indicator.sections %}
+                <div class="indicator-section">
+                    {# Question Area #}
+                    <fieldset class="question-fieldset">
+                        <legend class="question">{{ section.question }}</legend>
+                        
+                        {# Defaults to often/sometimes/never unless custom options are provided #}
+                        {% set options = section.options|default(['often', 'sometimes', 'never']) %}
+                        {% for option in options %}
+                            {# Create a unique ID #}
+                            {% set input_id = section.id ~ '-' ~ option %}
+                            <label for="{{ input_id }}">
+                                <input type="radio" id="{{ input_id }}" name="{{ section.id }}" value="{{ option }}" required> 
+                                {{ option|capitalize }}
+                            </label>
+                        {% endfor %}
+                    </fieldset>
+
+                    {# Proficiency Area #}
+                    <fieldset class="proficiency-fieldset" hidden>
+                        <legend class="proficiency">Which  level of ability would you like to  achieve in this area?</legend>
+                        {% for level in ['competent', 'proficient', 'leader'] %}
+                            {# Create a unique ID #}
+                            {% set prof_id = section.id ~ '-proficiency-' ~ level %}
+                            <label for="{{ prof_id }}">
+                                {# Add radio buttons for each proficiency and set competent to checked #}
+                                <input type="radio" id="{{ prof_id }}" name="{{ section.id }}-proficiency" value="{{ level }}" {{ level == 'competent' ? 'checked' : '' }}>
+                                {{ level|capitalize }}
+                            </label>
+                        {% endfor %}
+                    </fieldset>
+                </div>
+            {% endfor %}
+
+        {% endfor %}
+
+        <br><br>
+        {# Analyze Answers Button #}
+        <button type="submit" id="download-recommendations">  
+            <svg class="download-icon" viewBox="0 0 24 24" width="30" height="30">
+                <path fill="currentColor" d="M12 16l-6-6h4V4h4v6h4zM5 18h14v2H5z"/>
+            </svg>
+            <span>Download Recommendations</span>
+        </button>
+    </form>
+    {# Serializes indicator data for JavaScript #}
+    <script>
+        window.indicatorsData = {{ indicators|json_encode|raw }};
+    </script>
+</section>

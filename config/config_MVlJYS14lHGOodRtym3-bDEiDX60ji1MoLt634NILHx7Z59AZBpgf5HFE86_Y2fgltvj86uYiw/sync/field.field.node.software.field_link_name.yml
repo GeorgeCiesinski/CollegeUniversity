@@ -1,0 +1,24 @@
+uuid: 7b6f9c7c-fe26-48df-816c-fbf72aeded14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_name
+    - filter.format.full_html
+    - node.type.software
+  module:
+    - text
+id: node.software.field_link_name
+field_name: field_link_name
+entity_type: node
+bundle: software
+label: Link/name
+description: 'The name of the software and link to it.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

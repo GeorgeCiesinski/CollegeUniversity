@@ -1,0 +1,14 @@
+/**
+ * Styles expand-filters button
+ */
+#expand-filters {
+  margin: 0.5rem 0;
+}
+#expand-filters::before {
+  content: "Show ";
+}
+#expand-filters.active::before {
+  content: "Hide ";
+}
+
+/*# sourceMappingURL=expand-filters.css.map */

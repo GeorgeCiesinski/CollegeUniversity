@@ -1,0 +1,30 @@
+uuid: 33d648a5-a7eb-43cb-8f5e-a40b678523f8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9a875882-d10e-409c-be53-b102266f6a17'
+  module:
+    - block_content
+    - system
+  theme:
+    - humber
+id: humber_aitable
+theme: humber
+region: content
+weight: -16
+provider: null
+plugin: 'block_content:9a875882-d10e-409c-be53-b102266f6a17'
+settings:
+  id: 'block_content:9a875882-d10e-409c-be53-b102266f6a17'
+  label: 'AI Comparison'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /artificial-intelligence

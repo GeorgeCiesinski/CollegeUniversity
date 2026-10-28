@@ -1,0 +1,19 @@
+uuid: fe668225-76af-4efe-8142-5cfb6b8a0b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_blurb
+    - node.type.hero_image
+id: node.hero_image.field_text_blurb
+field_name: field_text_blurb
+entity_type: node
+bundle: hero_image
+label: 'Text Blurb'
+description: 'Short text blurb to display with each hero slide'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

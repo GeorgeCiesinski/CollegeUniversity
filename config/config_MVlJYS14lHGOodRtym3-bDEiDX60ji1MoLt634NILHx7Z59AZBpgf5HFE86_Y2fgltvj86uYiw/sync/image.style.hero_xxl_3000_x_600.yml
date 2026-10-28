@@ -1,0 +1,15 @@
+uuid: d102f575-5dec-4a1d-99ee-ce1a09108781
+langcode: en
+status: true
+dependencies: {  }
+name: hero_xxl_3000_x_600
+label: 'Hero xxl - 4000 x 400'
+effects:
+  4674cfce-1934-45c4-b18a-be388170efa4:
+    uuid: 4674cfce-1934-45c4-b18a-be388170efa4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 4000
+      height: 400
+      anchor: center-center

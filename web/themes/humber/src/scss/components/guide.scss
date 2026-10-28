@@ -1,0 +1,12 @@
+/**
+ * Styles guide images and centers them
+ */
+
+article {
+  div {
+    &.align-center {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

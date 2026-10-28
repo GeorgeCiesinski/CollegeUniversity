@@ -1,0 +1,23 @@
+uuid: 1298fbbb-83ed-4e49-87f2-5a07d33a0fa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_weight
+    - node.type.hero_image
+id: node.hero_image.field_hero_weight
+field_name: field_hero_weight
+entity_type: node
+bundle: hero_image
+label: 'Hero Weight'
+description: 'Provides weight for hero images to customize sorting'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

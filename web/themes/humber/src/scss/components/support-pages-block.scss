@@ -1,0 +1,124 @@
+/**
+ * Styling for Services section
+ */
+
+ @use "../abstracts" as *;
+
+.block-views-blocksupport-pages-block-block-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  padding-bottom: 6rem;
+  width: 100%;
+
+  h2 {
+    display: block;
+    color: $primary-blue-500;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
+    text-underline-position: under;
+    padding: 2rem;
+    margin: 0;
+    text-transform: capitalize;
+  }
+}
+
+.support-pages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 $margin-xs;
+}
+
+.support-pages-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 12rem;
+  width: 100%;
+  background-color: $primary-yellow-500;
+  color: white;
+  border-radius: $radius-md;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  transition: all ease-in-out .2s;
+
+  .views-field-title {
+    transition: all ease-in-out .2s;
+  }
+
+  a {
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    // font-size: 1.6rem;    
+    filter: drop-shadow(5px 5px $primary-yellow-300);
+    transform: translateY(-0.5rem); // Raise button on hover
+
+    .views-field-field-support-icon img {
+      background-color: $primary-blue-500;
+      border-color: $primary-blue-500;
+    }
+
+    .views-field-title {
+      transform: scale(1.1);
+      text-shadow: 2px 2px 1px $primary-yellow-700;
+    }
+  }
+}
+
+// Sets icon size and both parent elements
+.views-field-field-support-icon, .views-field-field-support-icon>div, .views-field-field-support-icon img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.views-field-field-support-icon img {
+  box-sizing: border-box;
+  padding: .5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+@include breakpoint(sm) {
+  .block-views-blocksupport-pages-block-block-1 {
+    .support-pages-item {
+      width: 15rem;
+    }
+
+    h2 {
+      width: $content-sm;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .block-views-blocksupport-pages-block-block-1 {
+    h2 {
+      width: $content-md;
+      margin: 0 auto;
+    }
+  
+    .support-pages-list {
+      justify-content: space-between;
+      gap: 3rem;
+    }
+  }
+}

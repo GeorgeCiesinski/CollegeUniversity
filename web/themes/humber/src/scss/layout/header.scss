@@ -1,0 +1,36 @@
+/**
+ * Styles Header region
+ */
+
+@use "../abstracts" as *;
+
+/*
+MOBILE
+*/
+.main-header {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 $nav-xs 0 $nav-xs;
+}
+
+.sticky-header {
+    height: 4rem;
+    position: -webkit-sticky; // Safari
+    position: sticky;
+    top: var(--gin-toolbar-height, 0);  // Fallback value of 0 in case user is logged out and gin toolbar isn't instantiated
+    z-index: 102;
+}
+
+/*
+SMALL DESKTOP
+*/
+@include breakpoint(md) {
+  .main-header {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 $nav-sm 0 $nav-sm;
+  }   
+}

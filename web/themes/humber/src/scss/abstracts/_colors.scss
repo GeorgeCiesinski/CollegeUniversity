@@ -1,0 +1,89 @@
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+
+
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+
+// Primary
+$primary-blue: #004B78;
+$primary-yellow: #CC9900;
+
+// Secondary
+$secondary-sky: #009be0;
+$secondary-darkgreen: #006c5b;
+
+// Transparent
+$transparent-blue: rgba(0, 30, 48, 0.5);
+
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+
+// Primary Blue
+$primary-blue-50: #e6edf2;
+$primary-blue-100: #ccdbe4;
+$primary-blue-200: #99b7c9;
+$primary-blue-300: #6693ae;
+$primary-blue-400: #336f93;
+$primary-blue-500: #004b78;
+$primary-blue-600: #003c60;
+$primary-blue-700: #002d48;
+$primary-blue-800: #001e30;
+$primary-blue-900: #000f18;
+
+// Primary Yellow
+$primary-yellow-50: #faf5e6;
+$primary-yellow-100: #f5ebcc;
+$primary-yellow-200: #ebd699;
+$primary-yellow-300: #e0c266;
+$primary-yellow-400: #d6ad33;
+$primary-yellow-500: #cc9900;
+$primary-yellow-600: #a37a00;
+$primary-yellow-700: #7a5c00;
+$primary-yellow-800: #523d00;
+$primary-yellow-900: #291f00;
+
+// Secondary Sky
+$secondary-sky-50: #e6f5fc;
+$secondary-sky-100: #ccebf9;
+$secondary-sky-200: #99d7f3;
+$secondary-sky-300: #66c3ec;
+$secondary-sky-400: #33afe6;
+$secondary-sky-500: #009be0;
+$secondary-sky-600: #007cb3;
+$secondary-sky-700: #005d86;
+$secondary-sky-800: #003e5a;
+$secondary-sky-900: #001f2d;
+
+// Secondary Green
+$secondary-darkgreen-50: #e6f0ef;
+$secondary-darkgreen-100: #cce2de;
+$secondary-darkgreen-200: #99c4bd;
+$secondary-darkgreen-300: #66a79d;
+$secondary-darkgreen-400: #33897c;
+$secondary-darkgreen-500: #006c5b;
+$secondary-darkgreen-600: #005649;
+$secondary-darkgreen-700: #004137;
+$secondary-darkgreen-800: #002b24;
+$secondary-darkgreen-900: #001612;
+
+// Indicative
+$orange: orange;
+$red: red;
+$blue: teal;
+$green: green;

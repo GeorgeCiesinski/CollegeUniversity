@@ -1,0 +1,71 @@
+/**
+ * Styles Field and children
+ */
+
+@use '../abstracts' as *;
+
+.field {
+margin-bottom: 1rem;
+}
+
+.field__label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.field--label-inline {
+
+  .field__label, .field__items {
+    float: left; /* LTR */
+  }
+
+  .field__label, > .field__item, .field__items {
+    padding-right: 0.5em;
+  }
+
+  .field__label::after {
+    content: ":";
+  }
+
+}
+
+[dir="rtl"] .field--label-inline {
+  .field__label, .field__items {
+    padding-right: 0;
+    padding-left: 0.5em;
+  }
+}
+
+.field--name-field-icon {
+  width: 4rem;
+}
+
+.field--name-field-category, .field--name-field-target-audience-guides, .field--name-field-tags {
+  // Entity reference field width
+  width: fit-content;
+
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .field__item {
+    background-color: $primary-blue-400;
+    border: 1px solid $primary-blue-400;
+    border-radius: $radius-lg;
+
+    &:hover {
+      background-color: $primary-blue-500;
+      border-color: $primary-blue-500;
+    }
+
+    a {
+      display: block;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+}

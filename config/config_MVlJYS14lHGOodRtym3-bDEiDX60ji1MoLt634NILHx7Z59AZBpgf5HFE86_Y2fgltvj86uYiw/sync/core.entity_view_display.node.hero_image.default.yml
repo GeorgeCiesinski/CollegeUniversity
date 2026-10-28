@@ -1,0 +1,71 @@
+uuid: 99617f8a-846e-469b-9bce-8cce1a5aeac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hero_image.field_hero_image
+    - field.field.node.hero_image.field_hero_link
+    - field.field.node.hero_image.field_hero_weight
+    - field.field.node.hero_image.field_text_blurb
+    - image.style.hero_xxl_4000_x_400
+    - node.type.hero_image
+  module:
+    - link
+    - svg_image
+    - user
+id: node.hero_image.default
+targetEntityType: node
+bundle: hero_image
+mode: default
+content:
+  field_hero_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: hero_xxl_4000_x_400
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_hero_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_hero_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_text_blurb:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

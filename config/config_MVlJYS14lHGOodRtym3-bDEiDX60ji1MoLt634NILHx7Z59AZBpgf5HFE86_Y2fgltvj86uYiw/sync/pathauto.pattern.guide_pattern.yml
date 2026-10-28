@@ -1,0 +1,22 @@
+uuid: 6997bfe4-5f97-4567-9996-824db6084880
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: guide_pattern
+label: 'Guide iterator'
+type: 'canonical_entities:node'
+pattern: '/resource-centre/[node:title]'
+selection_criteria:
+  f9feb496-2746-43d1-85d4-84a7bfee403e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f9feb496-2746-43d1-85d4-84a7bfee403e
+    context_mapping:
+      node: node
+    bundles:
+      guide: guide
+selection_logic: and
+weight: -5
+relationships: {  }

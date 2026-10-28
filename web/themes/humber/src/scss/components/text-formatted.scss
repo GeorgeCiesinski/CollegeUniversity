@@ -1,0 +1,13 @@
+/**
+ * Styles images placed with CKEditor as opposed to image fields
+ */
+
+.text-formatted {
+
+  width: 100%;
+
+  img, ul, ol, li {
+    max-width: 100%;
+    height: auto;
+  }
+}

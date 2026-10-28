@@ -1,0 +1,11 @@
+# ITS Site
+
+Main site for Information Technology Services. 
+
+## Theming
+
+This repository contains a `watch.sh` command which constructs a `sass --watch (args)` command. This script looks at the sass folder and constructs arguments for each sub folder and corresponding css folder. Finally, it runs the command with all of the arguments. 
+
+To run this, use the command `npm run watch`.
+
+Please ensure you read the theme's README file as well for more information. 

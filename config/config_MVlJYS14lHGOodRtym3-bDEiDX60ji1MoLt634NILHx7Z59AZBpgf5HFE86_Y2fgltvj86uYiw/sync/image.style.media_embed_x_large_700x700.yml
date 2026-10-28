@@ -1,0 +1,15 @@
+uuid: 14c91fd7-3eef-4881-804f-3dc536f4fff8
+langcode: en
+status: true
+dependencies: {  }
+name: media_embed_x_large_700x700
+label: 'Media Embed X-Large 700x700'
+effects:
+  d78202a5-6db2-449d-b27c-6fd7a54d1433:
+    uuid: d78202a5-6db2-449d-b27c-6fd7a54d1433
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: 700
+      upscale: false

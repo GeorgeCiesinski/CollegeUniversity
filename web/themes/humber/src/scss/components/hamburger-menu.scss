@@ -1,0 +1,78 @@
+/**
+ * Styling for the mobile hamburger menu
+ */
+
+@use "../abstracts" as *;
+
+/*
+MOBILE
+*/
+#navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0.5rem;
+  border-radius: $radius-sm;
+
+  &:hover {
+    background-color: $primary-blue-50;
+  }
+
+  // Hamburger menu bars
+  .icon-bar {
+    display: block;
+    width: 1.75rem;
+    height: .25rem;
+    margin: .15rem;
+    background-color: $primary-blue-500;
+    -webkit-transition: $primary-transition ease-in-out;
+    -moz-transition: $primary-transition ease-in-out;
+    -o-transition: $primary-transition ease-in-out;
+    transition: $primary-transition ease-in-out;
+  }
+
+  // Transforms hamburger bars into X
+  &[aria-expanded="true"] {
+    // Apply changes to first, middle and last bar
+    .icon-bar {
+      &:is(:first-child, :last-child) {
+        position: absolute;
+        margin: 0;
+        width: 30px;
+      }
+      // Rotate first bar
+      &:first-child {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+      }
+      // Fade out middle bar
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // Rotate last bar
+      &:last-child {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+/*
+SMALL DESKTOP
+*/
+@include breakpoint(md) {
+  #navbar-toggle {
+    display: none;  // Hide hamburger button on larger screens
+  }
+}

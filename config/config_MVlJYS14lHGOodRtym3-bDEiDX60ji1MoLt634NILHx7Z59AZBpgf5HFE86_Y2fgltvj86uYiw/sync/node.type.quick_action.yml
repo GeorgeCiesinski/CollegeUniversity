@@ -1,0 +1,17 @@
+uuid: b0f29a73-6705-4b9f-a1e3-1727012cb0b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Quick Action'
+type: quick_action
+description: "Quick Action links for staff and students.\r\n\r\nThese should be actions useful to the primary users of the website. In other words, the most popular actions which should be easiest to access.\r\n\r\nAppears on Home Page. "
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

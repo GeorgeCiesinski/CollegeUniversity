@@ -1,0 +1,24 @@
+uuid: d055ba55-2dd6-49be-a83c-a04f612d1517
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.service_status.field_short_summary
+    - field.field.node.service_status.field_status
+    - node.type.service_status
+  module:
+    - user
+id: node.service_status.teaser
+targetEntityType: node
+bundle: service_status
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_short_summary: true
+  field_status: true

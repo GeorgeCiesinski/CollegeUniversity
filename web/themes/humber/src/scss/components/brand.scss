@@ -1,0 +1,22 @@
+/**
+ * Styles brand and site name
+ */
+
+@use "../abstracts" as *;
+
+// Container for site-name
+.brand {
+  display: flex; 
+  align-items: center;
+  flex: 1;
+  padding: $nav-top-bottom 0 $nav-top-bottom 0;   
+}
+
+.site-name > a {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.site-name > a:link, .site-name > a:visited {
+  color: $primary-blue-500;
+}

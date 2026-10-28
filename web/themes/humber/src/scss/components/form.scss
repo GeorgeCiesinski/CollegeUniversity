@@ -1,0 +1,40 @@
+/**
+ * Styles form elements including fieldset and fieldgroup
+ */
+
+@use "../abstracts" as *;
+
+form {
+  width: calc(100% - (2 * $margin-xs));
+  display: flex;
+  flex-direction: column;
+  margin: 0 $margin-xs 2rem $margin-xs;
+  overflow: hidden;
+
+  fieldset {
+    border: 1px solid $primary-blue-500;
+    border-radius: $radius-md;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+  }
+
+  label {
+    display: block;
+    min-width: 6rem; // Max label width should be larger than the largest label
+    margin: 0.25rem 0;
+  }
+}
+
+@include breakpoint(sm) {
+  form {
+    width: $content-sm;
+    margin: 0 auto;
+  }
+}
+
+@include breakpoint(md) {
+  form {
+    width: $content-md;
+    margin: 0 auto;
+  }
+}

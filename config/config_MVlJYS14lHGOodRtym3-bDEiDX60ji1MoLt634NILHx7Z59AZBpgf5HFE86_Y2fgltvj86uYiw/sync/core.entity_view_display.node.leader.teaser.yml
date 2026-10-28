@@ -1,0 +1,55 @@
+uuid: ab8770b5-08a1-4044-8d0b-1fec5837471c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.leader.field_campus
+    - field.field.node.leader.field_email
+    - field.field.node.leader.field_leader_description
+    - field.field.node.leader.field_leader_image
+    - field.field.node.leader.field_leader_weight
+    - field.field.node.leader.field_office
+    - field.field.node.leader.field_phone
+    - field.field.node.leader.field_title
+    - image.style.large_thumbnail_150x150
+    - node.type.leader
+  module:
+    - svg_image
+    - user
+id: node.leader.teaser
+targetEntityType: node
+bundle: leader
+mode: teaser
+content:
+  field_leader_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large_thumbnail_150x150
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_campus: true
+  field_email: true
+  field_leader_description: true
+  field_leader_weight: true
+  field_office: true
+  field_phone: true
+  links: true

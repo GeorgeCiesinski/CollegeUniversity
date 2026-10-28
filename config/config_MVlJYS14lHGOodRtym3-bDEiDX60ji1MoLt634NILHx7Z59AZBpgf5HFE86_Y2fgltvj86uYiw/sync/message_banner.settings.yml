@@ -1,0 +1,10 @@
+langcode: en
+_core:
+  default_config_hash: xsaaf65tDxxhvWYm5meLSF0RoZHB-RBL9YBfywGNaOg
+banner_enabled: 0
+banner_enabled_on_admin_routes: 0
+banner_show_again_minutes: 1
+banner_color: default--red
+banner_text:
+  value: '<p><strong>Message: </strong>There is another outage again.</p>'
+  format: basic_html

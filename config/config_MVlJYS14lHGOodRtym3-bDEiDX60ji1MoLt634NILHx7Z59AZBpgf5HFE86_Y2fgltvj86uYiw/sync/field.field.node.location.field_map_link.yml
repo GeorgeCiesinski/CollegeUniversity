@@ -1,0 +1,31 @@
+uuid: 9172519a-0d16-4527-b8d5-8189af001924
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_link
+    - node.type.location
+  module:
+    - iframe
+id: node.location.field_map_link
+field_name: field_map_link
+entity_type: node
+bundle: location
+label: 'Map Link'
+description: 'Find a location using google maps, click share, and then go to the Embed a Map tab.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: null
+  headerlevel: '3'
+  class: ''
+  frameborder: '0'
+  scrolling: auto
+  transparency: '0'
+  allowfullscreen: '0'
+  tokensupport: '0'
+  width: null
+  height: null
+field_type: iframe

@@ -1,0 +1,50 @@
+uuid: b070f179-33d2-4619-bc91-bd174c79e46a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service_status.field_short_summary
+    - field.field.node.service_status.field_status
+    - node.type.service_status
+  module:
+    - path
+    - text
+id: node.service_status.default
+targetEntityType: node
+bundle: service_status
+mode: default
+content:
+  field_short_summary:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_status:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

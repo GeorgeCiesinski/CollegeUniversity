@@ -1,0 +1,22 @@
+uuid: 4e6e9de4-9bf4-436f-b84b-4d943fe2ba59
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.download_portal
+id: node.download_portal.promote
+field_name: promote
+entity_type: node
+bundle: download_portal
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: cb0f66d7-8c6b-4a97-9b68-a3bf66301685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portal_link
+    - node.type.download_portal
+  module:
+    - link
+id: node.download_portal.field_portal_link
+field_name: field_portal_link
+entity_type: node
+bundle: download_portal
+label: 'Portal Link'
+description: 'Link to the website or portal.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

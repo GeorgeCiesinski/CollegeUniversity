@@ -1,0 +1,9 @@
+/**
+ * Styles active table column
+ */
+
+@use '../abstracts' as *;
+
+th.is-active img {
+  display: inline;
+}

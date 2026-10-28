@@ -1,0 +1,44 @@
+/**
+ * Styles the locations block
+ */
+
+@use "../abstracts" as *;
+
+
+.block-views-blocklocations-block-1 {
+  box-sizing: border-box;
+  margin: 0 $margin-xs;
+
+  .views-field-title {
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+  }
+  
+  h2 {
+    margin: 2rem 0;
+  }
+
+  h4 {
+    margin: 0.5rem 0;
+  }
+}
+
+@include breakpoint(sm) {
+
+  .block-views-blocklocations-block-1 {
+    width: $content-sm;
+    margin: 0 auto;
+  }
+
+}
+
+@include breakpoint(md) {
+
+  .block-views-blocklocations-block-1 {
+    width: $content-md;
+    margin: 0 auto;
+  }
+
+}

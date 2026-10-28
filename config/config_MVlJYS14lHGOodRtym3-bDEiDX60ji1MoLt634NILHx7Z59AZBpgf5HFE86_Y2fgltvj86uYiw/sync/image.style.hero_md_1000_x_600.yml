@@ -1,0 +1,15 @@
+uuid: aefe7d7b-7551-4cac-842a-24bc301d4578
+langcode: en
+status: true
+dependencies: {  }
+name: hero_md_1000_x_600
+label: 'Hero md - 1200 x 400'
+effects:
+  6e91c025-2e51-4d2a-b17d-5f530b4b1fb3:
+    uuid: 6e91c025-2e51-4d2a-b17d-5f530b4b1fb3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 400
+      anchor: center-center

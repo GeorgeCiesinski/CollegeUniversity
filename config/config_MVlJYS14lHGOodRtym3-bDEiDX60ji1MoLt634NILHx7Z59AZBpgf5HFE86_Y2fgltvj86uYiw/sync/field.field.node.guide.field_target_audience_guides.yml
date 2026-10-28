@@ -1,0 +1,29 @@
+uuid: 14417c00-6526-4cf8-96de-f096be5973a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_audience_guides
+    - node.type.guide
+    - taxonomy.vocabulary.guide_audience
+id: node.guide.field_target_audience_guides
+field_name: field_target_audience_guides
+entity_type: node
+bundle: guide
+label: 'Target Audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      guide_audience: guide_audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

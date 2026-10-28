@@ -1,0 +1,22 @@
+uuid: 52ab8486-0af0-44ac-8e27-0f7d1d23a7fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.beautiful_text
+id: node.beautiful_text.promote
+field_name: promote
+entity_type: node
+bundle: beautiful_text
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

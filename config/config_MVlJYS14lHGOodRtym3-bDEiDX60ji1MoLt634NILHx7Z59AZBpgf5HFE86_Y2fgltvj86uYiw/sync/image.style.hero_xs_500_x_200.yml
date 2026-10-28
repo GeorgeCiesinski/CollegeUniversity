@@ -1,0 +1,15 @@
+uuid: d2d4c83c-3dee-48cf-9d89-20025edfe42a
+langcode: en
+status: true
+dependencies: {  }
+name: hero_xs_500_x_200
+label: 'Hero xs - 768 x 600'
+effects:
+  0a45d354-3d5b-4175-a269-437ef309a3cb:
+    uuid: 0a45d354-3d5b-4175-a269-437ef309a3cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 600
+      anchor: center-center

@@ -1,0 +1,172 @@
+/*
+ * @file
+ * CSS styles for the Individual Reflection module. This file includes styles for the questionnaire form, results section, and instructions section. 
+ * It also includes styles for the numbering of the questionnaire questions and the formatting of the questionnaire options and results. The styles 
+ * are designed to create a clean and user-friendly interface for users to complete the questionnaire and view their results.
+ */
+
+#individual-reflection-page {
+  padding: 0 1rem;
+}
+
+#individual-reflection-page form {
+  margin: 0;
+}
+
+/* Questionnaire numbering */
+
+.questionnaire {
+  counter-reset: question;
+}
+
+.questionnaire legend, .questionnaire .proficiency {
+  font-size: 1.2rem;
+}
+
+.questionnaire .question {
+  padding-right: 0.5rem;
+}
+
+.questionnaire .question::before {
+  counter-increment: question;
+  content: counter(question) ". ";
+  font-weight: bold;
+}
+
+.questionnaire .question, .questionnaire .proficiency {
+  padding: 0 0.5rem;
+  line-height: 1.4;
+}
+
+/* Questionnaire Formatting */
+
+#questionnaire-form h2 {
+  page-break-before: always;
+  break-before: page;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.proficiency-fieldset {
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease,opacity 0.5s ease, visibility 0.5s ease;
+  transform: translateY(-0.5rem);
+}
+
+.proficiency-fieldset.is-visible {
+  max-height: 500px;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.question-fieldset input, .proficiency-fieldset input {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.indicator-div {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.indicator-div input {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.question-fieldset label, .proficiency-fieldset label {
+  display: inline-flex;
+  width: 12rem;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+}
+
+.question-fieldset label:hover, .proficiency-fieldset label:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Results Section */
+
+#individual-reflection-introduction li, #results-section li {
+  margin: 0.5rem 0;
+}
+
+#results-section {
+  display: none;
+}
+
+.indicator-empty {
+  display: none;
+}
+
+.indicator-empty.is-visible {
+  display: block;
+}
+
+#results-section.is-visible {
+  display: block;
+}
+
+#results-section h2 {
+  text-align: center;
+}
+
+#download-recommendations {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  background-color: green;
+  border-color: green;
+  gap: 0.5rem;
+  align-items: center;
+  width: 20rem;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+#download-recommendations:hover {
+  transform: translateY(-0.25rem);
+  background-color: darkgreen;
+  border-color: darkgreen;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 5px gray);
+}
+
+.fat-icon {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.course-competency {
+  display: none;
+}
+
+.course-competency.is-visible {
+  display: block;
+}
+
+/* Instructions Section */
+
+#instructions-section {
+  padding-top: 5rem;
+}
+
+#instructions-section img {
+  display: block;
+  margin: 1rem auto;
+  width: 90%;
+  height: auto;
+  max-width: 600px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+}

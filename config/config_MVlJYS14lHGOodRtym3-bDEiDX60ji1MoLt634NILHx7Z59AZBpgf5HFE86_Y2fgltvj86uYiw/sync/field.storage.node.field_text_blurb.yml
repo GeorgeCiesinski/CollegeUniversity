@@ -1,0 +1,21 @@
+uuid: 453125f6-28f6-4b8c-86c1-b2c02d263797
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_text_blurb
+field_name: field_text_blurb
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

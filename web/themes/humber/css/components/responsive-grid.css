@@ -1,0 +1,64 @@
+/**
+ * Styling for responsive grid views
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the Humber theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+.views-view-responsive-grid--horizontal {
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+}
+
+.views-view-responsive-grid__item {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 10px;
+  justify-content: center;
+}
+.views-view-responsive-grid__item:hover {
+  background-color: #e6edf2;
+}
+.views-view-responsive-grid__item h2 {
+  width: 100% !important;
+}
+
+/*# sourceMappingURL=responsive-grid.css.map */

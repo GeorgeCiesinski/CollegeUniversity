@@ -1,0 +1,24 @@
+uuid: 543a1f8a-dc74-4491-a57a-74ac3208e4cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.beautiful_text
+  module:
+    - text
+id: node.beautiful_text.body
+field_name: body
+entity_type: node
+bundle: beautiful_text
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

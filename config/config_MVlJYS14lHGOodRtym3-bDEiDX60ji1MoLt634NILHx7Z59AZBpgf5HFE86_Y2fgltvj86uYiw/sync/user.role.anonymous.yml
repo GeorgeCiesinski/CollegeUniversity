@@ -1,0 +1,28 @@
+uuid: d2c16471-8519-4b1a-9def-1ac267a05f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_autocomplete.search.search
+  module:
+    - background_image
+    - comment
+    - contact
+    - media
+    - message_banner
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'use search_api_autocomplete for search'
+  - 'view background image'
+  - 'view media'
+  - 'view message banner'

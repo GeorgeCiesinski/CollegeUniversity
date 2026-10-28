@@ -1,0 +1,64 @@
+@use "../abstracts" as *;
+
+.block-views-exposed-filter-blocksearch-page-1 {
+  .filters {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    padding: 0; 
+  }
+
+  .form-wrapper {
+    width: fit-content;
+  }
+
+  .form-submit, .ui-autocomplete-input {
+    height: 2rem;
+  }
+
+  .form-submit {
+    width: fit-content;
+    float: 0;
+    background-color: $primary-blue-500;
+    float: left;
+    margin: 0;
+    border-radius: 0 $radius-md $radius-md 0;
+  }
+
+  .ui-autocomplete-input {
+    border-radius: $radius-md 0 0 $radius-md;
+    width: 15rem;
+  }
+}
+
+.search-api-autocomplete-search {
+  li {
+    background-color: white;
+  }
+}
+
+.search-bar {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 1.5rem;
+
+    &:first-child {
+      margin-top: 1.5rem; 
+    }
+  }
+
+  .views-field-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@include breakpoint(sm) {
+  .form-item-search-api-fulltext {
+    padding-left: 35rem;
+  }
+}

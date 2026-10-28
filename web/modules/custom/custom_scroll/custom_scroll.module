@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function custom_scroll_page_attachments_alter(array &$attachments, \Drupal\Core\Routing\RouteMatchInterface $route_match = NULL) {
+
+  $route_match = \Drupal::routeMatch();
+
+  // Check if the $route_match object is available.
+  if ($route_match) {
+    
+    // Get the current route match object.
+    $route_match = \Drupal::routeMatch();
+
+    // Check if the current page is a node.
+    if ($node = $route_match->getParameter('node')) {
+      // Get the content type of the node.
+      $content_type = $node->getType();
+
+      // Check if the content type is 'beautiful_page'.
+      if ($content_type === 'beautiful_page') {
+        // Check if the user is anonymous.
+        if (\Drupal::currentUser()->isAnonymous()) {
+          // Attach the custom library.
+
+          \Drupal::messenger()->addMessage(t('Content type is beautiful_page. User is Anonymous'));
+          $attachments['#attached']['library'][] = 'custom_scroll/custom_scroll';
+        }
+      }
+    }
+  }
+}

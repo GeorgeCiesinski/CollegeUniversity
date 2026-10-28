@@ -1,0 +1,107 @@
+/**
+ * Style for the filters section
+ */
+
+@use '../abstracts' as *;
+
+.filters {
+  box-sizing: border-box;
+  display: block;  // Display none to enable
+  border: 1px solid $primary-yellow-500;
+  border-radius: $radius-md;
+  padding: 0.5rem 1rem;
+
+  select {
+    width: 10rem;
+  }
+
+  // Overrides fieldset styling within the filters class
+  fieldset {
+    margin: 1rem 0 0.5rem 0;
+    padding: 0;
+    border: 0;
+
+    span {
+      color: black;
+    }
+  }
+
+  // Overrides fieldset-wrapper class within filters class
+  .fieldset-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    > div {
+      flex: 1;
+    }
+  }
+
+  .form-submit {
+    margin-left: auto;
+    background-color: $secondary-darkgreen-500;
+    border-color: $secondary-darkgreen-500;
+
+    &:hover {
+      background-color: $secondary-darkgreen-400;
+      border-color: $secondary-darkgreen-400;
+    }
+  }
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+    label {
+      display: block;
+      width: 8rem;
+    }
+
+    input {
+      // Stops 'Apply' button from stretching 100% of width
+      &:not(.button) {
+        flex: 1;
+      }
+    }
+  }
+
+  .form-item {
+    label, select, input {
+      order: 1;
+    }
+
+    .description {
+      display: block;
+      order: 2;
+      width: 100%;
+    }
+  }
+
+  // Hides description from filter form
+  #edit-uid--description {
+    display: none;
+  }
+
+  &.visible {
+    display: block;
+  }
+}
+
+@include breakpoint(sm) {
+  .filters {
+    width: $content-sm;
+    margin: 0 auto 2rem auto;
+
+    select {
+      width: 20rem;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .filters {
+    width: $content-md;
+    margin: 0 auto 2rem auto;
+  }
+}

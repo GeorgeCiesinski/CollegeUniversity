@@ -1,0 +1,31 @@
+uuid: 6aa7f26b-4954-4f78-8af4-c7bba1f22d1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ai_profile.body
+    - field.field.node.ai_profile.field_weight
+    - node.type.ai_profile
+  module:
+    - text
+    - user
+id: node.ai_profile.default
+targetEntityType: node
+bundle: ai_profile
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_weight: true
+  search_api_excerpt: true

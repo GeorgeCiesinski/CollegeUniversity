@@ -1,0 +1,24 @@
+uuid: a061c7d9-1f23-48db-bbba-0ae4d7c6cbe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leader_description
+    - filter.format.full_html
+    - node.type.leader
+  module:
+    - text
+id: node.leader.field_leader_description
+field_name: field_leader_description
+entity_type: node
+bundle: leader
+label: Description
+description: 'Text blurb about the leader.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

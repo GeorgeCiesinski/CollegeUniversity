@@ -1,0 +1,28 @@
+uuid: c33453f3-0502-41d0-898c-a9fb6184b219
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quick_action.field_quick_action_icon
+    - field.field.node.quick_action.field_quick_action_link
+    - field.field.node.quick_action.field_target_audience
+    - field.field.node.quick_action.field_weight
+    - node.type.quick_action
+  module:
+    - user
+id: node.quick_action.teaser
+targetEntityType: node
+bundle: quick_action
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_quick_action_icon: true
+  field_quick_action_link: true
+  field_target_audience: true
+  field_weight: true

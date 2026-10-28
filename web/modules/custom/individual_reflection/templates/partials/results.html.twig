@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Results partial.
+ * This template defines the results section of the individual reflection page, 
+ * providing a summary of the respondent's performance across each indicator.
+ * 
+ * It is populated using the populateResults function in recommender.js, which 
+ * generates personalized course recommendations based on the respondent's answers 
+ * to the questionnaire.
+ */
+#}
+<section id='results-section'>
+    <div id='results-introduction'>
+        <h2>Recommended Digital Fluency Trainings in HRMS LEARN</h2>
+        <p>Thank you for completing the Digital Fluency individual reflection questionnaire. The recommendations listed below are based on your responses. If you would like to access these recommendations at a later date, be sure to save them.</p>
+        <p>For each Indicator, the results will reflect the levels of ability that would be most appropriate based on your responses to the questionnaire. Below the levels, you will see a list of recommended sub-topics. The sub-topics correspond to the training categories for each Indicator  in HRMS LEARN.</p>
+        <p>You are always encouraged to review and explore the Digital Fluency offerings in HRMS LEARN as you prefer. These recommendations are intended as a starting point.</p>
+        <p>Questions and feedback about the questionnaire and the list of recommendations can be directed via email to <a href="mailto:digitalfluency@humber.ca">digitalfluency@humber.ca</a>.</p>
+        <p>
+            <strong>Note:</strong> This questionnaire is completely private and no identifying information is captured. 
+        </p>
+    </div>
+
+    {% for indicator in indicators %}
+        <div class='indicator-div indicator-{{ loop.index }}-div'>
+            <h3>{{ indicator.title }}</h3>
+            <p class='indicator-empty is-visible'>You have no courses recommended to you for this indicator.</p>
+            {% for level in ['competent', 'proficient', 'leader'] %}
+                <div class='course-competency {{ level }}'>
+                    <h4 class='competency-title'>{{ level|capitalize }}</h4>
+                    <p>
+                        Open the course "{{ indicator.title | replace({':': ' (' ~ level|capitalize ~ '):'}) }}"
+                    </p>
+                    <p>Complete all activities in the following sections:</p>
+                    <ol class='course-sections'></ol>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    {# Include instructions partial #}
+    {% include '@individual_reflection/templates/partials/instructions.html.twig' %}
+</section>

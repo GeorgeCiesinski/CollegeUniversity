@@ -1,0 +1,60 @@
+/**
+ * Style for primary and secondary menu as well as .nav-bar
+ */
+
+@use '../abstracts' as *;
+
+/*
+MOBILE
+*/
+
+// Aligns nav-bar menus in parent divs
+.region-primary-menu, .region-secondary-menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  > nav {
+    width: 100%;
+  }
+}
+
+.nav-bar {
+  display:none;
+  flex-basis: 100%;
+  padding-bottom: $menu-gap;
+
+  // Toggled by hamburger-menu.js
+  &.active {
+    display: flex;
+    flex-direction: column;
+    gap: $menu-gap;
+    align-items: center;
+  }
+}
+
+/*
+SMALL DESKTOP
+*/
+@include breakpoint(md) {
+  .region-primary-menu, .region-secondary-menu {
+    flex-grow: 1;
+    width: auto;
+
+    > nav {
+      width: auto;
+    }
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    gap: calc(2 * $menu-gap);;
+    flex-basis: auto;
+    padding-bottom: 0;
+
+    &.active {
+      flex-flow: row;  // Fixes column after toggling hamburger and returning to desktop view
+    }
+  }
+}

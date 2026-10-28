@@ -1,0 +1,22 @@
+uuid: 17361780-060f-45c8-bf83-6f705ac52735
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testomonial
+id: node.testomonial.promote
+field_name: promote
+entity_type: node
+bundle: testomonial
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,15 @@
+uuid: babc6f21-a73c-4ddb-955c-9cfb42b91622
+langcode: en
+status: true
+dependencies: {  }
+name: medium_thumbnail_125x125
+label: 'Medium Thumbnail 125x125'
+effects:
+  20d1536b-11cd-40c8-b024-adc899abb782:
+    uuid: 20d1536b-11cd-40c8-b024-adc899abb782
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 125
+      height: 125
+      anchor: center-center

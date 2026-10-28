@@ -1,0 +1,22 @@
+/**
+ * Styles views-table
+ */
+
+ @use '../abstracts' as *;
+
+.views-table {
+  margin: 0.5rem 0;
+}
+
+.table-container {
+  overflow-x: scroll;
+}
+
+@include breakpoint(md) {
+
+  .views-table {
+    table-layout: auto;
+    max-width: 100%;
+  }
+
+}

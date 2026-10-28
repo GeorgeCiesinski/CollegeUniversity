@@ -1,0 +1,24 @@
+uuid: cc7b6a51-5403-4cd9-b515-a7ca5db6df7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_summary
+    - filter.format.basic_html
+    - node.type.service_status
+  module:
+    - text
+id: node.service_status.field_short_summary
+field_name: field_short_summary
+entity_type: node
+bundle: service_status
+label: Summary
+description: 'Short description of the partial or complete outage. Leave empty if service is fully operational. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

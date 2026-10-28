@@ -1,0 +1,25 @@
+uuid: 20f0713b-5b07-43e2-a541-8ebf4f8e7778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.ai_profile
+id: node.ai_profile.field_weight
+field_name: field_weight
+entity_type: node
+bundle: ai_profile
+label: Weight
+description: "The weight is how quick actions are sorted. Lower weight items appear before higher weight items. When assigning a weight to an item, it is recommended to space them out a bit. If you have 3 items with the weights 1, 2 and 3 and want to insert a fourth item somewhere between those, then you would have to first edit these items to make space for the fourth. Instead, if you number those items 10, 20, and 30, then you have plenty of space between the existing items and don't have to edit them first."
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

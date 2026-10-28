@@ -1,0 +1,17 @@
+uuid: 147c10ba-74cb-44f6-9627-8a9c2f25f4ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Testomonial
+type: testomonial
+description: "A testimonial written by a staff member. \r\n\r\nAppears on the Careers page."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

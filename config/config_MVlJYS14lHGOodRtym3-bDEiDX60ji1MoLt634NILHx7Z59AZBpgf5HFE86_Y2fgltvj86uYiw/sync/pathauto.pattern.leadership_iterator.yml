@@ -1,0 +1,22 @@
+uuid: 6676929a-f3cd-41fe-9851-2e64197803e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: leadership_iterator
+label: 'Leadership iterator'
+type: 'canonical_entities:node'
+pattern: '/about/[node:title]'
+selection_criteria:
+  30e68f26-2a1a-4960-b0fd-b31526d569d6:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 30e68f26-2a1a-4960-b0fd-b31526d569d6
+    context_mapping:
+      node: node
+    bundles:
+      leader: leader
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,30 @@
+uuid: ffef50e8-b56d-4366-972e-43d4526c76f5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bd862761-5d28-49ed-ae79-ae85502c15f3'
+  module:
+    - block_content
+    - system
+  theme:
+    - humber
+id: humber_additionallinks
+theme: humber
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:bd862761-5d28-49ed-ae79-ae85502c15f3'
+settings:
+  id: 'block_content:bd862761-5d28-49ed-ae79-ae85502c15f3'
+  label: 'Additional Links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/startup/students\r\n/startup/staff"

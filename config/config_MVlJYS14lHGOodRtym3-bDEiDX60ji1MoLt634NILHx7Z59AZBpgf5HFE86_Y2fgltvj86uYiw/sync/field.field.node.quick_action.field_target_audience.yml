@@ -1,0 +1,29 @@
+uuid: c9f06b90-f1e2-43c7-bd28-14eb8003e4f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_audience
+    - node.type.quick_action
+    - taxonomy.vocabulary.audience
+id: node.quick_action.field_target_audience
+field_name: field_target_audience
+entity_type: node
+bundle: quick_action
+label: 'Target Audience'
+description: 'Which audience is this quick action for? This will determine the categorization of the quick action for easy search, and to determine which page it appears on. You can select more than one if this should appear in multiple areas/categories.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      audience: audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: a880c0bd-3f6f-4028-a178-f067c33ae8f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Guide
+type: guide
+description: "Guides about specific topics containing text, instructions, and optionally picture and video.\r\n\r\nAppears in the Resource Centre. "
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

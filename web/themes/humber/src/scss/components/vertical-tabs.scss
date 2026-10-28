@@ -1,0 +1,38 @@
+/**
+ * Styles the revision form included at the bottom of regular Drupal forms
+ */
+
+@use '../abstracts' as *;
+
+.vertical-tabs {
+  border: none;
+  border-radius: 0;  // All radius except top left
+}
+
+.vertical-tabs__menu {
+  border: none; 
+  border-radius: 0; // Top left radius
+}
+
+.vertical-tabs__menu-item {
+  border: none;
+  border-radius: 0; // Top left and bottom left radius
+}
+
+@include breakpoint(md) {
+  .vertical-tabs {
+    border: 1px solid $primary-blue-200;
+    border-radius: 0 $radius-md $radius-md $radius-md;  // All radius except top left
+  }
+  
+  .vertical-tabs__menu {
+    border-top: 1px solid $primary-blue-200; 
+    border-radius: $radius-md 0 0 0; // Top left radius
+  }
+  
+  .vertical-tabs__menu-item {
+    border-bottom: 1px solid $primary-blue-200;
+    border-left: 1px solid $primary-blue-200;
+    border-radius: $radius-md 0 0 $radius-md; // Top left and bottom left radius
+  }
+}

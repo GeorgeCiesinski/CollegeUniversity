@@ -1,0 +1,84 @@
+/**
+ * Styles help & support custom block
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the Humber theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+#block-humber-helpsupportblock {
+  margin: 0.5rem;
+}
+#block-humber-helpsupportblock h2, #block-humber-helpsupportblock > div {
+  margin-bottom: 0.5rem;
+}
+#block-humber-helpsupportblock h2 {
+  width: 100%;
+}
+#block-humber-helpsupportblock > div {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  #block-humber-helpsupportblock h2, #block-humber-helpsupportblock .clearfix {
+    width: 46rem;
+    margin: 0 auto;
+  }
+  #block-humber-helpsupportblock h2 {
+    margin: 3rem auto 0 auto;
+  }
+  #block-humber-helpsupportblock .clearfix {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 61rem) {
+  #block-humber-helpsupportblock h2, #block-humber-helpsupportblock .clearfix {
+    width: 58rem;
+  }
+  #block-humber-helpsupportblock h2 {
+    margin: 3rem auto 0 auto;
+  }
+  #block-humber-helpsupportblock .clearfix {
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=help-and-support-block.css.map */

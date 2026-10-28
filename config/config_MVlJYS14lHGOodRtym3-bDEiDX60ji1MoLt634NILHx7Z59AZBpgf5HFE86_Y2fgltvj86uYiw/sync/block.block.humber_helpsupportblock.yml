@@ -1,0 +1,33 @@
+uuid: 81cb2cc9-3285-4be6-ae5a-2b92c82ad171
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3519c686-fbfd-4577-811d-902e6dbbb5b2'
+  module:
+    - block_content
+    - node
+  theme:
+    - humber
+id: humber_helpsupportblock
+theme: humber
+region: content
+weight: 6
+provider: null
+plugin: 'block_content:3519c686-fbfd-4577-811d-902e6dbbb5b2'
+settings:
+  id: 'block_content:3519c686-fbfd-4577-811d-902e6dbbb5b2'
+  label: 'Help & Support'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      guide: guide

@@ -1,0 +1,11 @@
+recommender:
+  version: 1.0
+  css:
+    theme:
+      css/individual-reflection.css: {}
+  js:
+    js/recommender.js: {}
+    js/show-hidden.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js: { type: external, minified: true }
+  dependencies:
+    - core/drupal

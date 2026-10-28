@@ -1,0 +1,11 @@
+uuid: 2abef792-10d0-46cf-99b5-b5129b47762c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.4_3_portal_tile_272_x_340
+label: '4:3 Portal Tile - 272 x 340'
+description: ''
+targetEntityType: media
+cache: true

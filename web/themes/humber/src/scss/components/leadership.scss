@@ -1,0 +1,96 @@
+/**
+ * Styles the leadership block and items
+ */
+
+ @use "../abstracts" as *;
+
+
+.block-views-blockleadership-team-block-1 {
+  margin: 0 $margin-xs;
+
+  article {
+    position: relative;
+    margin: 1rem 0;
+    border-radius: $radius-md;
+
+    h2 {
+      margin-top: 0;
+      height: 2rem;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+
+      &:link, &:visited {
+        color: $primary-blue-500
+      }
+    }
+
+    a, .field--name-field-title {
+      text-align: center;
+    }
+    
+    .node__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 15rem;
+    }
+
+    &:hover {
+      background-color: $primary-blue-50;
+    }
+  }
+}
+
+.field--name-field-leader-image, .field--name-field-title {
+  display: block;
+  height: auto;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field--name-field-leader-image {
+
+  >div {
+    display: block;
+    height: auto;
+    width: fit-content;
+  }
+
+  .field__item {
+    img {
+      overflow: hidden;
+      border-radius: 50%;
+      border: 2px solid $primary-blue-500;
+    }
+  }
+}
+
+.field--name-field-title {
+  font-weight: bold;
+}
+
+@include breakpoint(sm) {
+
+  .block-views-blockleadership-team-block-1 {
+    width: $content-sm;
+    margin: 0 auto;
+  }
+
+}
+
+@include breakpoint(md) {
+
+  .block-views-blockleadership-team-block-1 {
+    width: $content-md;
+    margin: 0 auto;
+  }
+
+}

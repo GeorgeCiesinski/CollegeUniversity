@@ -1,0 +1,48 @@
+uuid: 23641aec-11ff-4e8a-ba09-c79f6686e9a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.beautiful_text.body
+    - field.field.node.beautiful_text.field_page_item_weight
+    - field.field.node.beautiful_text.field_page_name
+    - node.type.beautiful_text
+  module:
+    - text
+    - user
+id: node.beautiful_text.default
+targetEntityType: node
+bundle: beautiful_text
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_page_item_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_page_name:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

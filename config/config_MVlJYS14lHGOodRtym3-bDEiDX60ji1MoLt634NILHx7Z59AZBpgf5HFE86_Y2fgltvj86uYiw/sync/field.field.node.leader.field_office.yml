@@ -1,0 +1,19 @@
+uuid: dfb1cd3a-482d-4a9b-a31d-c8134c3a95fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_office
+    - node.type.leader
+id: node.leader.field_office
+field_name: field_office
+entity_type: node
+bundle: leader
+label: Office
+description: 'Office designation of leader. This is the alphanumeric room number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

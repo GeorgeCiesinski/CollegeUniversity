@@ -1,0 +1,160 @@
+/**
+ * Styling for Tabbed Content pages
+ * 
+ * Example Pages: Artificial Intelligence
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the Humber theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+#block-humber-views-block-tabbed-ai-block-1 .content-list {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0 0.5rem;
+  margin: 0;
+}
+#block-humber-views-block-tabbed-ai-block-1 .content-list .content-item {
+  cursor: pointer;
+}
+#block-humber-views-block-tabbed-ai-block-1 .tab-button {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  max-width: 23rem;
+  font-size: 1.25rem;
+  background-color: #004b78;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px 5px 0 0;
+}
+#block-humber-views-block-tabbed-ai-block-1 .tab-button.active {
+  background-color: white;
+  color: Black;
+  font-weight: bold;
+}
+#block-humber-views-block-tabbed-ai-block-1 h2, #block-humber-views-block-tabbed-ai-block-1 .view {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#block-humber-views-block-tabbed-ai-block-2 {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0 0.5rem 2rem 0.5rem;
+}
+#block-humber-views-block-tabbed-ai-block-2 .tab-content {
+  display: none;
+}
+#block-humber-views-block-tabbed-ai-block-2 .tab-content.active {
+  display: block;
+}
+#block-humber-views-block-tabbed-ai-block-2 h2 ul, #block-humber-views-block-tabbed-ai-block-2 .clearfix ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#block-humber-views-block-tabbed-ai-block-2 .view {
+  box-sizing: border-box;
+  background-color: white;
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+#block-humber-views-block-tabbed-ai-block-2 .content-list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+#block-humber-views-block-tabbed-ai-block-2 .content-list ul li, #block-humber-views-block-tabbed-ai-block-2 .content-list ol li {
+  margin: 0.5rem 0;
+}
+#block-humber-views-block-tabbed-ai-block-2 .content-list ul p, #block-humber-views-block-tabbed-ai-block-2 .content-list ol p {
+  margin: 0;
+  padding: 0;
+}
+#block-humber-views-block-tabbed-ai-block-2 .file {
+  margin: 1rem;
+}
+#block-humber-views-block-tabbed-ai-block-2 h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+  text-shadow: 2px 2px 2px #6693ae;
+}
+#block-humber-views-block-tabbed-ai-block-2 h2, #block-humber-views-block-tabbed-ai-block-2 h3, #block-humber-views-block-tabbed-ai-block-2 h4 {
+  margin: 2rem 0;
+}
+#block-humber-views-block-tabbed-ai-block-2 ul, #block-humber-views-block-tabbed-ai-block-2 ol {
+  list-style-type: disc;
+  padding-inline-start: 1rem;
+}
+
+@media (min-width: 48rem) {
+  #block-humber-views-block-tabbed-ai-block-1 .content-list {
+    padding: 0;
+  }
+  #block-humber-views-block-tabbed-ai-block-1 ul:not(.contextual-links) {
+    width: 46rem;
+    margin: 0 auto;
+  }
+  #block-humber-views-block-tabbed-ai-block-2 .clearfix, #block-humber-views-block-tabbed-ai-block-2 .view {
+    width: 46rem;
+    margin: 0 auto 2rem auto;
+  }
+  #block-humber-views-block-tabbed-ai-block-2 .view {
+    padding: 1rem;
+  }
+  #block-humber-views-block-tabbed-ai-block-2 .content-list {
+    padding: 0;
+  }
+}
+@media (min-width: 61rem) {
+  #block-humber-views-block-tabbed-ai-block-1 ul:not(.contextual-links) {
+    width: 58rem;
+    margin: 0 auto;
+  }
+  #block-humber-views-block-tabbed-ai-block-2 .clearfix, #block-humber-views-block-tabbed-ai-block-2 .view {
+    width: 58rem;
+  }
+}
+
+/*# sourceMappingURL=tabbed-content.css.map */

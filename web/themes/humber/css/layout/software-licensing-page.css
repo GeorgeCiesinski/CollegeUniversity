@@ -1,0 +1,183 @@
+/**
+ * Styling for software licensing page
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the Humber theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+.block-views-blockdownload-portals-block-1 {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.block-views-blockdownload-portals-block-1 h2 {
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 30, 48, 0.5);
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+  margin: 2rem 0.5rem 3rem 0.5rem;
+}
+
+.portal-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portal-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 3rem 0.5rem;
+}
+
+.portal-item {
+  position: relative;
+  width: 272px;
+  height: 340px;
+  border-radius: 10px;
+  perspective: 1000px;
+}
+.portal-item > div {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+  transform-style: preserve-3d;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the backside */
+}
+.portal-item .views-field-title {
+  z-index: 2;
+  background-color: transparent;
+  width: 100%;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  overflow: hidden;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(transparent, #002d48);
+  border-radius: 0 0 10px 10px;
+}
+.portal-item .views-field-field-portal-image {
+  z-index: 1;
+  overflow: hidden;
+  filter: drop-shadow(5px 5px #99b7c9);
+}
+.portal-item .views-field-field-portal-image img {
+  border-radius: 10px;
+}
+.portal-item .views-field-body {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #002d48;
+  display: flex;
+  border-radius: 10px;
+  filter: drop-shadow(5px 5px #99b7c9);
+}
+.portal-item .views-field-body p {
+  margin: 0;
+  padding: 1rem;
+}
+.portal-item .views-field-field-portal-link {
+  bottom: 0;
+  padding: 2rem;
+}
+.portal-item .views-field-field-portal-link a {
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+.portal-item .views-field-field-portal-link a:hover {
+  transform: scale(1.1);
+  background-color: #f1f1f1;
+}
+.portal-item .views-field-body,
+.portal-item .views-field-field-portal-link {
+  transform: rotateY(-180deg);
+}
+.portal-item:hover .views-field-title,
+.portal-item:hover .views-field-field-portal-image {
+  transform: rotateY(180deg);
+}
+.portal-item:hover .views-field-body,
+.portal-item:hover .views-field-field-portal-link {
+  transform: rotateY(0deg);
+}
+
+.view-student-software .filters {
+  margin: 0 0 2rem 0;
+}
+
+.views-field-field-link-name h3 {
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 48rem) {
+  .block-views-blockdownload-portals-block-1 h2 {
+    width: 46rem;
+    margin: 3rem auto;
+  }
+  .portal-wrapper {
+    width: 46rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 61rem) {
+  .block-views-blockdownload-portals-block-1 h2 {
+    width: 58rem;
+  }
+  .block-views-blockdownload-portals-block-1 .portal-wrapper {
+    width: 58rem;
+  }
+}
+
+/*# sourceMappingURL=software-licensing-page.css.map */

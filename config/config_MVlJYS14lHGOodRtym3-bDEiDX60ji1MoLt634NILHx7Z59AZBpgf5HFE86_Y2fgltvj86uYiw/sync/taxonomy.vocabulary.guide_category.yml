@@ -1,0 +1,9 @@
+uuid: af1e1f24-2ada-4fd9-bcf5-8cf0b642f6f0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Guide Category'
+vid: guide_category
+description: 'Categories guides can be created under'
+weight: 0
+new_revision: false

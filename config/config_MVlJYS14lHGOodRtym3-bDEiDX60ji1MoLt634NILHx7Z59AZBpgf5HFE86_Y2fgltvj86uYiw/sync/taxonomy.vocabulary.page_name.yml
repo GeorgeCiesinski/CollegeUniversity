@@ -1,0 +1,9 @@
+uuid: 37d9c3e2-570a-4929-ac19-203a8dd2c3b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Page Name'
+vid: page_name
+description: 'Used to organize Beautiful Text items into separate views.'
+weight: 0
+new_revision: false

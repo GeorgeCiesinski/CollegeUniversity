@@ -1,0 +1,35 @@
+uuid: 56e3dae5-0979-430d-ad57-0213e1a88990
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.download_portal.body
+    - field.field.node.download_portal.field_portal_image
+    - field.field.node.download_portal.field_portal_link
+    - node.type.download_portal
+  module:
+    - text
+    - user
+id: node.download_portal.teaser
+targetEntityType: node
+bundle: download_portal
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_portal_image: true
+  field_portal_link: true
+  search_api_excerpt: true

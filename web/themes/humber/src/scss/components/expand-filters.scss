@@ -1,0 +1,17 @@
+/**
+ * Styles expand-filters button
+ */
+
+#expand-filters {
+  margin: 0.5rem 0;
+
+  &::before {
+    content: 'Show '
+  }
+
+  &.active {
+    &::before {
+      content: 'Hide '
+    }
+  }
+}

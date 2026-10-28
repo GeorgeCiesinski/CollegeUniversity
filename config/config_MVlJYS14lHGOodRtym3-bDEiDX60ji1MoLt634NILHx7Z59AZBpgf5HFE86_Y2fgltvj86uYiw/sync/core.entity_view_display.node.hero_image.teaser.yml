@@ -1,0 +1,29 @@
+uuid: 02c752cb-48c3-453d-a792-261ab71a15cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hero_image.field_hero_image
+    - field.field.node.hero_image.field_hero_link
+    - field.field.node.hero_image.field_hero_weight
+    - field.field.node.hero_image.field_text_blurb
+    - node.type.hero_image
+  module:
+    - user
+id: node.hero_image.teaser
+targetEntityType: node
+bundle: hero_image
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero_image: true
+  field_hero_link: true
+  field_hero_weight: true
+  field_text_blurb: true
+  search_api_excerpt: true

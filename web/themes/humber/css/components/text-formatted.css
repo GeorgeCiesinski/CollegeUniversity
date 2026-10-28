@@ -1,0 +1,12 @@
+/**
+ * Styles images placed with CKEditor as opposed to image fields
+ */
+.text-formatted {
+  width: 100%;
+}
+.text-formatted img, .text-formatted ul, .text-formatted ol, .text-formatted li {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=text-formatted.css.map */

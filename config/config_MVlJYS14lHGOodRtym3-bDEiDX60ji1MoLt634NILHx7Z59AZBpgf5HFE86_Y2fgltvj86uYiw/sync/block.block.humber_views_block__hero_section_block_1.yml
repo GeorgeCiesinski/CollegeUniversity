@@ -1,0 +1,29 @@
+uuid: 47aa2486-0071-403f-a2ec-b7c21e4f5980
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_section
+  module:
+    - system
+    - views
+  theme:
+    - humber
+id: humber_views_block__hero_section_block_1
+theme: humber
+region: help
+weight: -8
+provider: null
+plugin: 'views_block:hero_section-block_1'
+settings:
+  id: 'views_block:hero_section-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

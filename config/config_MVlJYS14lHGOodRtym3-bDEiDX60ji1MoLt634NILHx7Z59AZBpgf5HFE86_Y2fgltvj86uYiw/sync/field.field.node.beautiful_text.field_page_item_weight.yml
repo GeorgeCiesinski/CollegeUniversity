@@ -1,0 +1,25 @@
+uuid: 095e916a-ad88-4961-aa67-bc9e27f04515
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_item_weight
+    - node.type.beautiful_text
+id: node.beautiful_text.field_page_item_weight
+field_name: field_page_item_weight
+entity_type: node
+bundle: beautiful_text
+label: 'Page Weight'
+description: 'Used to sort page items. Use increments of 10 initially, or a number in between if items have already taken up a weight.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

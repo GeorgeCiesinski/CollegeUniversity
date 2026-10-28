@@ -1,0 +1,5 @@
+name: 'custom_scroll'
+type: module
+core_version_requirement: ^10
+description: 'Blurs background during scroll.'
+package: 'Humber ITS'

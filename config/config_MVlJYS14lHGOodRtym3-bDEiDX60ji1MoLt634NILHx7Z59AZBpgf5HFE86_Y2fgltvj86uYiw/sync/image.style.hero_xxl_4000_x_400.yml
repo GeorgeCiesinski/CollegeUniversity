@@ -1,0 +1,17 @@
+uuid: 078501be-72c2-4174-881e-97c30cdf4473
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_xxl_4000_x_400
+label: 'Hero Focal xxl - 4000 x 400'
+effects:
+  d9299175-ae43-45fa-9678-f3aed9e67055:
+    uuid: d9299175-ae43-45fa-9678-f3aed9e67055
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 4000
+      height: 400
+      crop_type: focal_point

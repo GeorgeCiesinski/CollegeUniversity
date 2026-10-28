@@ -1,0 +1,31 @@
+/**
+ * Styling for FAQ dropdown in guides
+ */
+
+ @use "../abstracts" as *;
+
+.faq-heading {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: $primary-blue-500;
+  }
+
+  &:hover {
+    background-color: ghostwhite;
+    border-radius: $radius-sm;
+  }
+}
+
+.faq-dropdown {
+  &.active {
+    display: block;
+  }
+  &:not(.active) {
+    display: none;
+  }
+}

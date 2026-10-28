@@ -1,0 +1,61 @@
+uuid: a94348ec-aaa4-4be9-860c-3d99792ba3e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.download_portal.body
+    - field.field.node.download_portal.field_portal_image
+    - field.field.node.download_portal.field_portal_link
+    - image.style.4_3_portal_tile_272_x_340
+    - node.type.download_portal
+  module:
+    - link
+    - svg_image
+    - text
+    - user
+id: node.download_portal.default
+targetEntityType: node
+bundle: download_portal
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_portal_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: 4_3_portal_tile_272_x_340
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_portal_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

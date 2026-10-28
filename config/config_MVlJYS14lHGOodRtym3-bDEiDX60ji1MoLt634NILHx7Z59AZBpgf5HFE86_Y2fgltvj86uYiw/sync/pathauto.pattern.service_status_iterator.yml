@@ -1,0 +1,22 @@
+uuid: 0d01cf3c-6eda-4c0c-b32b-3ca8b0a59052
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: service_status_iterator
+label: 'Service Status Iterator'
+type: 'canonical_entities:node'
+pattern: '/service-status-dashboard/[node:title]'
+selection_criteria:
+  644b990d-eb5d-45c8-a406-0bb7029ea466:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 644b990d-eb5d-45c8-a406-0bb7029ea466
+    context_mapping:
+      node: node
+    bundles:
+      service_status: service_status
+selection_logic: and
+weight: -5
+relationships: {  }

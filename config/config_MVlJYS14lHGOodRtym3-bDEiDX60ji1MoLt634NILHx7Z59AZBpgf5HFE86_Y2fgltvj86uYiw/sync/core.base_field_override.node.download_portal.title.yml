@@ -1,0 +1,18 @@
+uuid: e44a1b4b-121f-4b1e-9d06-32b58dbd3bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.download_portal
+id: node.download_portal.title
+field_name: title
+entity_type: node
+bundle: download_portal
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

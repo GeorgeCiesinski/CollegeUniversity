@@ -1,0 +1,15 @@
+uuid: f3905905-b46d-42cf-9ce4-14a31138d414
+langcode: en
+status: true
+dependencies: {  }
+name: hero_s_1000_x_600
+label: "Hero sm - 976 x 600\t"
+effects:
+  f5f73976-4cd7-4263-88a1-2a06117ba907:
+    uuid: f5f73976-4cd7-4263-88a1-2a06117ba907
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 976
+      height: 600
+      anchor: center-center

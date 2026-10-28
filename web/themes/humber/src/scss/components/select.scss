@@ -1,0 +1,12 @@
+/**
+ * Styles select elements
+ */
+
+@use "../abstracts" as *;
+
+select {
+  border: 1px solid $primary-blue-500;
+  border-radius: $radius-md;
+  padding: 0 0.5rem;
+  width: 17rem;
+}

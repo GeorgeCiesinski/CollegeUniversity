@@ -1,0 +1,24 @@
+uuid: 59c86e7a-b81c-4f5a-81a9-5a5b7ef14a67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.download_portal
+  module:
+    - text
+id: node.download_portal.body
+field_name: body
+entity_type: node
+bundle: download_portal
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

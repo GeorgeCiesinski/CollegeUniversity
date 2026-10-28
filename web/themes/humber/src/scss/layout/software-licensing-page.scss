@@ -1,0 +1,169 @@
+/**
+ * Styling for software licensing page
+ */
+
+@use "../abstracts" as *;
+
+.block-views-blockdownload-portals-block-1 {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  h2 {
+    color: white;
+    text-shadow: 3px 3px 3px $transparent-blue;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin: 2rem 0.5rem 3rem 0.5rem;
+  }
+}
+
+.portal-wrapper {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.portal-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 3rem $margin-xs;
+}
+
+// Flip Card
+.portal-item {
+  position: relative;
+  width: 272px;
+  height: 340px;
+  border-radius: $radius-md;
+  perspective: 1000px;
+
+  >div {
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    transition: all ease-in-out .5s;
+    transform-style: preserve-3d;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the backside */
+  }
+
+  .views-field-title {
+    z-index: 2;
+    background-color: transparent;
+    width: 100%;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    overflow: hidden;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: linear-gradient(transparent, $primary-blue-700);
+    border-radius: 0 0 $radius-md $radius-md;
+  }
+
+  .views-field-field-portal-image {
+    z-index: 1;
+    overflow: hidden;
+    filter: drop-shadow(5px 5px $primary-blue-200);
+    
+    img {
+      border-radius: $radius-md;
+    }
+  }
+
+  .views-field-body {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.1rem;
+    color: white;
+    background-color: $primary-blue-700;
+    display: flex;
+    border-radius: $radius-md;
+    filter: drop-shadow(5px 5px $primary-blue-200);
+
+    p {
+      margin: 0;
+      padding: 1rem;
+    }
+  }
+
+  .views-field-field-portal-link {
+    bottom: 0;
+    padding: 2rem;
+
+    a {
+      padding: 0.5rem;
+      color: black;
+      background-color: white;
+      text-decoration: none;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #f1f1f1;
+      }
+    }
+  }
+
+  .views-field-body,
+  .views-field-field-portal-link {
+    transform: rotateY(-180deg);
+  }
+  
+  &:hover {
+    .views-field-title,
+    .views-field-field-portal-image {
+      transform: rotateY(180deg);
+    }
+
+    .views-field-body,
+    .views-field-field-portal-link{
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.view-student-software {
+  .filters {
+    margin: 0 0 2rem 0;
+  }
+}
+
+.views-field-field-link-name {
+  h3 {
+    margin: 0.5rem 0;
+  }
+}
+
+@include breakpoint(sm) {
+  .block-views-blockdownload-portals-block-1 {
+    h2 {
+      width: $content-sm;
+      margin: 3rem auto;
+    }
+  }
+
+  .portal-wrapper {
+    width: $content-sm;
+    margin: 0 auto;
+  }
+}
+
+@include breakpoint(md) {
+  .block-views-blockdownload-portals-block-1 {
+    h2 {
+      width: $content-md;
+    }
+    .portal-wrapper {
+      width: $content-md;
+    }
+  }
+}

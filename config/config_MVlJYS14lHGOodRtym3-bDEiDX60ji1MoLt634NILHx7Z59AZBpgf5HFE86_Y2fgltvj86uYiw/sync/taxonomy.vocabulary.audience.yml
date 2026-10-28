@@ -1,0 +1,9 @@
+uuid: 25471f75-130c-4472-850a-09212e1765d9
+langcode: en
+status: true
+dependencies: {  }
+name: Audience
+vid: audience
+description: 'Type of audience viewing quick actions.'
+weight: 0
+new_revision: false

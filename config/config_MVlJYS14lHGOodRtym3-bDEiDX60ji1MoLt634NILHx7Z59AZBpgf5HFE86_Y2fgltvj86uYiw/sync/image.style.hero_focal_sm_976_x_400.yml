@@ -1,0 +1,17 @@
+uuid: 5de66144-c568-4724-81a4-b02e5fcfbc30
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_focal_sm_976_x_400
+label: 'Hero Focal sm - 976 x 600'
+effects:
+  38918042-0f6e-4e12-8f55-cf051b700681:
+    uuid: 38918042-0f6e-4e12-8f55-cf051b700681
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 976
+      height: 600
+      crop_type: focal_point

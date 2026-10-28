@@ -1,0 +1,57 @@
+uuid: 4f1ab429-6166-4392-a601-b1c24f55015e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location.field_map_link
+    - field.field.node.location.field_open_hours
+    - field.field.node.location.field_room
+    - node.type.location
+  module:
+    - iframe
+    - text
+    - user
+id: node.location.default
+targetEntityType: node
+bundle: location
+mode: default
+content:
+  field_map_link:
+    type: iframe_default
+    label: visually_hidden
+    settings:
+      url: ''
+      title: ''
+      headerlevel: '3'
+      class: ''
+      frameborder: '0'
+      scrolling: ''
+      transparency: '0'
+      allowfullscreen: '0'
+      tokensupport: '0'
+      width: ''
+      height: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_open_hours:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_room:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

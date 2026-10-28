@@ -1,0 +1,63 @@
+# Drupal / Composer project gitignore
+# Based on drupal/recommended-project and Drupal core's example.gitignore.
+
+# Composer-managed dependencies (reinstall with: ddev composer install)
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+/drush/Commands/contrib/
+/drush/contrib/
+
+# Drupal user-generated and private files
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/simpletest/
+
+# Sensitive and local Drupal settings
+# Keep default.settings.php and default.services.yml tracked.
+/web/sites/*/settings*.php
+!/web/sites/*/default.settings.php
+/web/sites/*/*services*.yml
+!/web/sites/*/default.services.yml
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Node (theme Sass watcher: npm install)
+/node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Generated Sass source maps
+*.css.map
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local debug files
+/web/phpinfo.php
+
+# DDEV database snapshots (created by `ddev snapshot`)
+/.ddev/db_snapshots/
+
+# Local backup archives (see BACKUP.md)
+/backups/
+/.tarballs/
+/*.sql
+/*.sql.gz
+/*.mysql
+
+# PHPUnit / test output
+.phpunit.result.cache
+/web/sites/simpletest

@@ -1,0 +1,11 @@
+uuid: 1b2d358c-8689-47f2-8e4e-67c46e6500e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_embed_x_large_700x700
+label: 'Media Embed X-Large 700x700'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,17 @@
+uuid: 918dad94-fbde-488f-83e3-af109ac96d72
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Beautiful Text'
+type: beautiful_text
+description: "A section containing text and optional background image.\r\n\r\nAppears on specified Beautiful Page content types."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

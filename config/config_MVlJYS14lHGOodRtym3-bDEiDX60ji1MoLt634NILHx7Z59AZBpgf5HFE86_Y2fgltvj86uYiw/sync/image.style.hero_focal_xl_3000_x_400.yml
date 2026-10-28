@@ -1,0 +1,17 @@
+uuid: 9342d07a-5cdb-4d6b-a273-e9287e794444
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_focal_xl_3000_x_400
+label: 'Hero Focal xl - 3000 x 400'
+effects:
+  aad76bf9-4046-4c0a-aae0-154c3963516b:
+    uuid: aad76bf9-4046-4c0a-aae0-154c3963516b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 3000
+      height: 400
+      crop_type: focal_point

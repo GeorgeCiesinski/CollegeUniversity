@@ -1,0 +1,32 @@
+uuid: 83ec3789-ad89-4810-a39d-9f8417faff1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.testomonial.body
+    - field.field.node.testomonial.field_job_title
+    - node.type.testomonial
+  module:
+    - text
+    - user
+id: node.testomonial.teaser
+targetEntityType: node
+bundle: testomonial
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_job_title: true

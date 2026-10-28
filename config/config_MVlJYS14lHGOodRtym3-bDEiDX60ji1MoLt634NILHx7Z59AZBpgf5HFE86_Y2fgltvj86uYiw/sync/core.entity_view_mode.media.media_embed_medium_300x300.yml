@@ -1,0 +1,11 @@
+uuid: 6bbc0db7-c3b3-4062-93b0-2ee02cbfe0aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_embed_medium_300x300
+label: 'Media Embed Medium 300x300'
+description: ''
+targetEntityType: media
+cache: true

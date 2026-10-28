@@ -1,0 +1,92 @@
+uuid: 8a06062b-2677-4b7a-beab-c7c89dad81c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.leader.field_campus
+    - field.field.node.leader.field_email
+    - field.field.node.leader.field_leader_description
+    - field.field.node.leader.field_leader_image
+    - field.field.node.leader.field_leader_weight
+    - field.field.node.leader.field_office
+    - field.field.node.leader.field_phone
+    - field.field.node.leader.field_title
+    - node.type.leader
+  module:
+    - svg_image
+    - text
+    - user
+id: node.leader.default
+targetEntityType: node
+bundle: leader
+mode: default
+content:
+  field_campus:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_email:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_leader_description:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_leader_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_office:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_leader_weight: true

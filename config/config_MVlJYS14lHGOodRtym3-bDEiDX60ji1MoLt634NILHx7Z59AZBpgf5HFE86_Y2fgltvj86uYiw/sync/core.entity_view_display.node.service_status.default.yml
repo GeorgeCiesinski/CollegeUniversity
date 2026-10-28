@@ -1,0 +1,37 @@
+uuid: 6672c054-04f0-4e89-aaf0-5dd474b6cc16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service_status.field_short_summary
+    - field.field.node.service_status.field_status
+    - node.type.service_status
+  module:
+    - text
+    - user
+id: node.service_status.default
+targetEntityType: node
+bundle: service_status
+mode: default
+content:
+  field_short_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

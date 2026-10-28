@@ -1,0 +1,17 @@
+uuid: 0a63f846-e139-49d8-b68b-b8c6eb936fb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_focal_md_1200_x_400
+label: 'Hero Focal md - 1200 x 400'
+effects:
+  f5a5e420-ef0a-454b-ac22-235cb99fbbba:
+    uuid: f5a5e420-ef0a-454b-ac22-235cb99fbbba
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 400
+      crop_type: focal_point

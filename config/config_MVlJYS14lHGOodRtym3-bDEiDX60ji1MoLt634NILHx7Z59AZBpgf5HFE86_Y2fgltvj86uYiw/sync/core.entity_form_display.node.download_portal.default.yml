@@ -1,0 +1,88 @@
+uuid: 75607175-5cc8-4ab4-ac1b-dfa7a2677de1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.download_portal.body
+    - field.field.node.download_portal.field_portal_image
+    - field.field.node.download_portal.field_portal_link
+    - image.style.4_3_portal_tile_272_x_340
+    - node.type.download_portal
+  module:
+    - focal_point
+    - link
+    - path
+    - text
+id: node.download_portal.default
+targetEntityType: node
+bundle: download_portal
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_portal_image:
+    type: image_focal_point
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: 4_3_portal_tile_272_x_340
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+  field_portal_link:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

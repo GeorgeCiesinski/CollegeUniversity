@@ -1,0 +1,29 @@
+uuid: 35465315-f37a-4e80-8a78-61c7690b33d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campus
+    - node.type.leader
+    - node.type.location
+id: node.leader.field_campus
+field_name: field_campus
+entity_type: node
+bundle: leader
+label: Campus
+description: 'Campus location of leader.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

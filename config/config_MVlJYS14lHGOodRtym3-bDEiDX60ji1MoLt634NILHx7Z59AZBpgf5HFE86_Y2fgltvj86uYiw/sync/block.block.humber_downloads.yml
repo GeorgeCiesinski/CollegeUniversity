@@ -1,0 +1,30 @@
+uuid: 6ad3a46d-1bc5-4e5e-9dd1-893796f66497
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:746bc1ff-3608-4586-8b96-6174300b363e'
+  module:
+    - block_content
+    - system
+  theme:
+    - humber
+id: humber_downloads
+theme: humber
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:746bc1ff-3608-4586-8b96-6174300b363e'
+settings:
+  id: 'block_content:746bc1ff-3608-4586-8b96-6174300b363e'
+  label: Downloads
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/startup/students\r\n/startup/staff"

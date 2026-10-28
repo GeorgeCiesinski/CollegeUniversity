@@ -1,0 +1,17 @@
+uuid: 2228cf9b-df6c-4005-abc5-79e895763132
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 4_3_portal_tile_272_x_340
+label: '4:3 Portal Tile - 272 x 340'
+effects:
+  8e1103d5-bac1-4761-a112-da7bf5f83927:
+    uuid: 8e1103d5-bac1-4761-a112-da7bf5f83927
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 272
+      height: 340
+      crop_type: focal_point

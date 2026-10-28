@@ -1,0 +1,53 @@
+/**
+ * Styles Buttons
+ * 
+ * Including button style links
+ */
+
+@use "../abstracts" as *;
+
+button, input.button, a.button {
+  cursor: pointer;
+  position: relative;
+  padding: 0.25rem;
+  width: 7rem;
+  color: white;
+  background-color: $primary-blue-500;
+  border: 1px solid $primary-blue-500;
+  border-radius: $radius-sm;
+
+  &:hover {
+    background-color: $primary-blue-400;
+    border-color: $primary-blue-400;
+  }
+}
+
+a.button {
+  text-decoration: none;
+}
+
+span {
+  &.file {
+    width: fit-content;
+    background-color: $primary-blue-500;
+    border: 1px solid $primary-blue-500;
+    border-radius: $radius-sm;
+    padding: 0.25rem;
+
+    > a {
+      text-decoration: none;
+      width: fit-content;
+      color: white;
+      padding-left: 1rem;
+    }
+
+    &:hover {
+      background-color: $primary-blue-400;
+      border-color: $primary-blue-400;
+
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
+} 

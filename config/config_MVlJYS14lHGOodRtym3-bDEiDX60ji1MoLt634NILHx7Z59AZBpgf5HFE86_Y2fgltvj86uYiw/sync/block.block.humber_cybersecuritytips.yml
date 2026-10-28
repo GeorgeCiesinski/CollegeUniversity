@@ -1,0 +1,30 @@
+uuid: fb626163-bf79-4769-8816-36f3291eaa3e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4a06a60a-296b-46fb-bbe9-5632511e7630'
+  module:
+    - block_content
+    - system
+  theme:
+    - humber
+id: humber_cybersecuritytips
+theme: humber
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:4a06a60a-296b-46fb-bbe9-5632511e7630'
+settings:
+  id: 'block_content:4a06a60a-296b-46fb-bbe9-5632511e7630'
+  label: 'Cybersecurity Tips'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /its-security

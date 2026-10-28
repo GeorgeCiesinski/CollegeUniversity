@@ -1,0 +1,17 @@
+uuid: 4044a2a5-0c17-4003-b904-626c0839f2ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: media_embed_medium_300x300
+label: 'Media Embed Medium 300x300'
+effects:
+  08659463-5873-4f90-bac4-826a098e90a2:
+    uuid: 08659463-5873-4f90-bac4-826a098e90a2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      crop_type: focal_point

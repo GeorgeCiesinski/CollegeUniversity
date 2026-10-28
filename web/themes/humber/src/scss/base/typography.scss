@@ -1,0 +1,78 @@
+/**
+ * Base font styles to be used throughout the Humber theme
+ */
+
+@use '../abstracts' as *;
+
+/**
+ * roboto-mono-regular - latin  
+ * 
+ * Monospace font used for width: _ch; styling where elements are set to multiples
+ * of a single character width.
+ */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/roboto-mono-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;  // Uses browser's default font-size setting - allows users to control font size
+}
+
+blockquote {
+  margin: 0;
+  p {
+    &:before, &:after {
+      color: $primary-blue-500;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 1.5rem;
+    }
+    &:before {
+      content: '“';
+    }
+    &:after {
+      content: '”';
+    }
+  }
+}
+
+p, li {
+  font-weight: 500;
+  line-height: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-blue-500;
+  // margin: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}

@@ -1,0 +1,29 @@
+uuid: a023be52-8899-4ffa-a15d-d541e0c8ea31
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.support_pages_block
+  module:
+    - system
+    - views
+  theme:
+    - humber
+id: humber_views_block__support_pages_block_block_1
+theme: humber
+region: content
+weight: -22
+provider: null
+plugin: 'views_block:support_pages_block-block_1'
+settings:
+  id: 'views_block:support_pages_block-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

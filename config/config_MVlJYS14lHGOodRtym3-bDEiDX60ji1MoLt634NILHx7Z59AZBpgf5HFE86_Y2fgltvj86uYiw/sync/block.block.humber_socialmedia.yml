@@ -1,0 +1,30 @@
+uuid: 3ec8e507-3e8a-41e5-9322-fadc022cf4b6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3146f771-5615-4db3-a0d4-969f6dcaac25'
+  module:
+    - block_content
+    - system
+  theme:
+    - humber
+id: humber_socialmedia
+theme: humber
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:3146f771-5615-4db3-a0d4-969f6dcaac25'
+settings:
+  id: 'block_content:3146f771-5615-4db3-a0d4-969f6dcaac25'
+  label: Socials
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/contact\r\n/startup/students\r\n/startup/staff\r\n/its-security"

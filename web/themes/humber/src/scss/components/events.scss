@@ -1,0 +1,97 @@
+/**
+ * Styles events page & planned maintenance block
+ */
+
+ @use "../abstracts" as *;
+
+.block-views-blockevents-block-1, .block-views-blockplanned-maintenance-block-1 {
+  padding-bottom: 6rem;
+  width: 100%; 
+
+  h2 {
+    width: 100%;
+    margin: 0 $margin-xs 1rem $margin-xs;
+  }
+
+  .views-field-field-event-type {
+  width: fit-content;
+  background-color: $primary-blue-400;
+  border-radius: $radius-md;
+  padding: 0.25rem 0.5rem;
+
+  a {
+    color: white;
+    text-decoration:none;
+  }
+
+  &:hover {
+    background-color: $primary-blue-500;
+  }
+  }
+}
+
+.event-wrapper {
+  width: 100%;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 0 $margin-xs;
+}
+
+.event-item {
+  background-color: ghostwhite;
+  border: 1px solid $primary-blue-500;
+  border-radius: $radius-md;
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-200;
+
+  .views-field-title {
+    color: $primary-blue-500;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .views-field-field-date {
+    margin: 1rem 0;
+    width: fit-content;
+
+    time {
+      font-weight: 700;
+    }
+  }
+
+  .views-field-field-description {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .block-views-blockevents-block-1, .block-views-blockplanned-maintenance-block-1 {
+    h2, .event-list {
+      width: $content-sm;
+      margin: 0 auto 1.5rem;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .block-views-blockevents-block-1, .block-views-blockplanned-maintenance-block-1 {
+    h2, .event-list {
+      width: $content-md;
+      margin: 0 auto 1.5rem;
+    }
+  }
+}

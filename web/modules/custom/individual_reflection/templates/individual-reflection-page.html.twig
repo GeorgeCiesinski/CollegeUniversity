@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Main page template for the individual reflection module.
+ *
+ * Available variables:
+ * - indicators: An array of indicators, each containing sections, questions, and course recommendations.
+ */
+#}
+<div id="individual-reflection-page">
+
+{# Include introduction partial #}
+{% include '@individual_reflection/templates/partials/introduction.html.twig' %}
+
+{# Include questionnaire-form partial #}
+{% include '@individual_reflection/templates/partials/questionnaire-form.html.twig' %}
+
+{# Include results #}
+{% include '@individual_reflection/templates/partials/results.html.twig' %}
+
+</div>

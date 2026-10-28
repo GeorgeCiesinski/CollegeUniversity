@@ -1,0 +1,17 @@
+uuid: a5fc5280-d13c-461b-8675-b4ace02e166e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: "Humber location information.\r\n\r\nThis contains information about Campus Locations.\r\n\r\nAppears on the Contact page."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

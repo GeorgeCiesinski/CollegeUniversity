@@ -1,0 +1,132 @@
+/**
+ * Styles Fullcalendar View Event Calendar
+ * 
+ * Requires Fullcalendar module
+ */
+
+@use "../abstracts" as *;
+
+.block-views-blockevent-calendar-block-1 {
+  margin: 0 $margin-xs;
+
+  >h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 2rem;
+  }
+}
+
+.event-calendar {
+  width: 100%;
+
+  .fc-toolbar {
+    flex-direction: column;
+
+    .fc-left {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .fc-center {
+      margin: 0.5rem;
+    }
+  }
+
+  .fc-timeGridWeek-view {
+    overflow-x: scroll;
+
+    >table {
+      width: 100rem;
+    }
+  }
+
+  .fc-day-header {
+    padding: 0.5rem;
+  }
+
+  .fc-day-number {
+    width: auto;
+  }
+
+  .fc-day {
+    background-color: $primary-blue-50;
+  }
+
+  // Table
+  .fc-unthemed {
+    td {
+      border: 1px solid $primary-blue-500;
+
+      .fc-today {
+        background-color: $primary-blue-100;
+      }
+    }
+
+    .fc-event {
+      border: none;
+      box-sizing: border-box;
+      padding: 2px 4px;
+      margin: 2px 0 0 0;
+    }
+
+  }
+
+  .fc-more-popover {
+    border: 1px solid $primary-blue-500;
+    transform: scale(1.2);
+  }
+
+  // Scroll event names
+  .fc-event {
+    overflow: hidden;
+
+    .fc-content {
+      width: fit-content;
+
+      .fc-time {
+        display: none;
+      }
+
+      .fc-time, .fc-title {
+        text-align: left;
+      }
+
+      .fc-title {
+        transition: transform 0.1s linear;
+      }
+    }
+
+    &:hover {
+      .fc-content {
+        .fc-time, .fc-title {
+          display: block;
+        }
+
+        .fc-title {
+          transform: translateX(min((calc(-1 * (100% - 120px))), 0px));
+          transition: transform 3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .block-views-blockevent-calendar-block-1 {
+    width: $content-sm;
+    margin: 0 auto;
+
+    .fc-toolbar {
+      flex-direction: row;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .block-views-blockevent-calendar-block-1 {
+    width: $content-md;
+    margin: 0 auto;
+  }
+}
+

@@ -1,0 +1,7 @@
+individual_reflection.page:
+  path: '/individual-reflection'
+  defaults:
+    _controller: '\Drupal\individual_reflection\Controller\IndividualReflectionController::page'
+    _title: 'Digital Fluency - Individual Reflection'
+  requirements:
+    _permission: 'access content'

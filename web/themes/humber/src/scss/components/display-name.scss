@@ -1,0 +1,12 @@
+/**
+ * Styles display name field
+ */
+
+.field--name-field-display-name {
+  display: flex;
+  gap: 1rem;
+
+  .field__label:after {
+    content: ":"
+  }
+}

@@ -1,0 +1,29 @@
+uuid: 36c772cf-9c4f-45dc-a677-9cf0470e6025
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.duplicate_of_student_services
+  module:
+    - system
+    - views
+  theme:
+    - humber
+id: humber_views_block__duplicate_of_student_services_block_1
+theme: humber
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:duplicate_of_student_services-block_1'
+settings:
+  id: 'views_block:duplicate_of_student_services-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /all-support

@@ -1,0 +1,18 @@
+uuid: 353a1d9f-f950-4410-81db-bdfa16707043
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ai_profile
+id: node.ai_profile.title
+field_name: title
+entity_type: node
+bundle: ai_profile
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

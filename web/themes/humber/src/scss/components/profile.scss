@@ -1,0 +1,31 @@
+/**
+ * Styling for profile
+ * Visible after logging in
+ */
+
+ @use "../abstracts" as *;
+
+.profile {
+  >div {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@include breakpoint(sm) {
+  .profile {
+    >div {
+      width: $content-sm;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .profile {
+    >div {
+      width: $content-md;
+      margin: 0 auto;
+    }
+  }
+}

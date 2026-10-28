@@ -1,0 +1,24 @@
+/**
+ * Styling for responsive grid views
+ */
+
+@use "../abstracts" as *;
+
+.views-view-responsive-grid--horizontal {
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+}
+
+.views-view-responsive-grid__item {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: $radius-md;
+  justify-content: center;
+
+  &:hover {
+    background-color: $primary-blue-50;
+  }
+
+  h2 {
+    width: 100% !important;
+  }
+}

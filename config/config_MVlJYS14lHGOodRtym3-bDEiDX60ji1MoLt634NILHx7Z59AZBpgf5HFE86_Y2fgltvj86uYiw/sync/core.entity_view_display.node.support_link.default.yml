@@ -1,0 +1,50 @@
+uuid: b971d48e-0cf6-430a-b507-cc363322f486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.support_link.field_support_icon
+    - field.field.node.support_link.field_support_link
+    - node.type.support_link
+  module:
+    - link
+    - svg_image
+    - user
+id: node.support_link.default
+targetEntityType: node
+bundle: support_link
+mode: default
+content:
+  field_support_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_support_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,38 @@
+uuid: d4b9c03c-069e-4ae1-b76a-17b03c581654
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testomonial.body
+    - field.field.node.testomonial.field_job_title
+    - node.type.testomonial
+  module:
+    - text
+    - user
+id: node.testomonial.default
+targetEntityType: node
+bundle: testomonial
+mode: default
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_job_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

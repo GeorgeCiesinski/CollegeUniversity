@@ -1,0 +1,17 @@
+uuid: 48aa8e5b-8b8d-499c-afad-1e3305f08d87
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_focal_xs_768_x_400
+label: 'Hero Focal xs - 768 x 600'
+effects:
+  a4c540ff-df2a-4088-ae05-e2419235a73b:
+    uuid: a4c540ff-df2a-4088-ae05-e2419235a73b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 600
+      crop_type: focal_point

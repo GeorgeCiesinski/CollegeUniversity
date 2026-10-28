@@ -1,0 +1,19 @@
+uuid: 1a066a96-9ca8-4eb0-bd7a-57e6aa32e36e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.leader
+id: node.leader.field_phone
+field_name: field_phone
+entity_type: node
+bundle: leader
+label: Phone
+description: 'Phone number of leader.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

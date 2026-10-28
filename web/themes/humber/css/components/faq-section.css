@@ -1,0 +1,69 @@
+/**
+ * Styling for FAQ dropdown in guides
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the Humber theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+.faq-heading {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.faq-heading span {
+  color: #004b78;
+}
+.faq-heading:hover {
+  background-color: ghostwhite;
+  border-radius: 5px;
+}
+
+.faq-dropdown.active {
+  display: block;
+}
+.faq-dropdown:not(.active) {
+  display: none;
+}
+
+/*# sourceMappingURL=faq-section.css.map */

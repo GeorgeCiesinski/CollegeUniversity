@@ -1,0 +1,17 @@
+uuid: 0cd01c5d-06a3-4870-8e0e-d028e3d8f3fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_lg_1920_x_400
+label: 'Hero Focal lg - 1920 x 400'
+effects:
+  8773d529-28ed-4204-a161-8933b5ec1850:
+    uuid: 8773d529-28ed-4204-a161-8933b5ec1850
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 400
+      crop_type: focal_point

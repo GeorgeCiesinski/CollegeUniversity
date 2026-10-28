@@ -1,0 +1,17 @@
+uuid: dd56ebdb-8765-4f10-829e-1ea126471e0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Download Portal'
+type: download_portal
+description: "Links to internal or external software download portals.\r\n\r\nAppears on the Software Licensing & Deployment page."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

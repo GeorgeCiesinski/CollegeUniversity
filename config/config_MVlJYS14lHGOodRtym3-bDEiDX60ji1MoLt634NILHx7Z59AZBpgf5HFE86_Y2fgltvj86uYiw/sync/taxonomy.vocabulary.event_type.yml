@@ -1,0 +1,9 @@
+uuid: ed377301-adb2-4aca-8b26-4502c6a4f8ac
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Type'
+vid: event_type
+description: 'Type of event seen on calendar.'
+weight: 0
+new_revision: false

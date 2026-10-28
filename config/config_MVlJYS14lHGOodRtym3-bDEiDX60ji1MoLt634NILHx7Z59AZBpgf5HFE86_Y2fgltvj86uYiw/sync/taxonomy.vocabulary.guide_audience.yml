@@ -1,0 +1,9 @@
+uuid: 6e9f024a-fa55-48f6-8d3b-49ea989ff10b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Guide Audience'
+vid: guide_audience
+description: 'Type of audience viewing guides.'
+weight: 0
+new_revision: false

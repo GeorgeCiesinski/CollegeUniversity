@@ -1,0 +1,149 @@
+<?php
+/**
+ * @file
+ * Main module file for the Individual Reflection module.
+ *
+ * This module provides the functionality for the Individual Reflection
+ * questionnaire and training recommendation system. It defines theme hooks,
+ * preprocess functions, and shared data structures used by Twig templates.
+ *
+ * Responsibilities of this file include:
+ * - Registering custom Twig templates via hook_theme().
+ * - Preparing variables and structured data for templates using preprocess hooks.
+ * - Providing indicator and question metadata used to dynamically generate
+ *   the questionnaire interface.
+ *
+ * The indicators array defined in preprocess functions serves as the
+ * single source of truth for:
+ * - Questionnaire questions
+ * - Associated course recommendations
+ * - Section identifiers used by JavaScript logic
+ *
+ * @package Drupal\individual_reflection
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function individual_reflection_theme($existing, $type, $theme, $path) {
+  return [
+    // Base landing page
+    'individual_reflection_page' => [
+      'template' => 'individual-reflection-page',
+      'render element' => 'elements',
+    ]
+  ];
+}
+
+/**
+ * Preprocess variables for individual_reflection_page templates.
+ */
+function individual_reflection_preprocess_individual_reflection_page(array &$variables) {
+  $variables['module_path'] = \Drupal::service('extension.list.module')->getPath('individual_reflection');
+
+  /*
+   * Defines the indicators, sections, questions/options and courses for use in Twig templates.
+   */
+  $variables['indicators'] = [
+    [
+      'title' => 'Indicator 1: User engages with digital tools and spaces ethically and appropriately',
+      'sections' => [
+        [
+          'id' => 'accessibility-considerations',
+          'question' => 'How often do you think about accessibility when you work with digital tools?',
+          'course' => 'Accessibility in a Digital Context',
+        ],
+        [
+          'id' => 'personal-data',
+          'question' => "How often does your work involve handling other people's personal data?",
+          'course' => 'Privacy',
+        ],
+        [
+          'id' => 'cybersecurity-guidelines',
+          'question' => "How familiar are you with Humber's cybersecurity and safety guidelines?",
+          'options' => ['very familiar', 'somewhat familiar', 'not familiar'],
+          'course' => 'Cybersecurity',
+        ],
+        [
+          'id' => 'equity-inclusion',
+          'question' => 'How often do you review and question how digital tools impact  equity and inclusion?',
+          'course' => 'Inclusion in a Digital Context',
+        ],
+        [
+          'id' => 'generative-ai',
+          'question' => 'How often do you use generative AI to complete tasks at work?',
+          'course' => 'Digital Ethics & Responsible AI',
+        ],
+        [
+          'id' => 'environmental-impact',
+          'question' => 'How often do you question the  environmental impact of the digital tools you use at work?',
+          'course' => 'Digital Sustainability',
+        ],
+      ],
+    ],
+    [
+      'title' => 'Indicator 2: User adapts to a variety of circumstances and technologies',
+      'sections' => [
+        [
+          'id' => 'ai-interest',
+          'question' => 'Would you like to improve your skills using generative AI?',
+          'options' => ['yes', 'no'],
+          'course' => 'Adapting with AI in the Workplace',
+        ],
+        [
+          'id' => 'career-interest',
+          'question' => 'Would you like to improve your flexibility and focus in the workplace?',
+          'options' => ['yes', 'no'],
+          'course' => 'Building Focus and Flexibility in Changing Workplaces',
+        ],
+        [
+          'id' => 'leadership-interest',
+          'question' => "Would you like to improve your skills to lead yourself and others in dynamic work environments?",
+          'options' => ['yes', 'no'],
+          'course' => 'Leading Self and Others in a Dynamic Work Environment',
+        ],
+      ],
+    ],
+    [
+      'title' => 'Indicator 3: User engages with information in digital spaces',
+      'sections' => [
+        [
+          'id' => 'digital-confidence',
+          'question' => 'How confident are you in your ability to find trustworthy information online?',
+          'options' => ['very confident', 'somewhat confident', 'not confident'],
+          'course' => 'Information and Digital Literacy',
+        ],
+        [
+          'id' => 'collaboration-interest',
+          'question' => 'Would you like to  improve your collaboration skills for online work environments?',
+          'options' => ['yes', 'no'],
+          'course' => 'Digital Workplaces',
+        ],
+        [
+          'id' => 'digital-tools-interest',
+          'question' => "Would you like to improve your skills using digital tools and apps?",
+          'options' => ['yes', 'no'],
+          'course' => 'Tools for Engaging Digitally',
+        ],
+      ],
+    ],
+    [
+      'title' => 'Indicator 4: User responds to tech issues and solves problems in real time',
+      'sections' => [
+        [
+          'id' => 'troubleshooting-interest',
+          'question' => 'Would you like to improve your hardware and software troubleshooting skills?',
+          'options' => ['yes', 'no'],
+          'course' => 'Troubleshooting with Hardware and Software',
+        ],
+        [
+          'id' => 'resources-interest',
+          'question' => 'Would you like to be more knowledgeable about Humber’s digital resources and support services?',
+          'options' => ['yes', 'no'],
+          'course' => 'Resources and Links Specific to Humber Polytechnic',
+        ],
+      ],
+    ],
+  ];
+}

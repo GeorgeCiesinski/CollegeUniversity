@@ -1,0 +1,15 @@
+uuid: f615d725-4919-456f-a6aa-38cddb642bda
+langcode: en
+status: true
+dependencies: {  }
+name: media_embed_large_500x500
+label: 'Media Embed Large 500x500'
+effects:
+  0c4eefa3-3d2c-49aa-93ae-5abd4d7e1ba9:
+    uuid: 0c4eefa3-3d2c-49aa-93ae-5abd4d7e1ba9
+    id: image_scale
+    weight: 1
+    data:
+      width: 500
+      height: 500
+      upscale: false

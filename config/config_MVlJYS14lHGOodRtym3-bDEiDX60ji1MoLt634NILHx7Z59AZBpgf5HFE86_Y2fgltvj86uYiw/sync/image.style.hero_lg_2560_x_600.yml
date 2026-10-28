@@ -1,0 +1,15 @@
+uuid: 53060cd4-c2f2-44a3-bed2-68a6eaa40643
+langcode: en
+status: true
+dependencies: {  }
+name: hero_lg_2560_x_600
+label: 'Hero lg - 1920 x 400'
+effects:
+  8cd04501-7f64-48ee-9ef1-c326dd744629:
+    uuid: 8cd04501-7f64-48ee-9ef1-c326dd744629
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 400
+      anchor: center-center

@@ -1,0 +1,6 @@
+custom_scroll:
+  version: 1.0
+  js:
+    js/custom_scroll.js: {}
+  dependencies:
+    - core/drupal

@@ -1,0 +1,18 @@
+uuid: 33683170-20dd-4722-a7d6-a9c4ac22c91d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Hero Image'
+type: hero_image
+description: "Hero image, text, and link. \r\n\r\nThis appears in the Home Page Hero section. "
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,43 @@
+uuid: d46836ad-e74f-4045-8399-34b115ce4660
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.webform_default
+  module:
+    - admin_toolbar_search
+    - background_image
+    - ckeditor5_premium_features_wproofreader
+    - comment
+    - contact
+    - file
+    - filter
+    - media
+    - message_banner
+    - shortcut
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'ckeditor5 wproofreader add word'
+  - 'ckeditor5 wproofreader ignore all'
+  - 'delete own background image'
+  - 'delete own files'
+  - 'edit own background image'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use admin toolbar search'
+  - 'use text format full_html'
+  - 'use text format webform_default'
+  - 'view background image'
+  - 'view media'
+  - 'view message banner'

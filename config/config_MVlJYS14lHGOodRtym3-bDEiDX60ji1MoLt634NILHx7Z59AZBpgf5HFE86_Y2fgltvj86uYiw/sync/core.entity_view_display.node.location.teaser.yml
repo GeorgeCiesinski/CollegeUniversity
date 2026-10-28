@@ -1,0 +1,26 @@
+uuid: 25ac9f98-7a56-4fba-a9e6-f6de9c1d0944
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.field_map_link
+    - field.field.node.location.field_open_hours
+    - field.field.node.location.field_room
+    - node.type.location
+  module:
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_map_link: true
+  field_open_hours: true
+  field_room: true

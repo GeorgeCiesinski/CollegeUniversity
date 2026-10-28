@@ -1,0 +1,115 @@
+/**
+ * Styling for Service Status Dashboard Page
+ * 
+ * This page contains the planned maintenance block which is styled in components/planned-maintenance.scss
+ */
+
+@use "../abstracts" as *;
+
+.block-views-blockstatus-overview-block-1 {
+  display: block;
+  background-color: ghostwhite;
+  border: 1px solid $primary-blue-500;
+  border-radius: $radius-md;
+  margin: 0 $margin-xs 2rem;
+  box-shadow: 5px 5px 5px $primary-blue-200;
+
+  h2 {
+    margin: 1rem;
+  }
+}
+
+.status-overview {
+  font-size: 1.1rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 1rem 0;
+
+    .views-field-field-status, >div {
+      margin: 0 1rem;
+    }
+
+    span {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed $primary-blue-500;
+    }
+
+  }
+
+  .views-field-title {
+    font-weight: bold;
+    width: 10rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // Contains status-icons and status-operational/partial/critical elements
+  .views-field-field-status {
+    display: flex;
+    width: 12rem;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .views-field-field-short-summary { 
+    p {
+      margin: 0 1rem;
+    }
+  }
+
+  .status-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    color: white; 
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .icon-operational {
+    background-color: green;
+  }
+
+  .icon-partial {
+    background-color: darkorange;
+  }
+
+  .icon-maintenance {
+    background-color: dodgerblue;
+  }
+
+  .icon-critical {
+    background-color: red;
+  }
+}
+
+@include breakpoint(sm) {
+  .block-views-blockstatus-overview-block-1 {
+    width: $content-sm;
+    margin: 0 auto 4rem;
+  }
+}
+
+@include breakpoint(md) {
+  .block-views-blockstatus-overview-block-1 {
+    width: $content-md;
+  }
+}

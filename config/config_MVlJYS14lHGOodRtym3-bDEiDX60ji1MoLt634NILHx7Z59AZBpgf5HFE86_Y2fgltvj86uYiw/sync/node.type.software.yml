@@ -1,0 +1,17 @@
+uuid: 43bf06a4-de22-419d-9737-a8b4217f7d55
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Software
+type: software
+description: "Software links and information.\r\n\r\nAppears on Student Software page: \r\n\r\nSoftware Licensing & Deployment > Student Software"
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

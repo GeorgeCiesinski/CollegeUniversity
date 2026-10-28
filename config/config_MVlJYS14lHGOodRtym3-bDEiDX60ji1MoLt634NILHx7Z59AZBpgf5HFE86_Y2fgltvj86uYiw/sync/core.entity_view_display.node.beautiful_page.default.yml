@@ -1,0 +1,29 @@
+uuid: 9cc1ef58-b75a-4e6e-ac5a-8b59b5daa7b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.beautiful_page.body
+    - node.type.beautiful_page
+  module:
+    - text
+    - user
+id: node.beautiful_page.default
+targetEntityType: node
+bundle: beautiful_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

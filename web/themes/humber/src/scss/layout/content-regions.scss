@@ -1,0 +1,32 @@
+/**
+ * Styles the padding for main content elements
+ */
+
+@use "../abstracts" as *;
+
+#main-content {
+  position: absolute;
+}
+
+.region-content, .region-breadcrumb, .region-highlighted {
+  width: 100%;
+}
+
+// Excludes gin breadcrumb
+.gin-breadcrumb-wrapper {
+  .region-highlighted {
+    background-color: white;
+  }
+}
+
+.region-breadcrumb, .region-highlighted {
+  background-color: white;
+}
+
+.region-breadcrumb {
+  filter: drop-shadow(0 0.5rem 0.5rem $primary-blue-200);
+  position: -webkit-sticky; // Safari
+  position: sticky;
+  top: calc(var(--gin-toolbar-height, 0rem) + 4rem);  // Fallback value of 0 in case user is logged out and gin toolbar isn't instantiated
+  z-index: 101;
+}

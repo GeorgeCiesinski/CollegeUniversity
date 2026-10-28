@@ -1,0 +1,19 @@
+uuid: bbea4edc-43d8-4980-9ae4-be7d372d46f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_open_hours
+field_name: field_open_hours
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

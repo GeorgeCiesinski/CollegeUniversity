@@ -1,0 +1,18 @@
+uuid: 255e9ec6-ecb6-4aa6-83a8-02527290187e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Beautiful Page'
+type: beautiful_page
+description: "Similar to a normal page, but with a background image.\r\n\r\nThis is used for pages that should draw attention.\r\n\r\nAppears throughout the site. "
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

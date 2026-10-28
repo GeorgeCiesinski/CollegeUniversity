@@ -1,0 +1,26 @@
+uuid: 2432e3c8-bc96-4474-a6ce-7d6ce3353985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.guide
+  module:
+    - text
+id: node.guide.body
+field_name: body
+entity_type: node
+bundle: guide
+label: Body
+description: 'This contains the guide content including text, photos, and videos. You can organize the content of the guide using Heading 2 - 6 as Heading 1 is used for the title. You can also edit the source in order to embed videos from youtube or other sources.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

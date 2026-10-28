@@ -1,0 +1,33 @@
+uuid: a1222559-2a14-477e-a3cd-c4a6ebc5323d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ai_profile.body
+    - field.field.node.ai_profile.field_weight
+    - node.type.ai_profile
+  module:
+    - text
+    - user
+id: node.ai_profile.teaser
+targetEntityType: node
+bundle: ai_profile
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_weight: true
+  search_api_excerpt: true

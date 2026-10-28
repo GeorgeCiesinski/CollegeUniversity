@@ -1,0 +1,26 @@
+uuid: a0616002-bdaf-4c8e-85e9-c51a94ba47d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - humber
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: humber_page_title
+theme: humber
+region: content
+weight: -25
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/careers\r\n/software-licensing-deployment\r\n/startup/students\r\n/startup/staff\r\n/its-security\r\n/artificial-intelligence"

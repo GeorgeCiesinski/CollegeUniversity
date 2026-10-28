@@ -1,0 +1,114 @@
+/**
+ * Styles taxonomy view
+ * This view shows when a taxonomy item is clicked
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * Humber Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+Humber Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the Humber theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+.taxonomy-view {
+  padding-bottom: 6rem;
+  width: calc(100% - 1rem);
+}
+.taxonomy-view h2 {
+  width: 100%;
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.taxonomy-wrapper {
+  width: 100%;
+}
+
+.taxonomy-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.taxonomy-item {
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  background-color: #004b78;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem 0.5rem #6693ae;
+  padding: 0.5rem;
+}
+.taxonomy-item h2 {
+  width: 100%;
+  color: white;
+  margin: 0.5rem;
+}
+.taxonomy-item h2 a {
+  line-height: 1.6rem;
+}
+.taxonomy-item a {
+  color: white;
+}
+.taxonomy-item p {
+  width: calc(100% - 1rem);
+}
+.taxonomy-item p::after {
+  content: "...";
+}
+.taxonomy-item .node__content h2 {
+  margin: 1rem 0;
+}
+
+@media (min-width: 48rem) {
+  .taxonomy-view h2, .taxonomy-view .taxonomy-list {
+    width: 46rem;
+    margin: 0 auto 1.5rem;
+  }
+}
+@media (min-width: 61rem) {
+  .taxonomy-view h2, .taxonomy-view .taxonomy-list {
+    width: 58rem;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=taxonomy-view.css.map */

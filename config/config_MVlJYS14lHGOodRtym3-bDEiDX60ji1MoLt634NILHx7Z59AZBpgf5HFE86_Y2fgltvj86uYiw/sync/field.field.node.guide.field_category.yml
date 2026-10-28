@@ -1,0 +1,29 @@
+uuid: 179e592f-624f-4f93-805e-94cdf597991c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.guide
+    - taxonomy.vocabulary.guide_category
+id: node.guide.field_category
+field_name: field_category
+entity_type: node
+bundle: guide
+label: Category
+description: 'The category this guide will appear under.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      guide_category: guide_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

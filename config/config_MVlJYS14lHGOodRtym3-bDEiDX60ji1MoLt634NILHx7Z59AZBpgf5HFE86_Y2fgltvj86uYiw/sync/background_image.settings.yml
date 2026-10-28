@@ -1,0 +1,153 @@
+_core:
+  default_config_hash: j3BcDXyzLHc2UkjLc-L0DaGpExUQdPyBeVEsMhKpVeQ
+defaults:
+  blur:
+    type: 2
+    radius: 50
+    speed: 1
+  dark: false
+  full_viewport: false
+  preload:
+    background_color: '#ffffff'
+  text:
+    value: ''
+    format: full_html
+entities:
+  node:
+    article:
+      enable: false
+      embed: false
+      require: false
+      group: advanced
+    page:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    beautiful_text:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    event:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    guide:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    hero_image:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    leader:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    location:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    news:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    quick_action:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    service_status:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    support_link:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    testomonial:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    beautiful_page:
+      enable: true
+      embed: true
+      require: false
+      group: advanced
+  user:
+    user:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+  view:
+    view:
+      enable: true
+      embed: true
+      require: false
+      group: advanced
+  comment:
+    comment:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+  taxonomy_term:
+    audience:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    event_type:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    guide_audience:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    guide_category:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    page_name:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    status:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+    tags:
+      enable: false
+      embed: false
+      require: false
+      group: ''
+css:
+  base_class: background-image
+  retina_rules:
+    - 'only screen and (-webkit-min-device-pixel-ratio:2)'
+    - 'only screen and (min--moz-device-pixel-ratio:2)'
+    - 'only screen and (-o-min-device-pixel-ratio:2/1)'
+    - 'only screen and (min-device-pixel-ratio:2)'
+    - 'only screen and (min-resolution: 192dpi)'
+    - 'only screen and (min-resolution: 2dppx)'
+image_style:
+  preload: background_image_preload
+  fallback: background_image_lg
+  responsive: background_image

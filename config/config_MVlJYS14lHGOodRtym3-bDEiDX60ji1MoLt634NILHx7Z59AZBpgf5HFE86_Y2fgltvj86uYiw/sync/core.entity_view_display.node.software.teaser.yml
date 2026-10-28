@@ -1,0 +1,33 @@
+uuid: 94c59518-6956-48fb-b117-fc3d3907ddd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.software.body
+    - field.field.node.software.field_link_name
+    - node.type.software
+  module:
+    - text
+    - user
+id: node.software.teaser
+targetEntityType: node
+bundle: software
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_link_name: true
+  search_api_excerpt: true

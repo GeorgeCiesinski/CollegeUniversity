@@ -1,0 +1,23 @@
+uuid: e489c10c-7ba5-4cf2-856e-3df96ed8a7cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leader_weight
+    - node.type.leader
+id: node.leader.field_leader_weight
+field_name: field_leader_weight
+entity_type: node
+bundle: leader
+label: Weight
+description: 'Weight of image. This is used to sort the leaders on the leadership team block. Lower weight items appear before higher weight items. Ideally, space them out by around 10 so that there is space to add items in between in the future: -10, 0, 10, 20, ect...'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

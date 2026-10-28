@@ -1,0 +1,18 @@
+uuid: 8f816442-7b1d-4edc-956d-febd702ca67b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testomonial
+id: node.testomonial.title
+field_name: title
+entity_type: node
+bundle: testomonial
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

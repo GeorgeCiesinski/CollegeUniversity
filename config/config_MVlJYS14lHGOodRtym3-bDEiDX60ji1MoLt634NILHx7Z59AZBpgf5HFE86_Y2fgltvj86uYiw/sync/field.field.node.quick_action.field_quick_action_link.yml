@@ -1,0 +1,23 @@
+uuid: 7db06330-e333-405c-a5cc-e85d82348e36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quick_action_link
+    - node.type.quick_action
+  module:
+    - link
+id: node.quick_action.field_quick_action_link
+field_name: field_quick_action_link
+entity_type: node
+bundle: quick_action
+label: 'Quick Action Link'
+description: 'The link to internal or external resource. This is what the button will link to when clicked.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
