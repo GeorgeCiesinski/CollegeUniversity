@@ -1,3 +1,12 @@
+/**
+ * @file
+ * Vite config for the ITS Drupal theme.
+ *
+ * Multi-entry Sass and JS build with a production manifest. jQuery,
+ * Drupal, once, and drupalSettings are externals (provided by Drupal,
+ * not bundled). Dev server origin is the DDEV site URL on port 5173.
+ */
+
 import { defineConfig } from 'vite';
 import path from 'path';
 import { fileURLToPath } from 'url';

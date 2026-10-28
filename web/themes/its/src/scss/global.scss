@@ -1,3 +1,8 @@
+/**
+ * Sitewide Vite CSS entry: chrome, typography, and components used on
+ * most pages. Page-only styles live in pages/ and are separate entries.
+ */
+
 @use 'base/base';
 @use 'base/typography';
 @use 'components/background-image';

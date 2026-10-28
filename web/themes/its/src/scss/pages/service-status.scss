@@ -1,7 +1,6 @@
 /**
- * Styling for Service Status Dashboard Page
- * 
- * This page contains the planned maintenance block which is styled in components/planned-maintenance.scss
+ * Styles the service status overview block and service_status nodes
+ * (path prefix /service-status-dashboard/…).
  */
 
 @use "../abstracts" as *;

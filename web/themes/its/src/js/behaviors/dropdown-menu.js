@@ -1,8 +1,18 @@
-/*
- * This script adds dropdown functionality to menu items
+/**
+ * @file
+ * Adds dropdown functionality to main menu items.
  */
 
 (function ($, Drupal) {
+  /**
+   * Toggles sub-menus on desktop and mobile menu items.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Toggles dropdown-active / visible on .menu li and closes them on
+   *   document click.
+   */
   Drupal.behaviors.dropdownBehavior = {
     attach: function (context, settings) {
       $(once('dropdownToggle', '.menu li', context)).each(function () {

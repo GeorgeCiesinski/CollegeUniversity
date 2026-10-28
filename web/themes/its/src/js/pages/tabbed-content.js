@@ -1,9 +1,17 @@
-/*
- * This script adds tabbed content to specific beautiful pages
- * Example page: artificial-intelligence
+/**
+ * @file
+ * Tab buttons on /artificial-intelligence.
  */
 
 (function ($, Drupal) {
+  /**
+   * Switches tabbed content panels on beautiful pages.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Activates the first tab and toggles .tab-button / .tab-content.
+   */
   Drupal.behaviors.tabbedContent = {
     attach: function (context, settings) {
       // Run the behavior once globally (on the body)

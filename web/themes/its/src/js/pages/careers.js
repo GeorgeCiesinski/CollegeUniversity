@@ -1,9 +1,17 @@
-/*
- * This script adds dropdow functionality to career items
- * Example page: careers
+/**
+ * @file
+ * Toggles career-item rows on /careers.
  */
 
 (function ($, Drupal) {
+  /**
+   * Expands and collapses career list items.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Adds a visibility icon and click toggle on `.career-item li`.
+   */
   Drupal.behaviors.careerItemDropdown = {
     attach: function (context, settings) {
       // Target the .career-item li

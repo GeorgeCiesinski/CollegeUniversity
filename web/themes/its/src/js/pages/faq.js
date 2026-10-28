@@ -1,8 +1,19 @@
-/*
- * This script adds toggle functionality to FAQ dropdowns
+/**
+ * @file
+ * FAQ accordion toggles.
+ *
+ * Loaded from global.js because FAQ sections appear on many pages.
  */
 
 (function ($, Drupal) {
+  /**
+   * Expands and collapses FAQ headings.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Toggles .faq-dropdown and the visibility icon on .faq-heading click.
+   */
   Drupal.behaviors.faqDropdown = {
     attach: function (context, settings) {
       // Target the .career-item li

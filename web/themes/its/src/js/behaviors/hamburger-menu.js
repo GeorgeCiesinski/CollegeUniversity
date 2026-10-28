@@ -1,8 +1,17 @@
-/*
- * This script adds toggle functionality to the hamburger menu
+/**
+ * @file
+ * Toggles the mobile hamburger menu.
  */
 
 (function ($, Drupal) {
+  /**
+   * Opens and closes the main nav via #navbar-toggle.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Toggles aria-expanded on the button and the active class on .nav-bar.
+   */
   Drupal.behaviors.hamburgerBehavior = {
     attach: function (context, settings) {
       $(once('hamburgerToggle', '#navbar-toggle', context)).each(function () {

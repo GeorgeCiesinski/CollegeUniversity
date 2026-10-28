@@ -1,3 +1,7 @@
+# ITS theme libraries.
+# global is attached from its.info.yml (every page). page.* libraries
+# are attached in its.theme by node bundle or path.
+
 global:
   vite: true
   css:

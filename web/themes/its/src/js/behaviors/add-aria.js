@@ -1,8 +1,18 @@
-/*
- * Adds aria-labelledby attribute to search bar and quick actions
+/**
+ * @file
+ * Adds aria-labelledby on the search bar and quick-action links.
  */
 
 (function ($, Drupal) {
+  /**
+   * Labels search inputs and quick-action items for assistive tech.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Sets aria-labelledby on Search API fulltext fields and
+   *   .quick-action-item links.
+   */
   Drupal.behaviors.addAriaBehavior = {
     attach: function (context, settings) {
 

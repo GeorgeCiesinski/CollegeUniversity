@@ -1,9 +1,19 @@
-/*
- * This script adds a dynamic blur effect to background images on beautiful pages as the user scrolls.
- * This overrides default scroll behavior provided in background images module.
+/**
+ * @file
+ * Blurs beautiful-page background images as the user scrolls.
+ *
+ * Overrides default scroll behavior from the Background Images module.
  */
 
 (function ($, Drupal) {
+  /**
+   * Applies a scroll-linked blur filter to .background-image.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Increases blur up to 50px over the first viewport of scroll.
+   */
   Drupal.behaviors.scrollBlur = {
     attach: function (context, settings) {
       // Target the window
@@ -21,4 +31,3 @@
     }
   };
 })(jQuery, Drupal, once);
-
