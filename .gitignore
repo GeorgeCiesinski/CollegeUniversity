@@ -28,8 +28,9 @@
 .env.*
 !.env.example
 
-# Node (theme Sass watcher: npm install)
+# Node (theme Vite build: npm install in web/themes/its)
 /node_modules/
+/web/themes/its/node_modules/
 npm-debug.log*
 yarn-error.log
 

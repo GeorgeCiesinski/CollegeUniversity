@@ -49,6 +49,7 @@
         "drupal/smart_date": "4.0.3",
         "drupal/svg_image": "^3.0",
         "drupal/token_block": "^2.0",
+        "drupal/vite": "^1.5",
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13",
         "wikimedia/composer-merge-plugin": "^2.1"
@@ -75,6 +76,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/sites/example.settings.local.php": false
             }
         },
         "merge-plugin": {

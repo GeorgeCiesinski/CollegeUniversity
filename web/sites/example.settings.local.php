@@ -149,3 +149,13 @@ $settings['skip_permissions_hardening'] = TRUE;
  * the language or field module.
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
+
+/**
+ * Vite HMR for the ITS theme.
+ *
+ * Browse https://its-website.ddev.site (not localhost:5173). Start the
+ * frontend watcher with: ddev npm run dev --prefix web/themes/its
+ */
+$settings['vite'] = [
+  'devServerUrl' => ($_ENV['DDEV_PRIMARY_URL'] ?? 'https://its-website.ddev.site') . ':5173',
+];

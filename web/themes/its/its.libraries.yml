@@ -1,159 +1,132 @@
-base:
-  version: VERSION
+global:
+  vite: true
   css:
-    base:
-      css/base/base.css: {}
-      css/base/typography.css: {}
-    component:
-      css/components/action-links.css: {}
-      css/components/background-image.css: {}
-      css/components/banner.css: {}
-      css/components/brand.css: {}
-      css/components/breadcrumb.css: {}
-      css/components/button-footer.css: {}
-      css/components/button.css: {}
-      css/components/chatbot.css: {}
-      css/components/container-inline.css: {}
-      css/components/details.css: {}
-      css/components/display-name.css: {}
-      css/components/edit-account.css: {}
-      css/components/event-calendar.css: {}
-      css/components/events.css: {}
-      css/components/expand-filters.css: {}
-      css/components/exposed-filters.css: {}
-      css/components/faq-section.css: {}
-      css/components/field.css: {}
-      css/components/filters.css: {}
-      css/components/form.css: {}
-      css/components/guide.css: {}
-      css/components/guidebook.css: {}
-      css/components/hamburger-menu.css: {}
-      css/components/help-and-support-block.css: {}
-      css/components/highlighted.css: {}
-      css/components/html-videos.css: {}
-      css/components/icons.css: {}
-      css/components/inline-form.css: {}
-      css/components/input.css: {}
-      css/components/item-list.css: {}
-      css/components/leadership.css: {}
-      css/components/legend.css: {}
-      css/components/link.css: {}
-      css/components/links.css: {}
-      css/components/locations-block.css: {}
-      css/components/menu.css: {}
-      css/components/menu-submenu.css: {}
-      css/components/more-link.css: {}
-      css/components/pager.css: {}
-      css/components/profile.css: {}
-      css/components/quick-actions-block.css: {}
-      css/components/responsive-grid.css: {}
-      css/components/search-bar.css: {}
-      css/components/select.css: {}
-      css/components/socials-links.css: {}
-      css/components/support-pages-block.css: {}
-      css/components/tabledrag.css: {}
-      css/components/tables.css: {}
-      css/components/tableselect.css: {}
-      css/components/tablesort.css: {}
-      css/components/taxonomy-view.css: {}
-      css/components/text-formatted.css: {}
-      css/components/textarea.css: {}
-      css/components/time.css: {}
-      css/components/ui-dialog.css: {}
-      css/components/vertical-tabs.css: {}
-      css/components/webform.css: {}
-    layout:
-      css/layout/tabbed-content.css: {}
-      css/layout/beautiful-page.css: {}
-      css/layout/careers-page.css: {}
-      css/layout/change-request.css: {}
-      css/layout/contact-page.css: {}
-      css/layout/content-regions.css: {}
-      css/layout/custom-modules.css: {}
-      css/layout/form.css: {}
-      css/layout/header.css: {}
-      css/layout/layout-container.css: {}
-      css/layout/navigation.css: {}
-      css/layout/page-layout.css: {}
-      css/layout/service-status-dashboard-page.css: {}
-      css/layout/software-licensing-page.css: {}
-      css/layout/startup.css: {}
-      css/layout/view-table.css: {}
-      css/layout/whats-new-page.css: {}
     theme:
-      css/theme/gin-theme.css: {}
+      src/scss/global.scss: {}
   js:
-    js/add-aria.js: {}
-    js/career-item-dropdown.js: {}
-    js/datetime-override.js: {}
-    js/dropdown-menu.js: {}
-    js/faq-dropdown.js: {}
-    js/hamburger-menu.js: {}
-    js/scroll-blur.js: {}
-    js/service-status.js: {}
-    js/tabbed-content.js: {}
+    src/js/global.js: { attributes: { type: module } }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/once
 
+page.beautiful:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/beautiful-page.scss: {}
+
+page.contact:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/contact.scss: {}
+
+page.careers:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/careers.scss: {}
+  js:
+    src/js/pages/careers.js: { attributes: { type: module } }
   dependencies:
     - core/drupal
     - core/jquery
     - core/once
 
-dialog:
-  version: VERSION
+page.startup:
+  vite: true
   css:
-    component:
-      css/components/dialog.css: {}
+    theme:
+      src/scss/pages/startup.scss: {}
 
-dropbutton:
-  version: VERSION
+page.tabbed:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/tabbed-content.scss: {}
+  js:
+    src/js/pages/tabbed-content.js: { attributes: { type: module } }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+page.service-status:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/service-status.scss: {}
+  js:
+    src/js/pages/service-status.js: { attributes: { type: module } }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+page.software-licensing:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/software-licensing.scss: {}
+
+page.whats-new:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/whats-new.scss: {}
+
+page.custom-modules:
+  vite: true
+  css:
+    theme:
+      src/scss/pages/custom-modules.scss: {}
+
+dialog:
+  vite: true
   css:
     component:
-      css/components/dropbutton.css: {}
+      src/scss/components/dialog.scss: {}
 
 file:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/file.css: {}
+      src/scss/components/file.scss: {}
 
 image-widget:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/image-widget.css: {}
+      src/scss/components/image-widget.scss: {}
 
 indented:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/indented.css: {}
-
-messages:
-  version: VERSION
-  css:
-    component:
-      css/components/messages.css: {}
+      src/scss/components/indented.scss: {}
 
 node:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/node.css: {}
+      src/scss/components/node.scss: {}
 
 progress:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/progress.css: {}
+      src/scss/components/progress.scss: {}
 
 search-results:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/search-results.css: {}
+      src/scss/components/search-results.scss: {}
 
 user:
-  version: VERSION
+  vite: true
   css:
     component:
-      css/components/user.css: {}
+      src/scss/components/user.scss: {}

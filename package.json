@@ -4,13 +4,8 @@
   "description": "Main site for Information Technology Services.",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "./watch.sh"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.90.0"
+    "dev": "npm run dev --prefix web/themes/its",
+    "build": "npm run build --prefix web/themes/its",
+    "watch": "npm run dev --prefix web/themes/its"
   }
 }

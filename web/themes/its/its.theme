@@ -1,13 +1,48 @@
 <?php
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Template\Attribute;
-use Drupal\Core\Cache\CacheBackendInterface;
-
 /**
  * @file
  * Functions to support theming.
  */
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function its_preprocess_html(array &$variables): void {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (is_numeric($node)) {
+    $node = \Drupal\node\Entity\Node::load($node);
+  }
+  if ($node instanceof NodeInterface) {
+    if ($node->bundle() === 'beautiful_page') {
+      $variables['#attached']['library'][] = 'its/page.beautiful';
+    }
+    if ($node->bundle() === 'service_status') {
+      $variables['#attached']['library'][] = 'its/page.service-status';
+    }
+  }
+
+  $current = \Drupal::request()->getPathInfo();
+
+  $path_libraries = [
+    '/contact' => 'its/page.contact',
+    '/careers' => 'its/page.careers',
+    '/software-licensing-deployment' => 'its/page.software-licensing',
+    '/whats-new' => 'its/page.whats-new',
+    '/startup' => 'its/page.startup',
+    '/artificial-intelligence' => 'its/page.tabbed',
+    '/service-status-dashboard' => 'its/page.service-status',
+    '/individual-reflection' => 'its/page.custom-modules',
+  ];
+
+  foreach ($path_libraries as $prefix => $library) {
+    if ($current === $prefix || str_starts_with($current, $prefix . '/')) {
+      $variables['#attached']['library'][] = $library;
+    }
+  }
+}
 
 /**
  * Implements hook_preprocess_image_widget().
@@ -23,4 +58,3 @@ function its_preprocess_image_widget(array &$variables) {
     unset($data['preview']);
   }
 }
-
