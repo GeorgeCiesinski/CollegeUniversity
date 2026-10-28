@@ -82,7 +82,6 @@ base:
       css/layout/whats-new-page.css: {}
     theme:
       css/theme/gin-theme.css: {}
-      css/theme/external-scripts.css: {}
   js:
     js/add-aria.js: {}
     js/career-item-dropdown.js: {}
