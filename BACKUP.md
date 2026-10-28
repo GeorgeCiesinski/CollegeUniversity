@@ -50,7 +50,10 @@ DDEV snapshots do **not** include `web/sites/default/files/`.
 ```bash
 mkdir -p backups
 tar -czf backups/files-pre-major-change.tar.gz -C web/sites/default files
+cp web/sites/default/settings.php backups/settings.php-pre-major-change
 ```
+
+`settings.php` is gitignored because it contains credentials. Copying it into `backups/` means a later `git clean` will not be the only copy on disk.
 
 ### Optional: portable SQL dump
 
