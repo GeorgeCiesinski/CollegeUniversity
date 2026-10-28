@@ -1,0 +1,30 @@
+uuid: 791e38a7-b195-4b33-a6c1-b15b6fdeeb59
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9031651b-e75d-4110-b893-6a09ffac6dbb'
+  module:
+    - block_content
+    - system
+  theme:
+    - its
+id: its_aiguidelines
+theme: its
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:9031651b-e75d-4110-b893-6a09ffac6dbb'
+settings:
+  id: 'block_content:9031651b-e75d-4110-b893-6a09ffac6dbb'
+  label: 'AI Guidelines'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /artificial-intelligence

@@ -1,0 +1,35 @@
+name: ITS
+type: theme
+'base theme': stable9
+starterkit: true
+# version: VERSION
+libraries:
+  - its/base
+  - its/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - its/user
+  core/drupal.dropbutton:
+    - its/dropbutton
+  core/drupal.dialog:
+    - its/dialog
+  file/drupal.file:
+    - its/file
+  core/drupal.progress:
+    - its/progress
+libraries-override: 
+  slick/base:
+    css:
+      layout:
+        css/layout/slick.module.css: css/layout/slick-module.css
+  slick/slick.theme:
+    css:
+      theme:
+        css/theme/slick.theme.css: css/theme/slick-theme.css
+  system/base:
+    css:
+      component:
+        /core/themes/stable9/css/system/components/fieldgroup.module.css: css/components/fieldgroup.css
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.2'

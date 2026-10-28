@@ -1,0 +1,151 @@
+/**
+ * Styling for Services section
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * ITS Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+ITS Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the ITS theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+.block-views-blocksupport-pages-block-block-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  padding-bottom: 6rem;
+  width: 100%;
+}
+.block-views-blocksupport-pages-block-block-1 h2 {
+  display: block;
+  color: #004b78;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  text-underline-position: under;
+  padding: 2rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.support-pages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+
+.support-pages-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 12rem;
+  width: 100%;
+  background-color: #cc9900;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  transition: all ease-in-out 0.2s;
+}
+.support-pages-item .views-field-title {
+  transition: all ease-in-out 0.2s;
+}
+.support-pages-item a {
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.support-pages-item:hover {
+  filter: drop-shadow(5px 5px #e0c266);
+  transform: translateY(-0.5rem);
+}
+.support-pages-item:hover .views-field-field-support-icon img {
+  background-color: #004b78;
+  border-color: #004b78;
+}
+.support-pages-item:hover .views-field-title {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 1px #7a5c00;
+}
+
+.views-field-field-support-icon, .views-field-field-support-icon > div, .views-field-field-support-icon img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.views-field-field-support-icon img {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+@media (min-width: 48rem) {
+  .block-views-blocksupport-pages-block-block-1 .support-pages-item {
+    width: 15rem;
+  }
+  .block-views-blocksupport-pages-block-block-1 h2 {
+    width: 46rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 61rem) {
+  .block-views-blocksupport-pages-block-block-1 h2 {
+    width: 58rem;
+    margin: 0 auto;
+  }
+  .block-views-blocksupport-pages-block-block-1 .support-pages-list {
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
+
+/*# sourceMappingURL=support-pages-block.css.map */

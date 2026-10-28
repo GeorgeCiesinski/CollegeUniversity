@@ -1,0 +1,95 @@
+/**
+ * Styles ITS chatbot
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * ITS Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+ITS Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the ITS theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+#block-its-chatbutton {
+  position: fixed;
+  bottom: 10rem;
+  right: 2rem;
+  z-index: 100;
+}
+#block-its-chatbutton > .text-formatted {
+  margin: 0;
+}
+
+#block-its-corporatefooter2 {
+  box-sizing: border-box;
+  color: white;
+  background-color: #142356;
+  padding: 1rem 0.5rem 5rem 0.5rem;
+}
+#block-its-corporatefooter2 .text-formatted {
+  margin: 0 auto;
+}
+#block-its-corporatefooter2 .text-formatted p {
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+iframe[src*="8x8"] {
+  right: 0 !important;
+}
+
+@media (min-width: 48rem) {
+  #block-its-corporatefooter2 p {
+    width: 46rem;
+  }
+}
+@media (min-width: 61rem) {
+  #block-its-corporatefooter2 p {
+    width: 58rem;
+  }
+}
+@media (min-width: 75rem) {
+  #block-its-chatbutton {
+    bottom: 2rem;
+  }
+  #block-its-corporatefooter2 {
+    padding: 1rem 0;
+  }
+}
+
+/*# sourceMappingURL=chatbot.css.map */

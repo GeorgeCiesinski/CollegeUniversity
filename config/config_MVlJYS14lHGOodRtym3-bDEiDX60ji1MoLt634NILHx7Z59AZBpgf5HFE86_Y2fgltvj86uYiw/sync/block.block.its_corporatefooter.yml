@@ -1,0 +1,25 @@
+uuid: 5e79dc17-fe6c-4518-9898-11e07d94d8a9
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:5e09f2a7-b50a-435c-946b-0958a23fc779'
+  module:
+    - block_content
+  theme:
+    - its
+id: its_corporatefooter
+theme: its
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:5e09f2a7-b50a-435c-946b-0958a23fc779'
+settings:
+  id: 'block_content:5e09f2a7-b50a-435c-946b-0958a23fc779'
+  label: 'Corporate Footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

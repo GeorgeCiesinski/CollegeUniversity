@@ -1,0 +1,30 @@
+uuid: 28d0d442-d6bf-4048-8a67-eaa5c1691381
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:826f643a-b6fb-42d2-b387-325b8ba61c52'
+  module:
+    - block_content
+    - system
+  theme:
+    - its
+id: its_deviceupdates
+theme: its
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:826f643a-b6fb-42d2-b387-325b8ba61c52'
+settings:
+  id: 'block_content:826f643a-b6fb-42d2-b387-325b8ba61c52'
+  label: 'Device Updates'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /its-security

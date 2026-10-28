@@ -1,0 +1,94 @@
+/**
+ * Styling for background image
+ * 
+ * Requires background image module
+ */
+/**
+ * Forwards stylesheets in this directory
+ *  
+ * Use abstracts in other stylesheets using:
+ * 
+ * @use '../abstracts' as *;
+ */
+/**
+ * Map of breakpoints
+ * Mixin which can be included in other files to add breakpoint functionality. 
+ * 
+ * Breakpoints can be added to other sass files with:
+ * 
+ * @include breakpoint(md) {
+ *   (style)
+ * }
+ */
+/**
+ * ITS Brand Colors and Palettes
+ * 
+ * These are the base colors used to generate tailwind style color palettes for each color.
+ * 
+ * Generator: https://tailcolor.com/palettes/
+ */
+/*
+ITS Brand Colors
+
+These are the base colors used to generate tailwind style color palettes for each color.
+
+Generator: https://tailcolor.com/palettes/
+*/
+/* 
+Palettes
+
+These colors should be used throughout the theme. 
+
+The -500 version of each color are the same as the primary and secondary colors defined above.
+*/
+/**
+ * Global Variables
+ * 
+ * These variables are used throughout the ITS theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+.background-image-wrapper {
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.background-image-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0rem;
+  bottom: 0rem;
+  width: 100%;
+}
+.background-image-text > h2, .background-image-text h3, .background-image-text h4, .background-image-text h5, .background-image-text h6 {
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 30, 48, 0.5);
+  padding: 0.5rem;
+  margin: 0;
+}
+.background-image-text > h2 {
+  font-size: 3rem;
+}
+.background-image-text > h3 {
+  font-size: 3rem;
+}
+
+@media (min-width: 48rem) {
+  .background-image-wrapper {
+    height: 300px;
+  }
+  .background-image-text h2, .background-image-text h3, .background-image-text h4, .background-image-text h5, .background-image-text h6 {
+    width: 46rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 61rem) {
+  .background-image-text h2, .background-image-text h3, .background-image-text h4, .background-image-text h5, .background-image-text h6 {
+    width: 58rem;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=background-image.css.map */

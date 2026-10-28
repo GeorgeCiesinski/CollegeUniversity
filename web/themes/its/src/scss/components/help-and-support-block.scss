@@ -1,0 +1,54 @@
+/**
+ * Styles help & support custom block
+ */
+
+@use "../abstracts" as *;
+
+#block-its-helpsupportblock {
+  margin: $margin-xs;
+
+  h2, >div {
+    margin-bottom: $margin-xs;
+  }
+
+  h2 {
+    width: 100%;
+  }
+
+  >div {
+    width: 100%;
+  }
+}
+
+@include breakpoint(sm) {
+  #block-its-helpsupportblock {
+    h2, .clearfix {
+      width: $content-sm;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin: 3rem auto 0 auto;
+    }
+
+    .clearfix {
+      margin: 0 auto;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  #block-its-helpsupportblock {
+    h2, .clearfix {
+      width: $content-md;
+    }
+
+    h2 {
+      margin: 3rem auto 0 auto;
+    }
+
+    .clearfix {
+      margin: 0 auto;
+    }
+  }
+}

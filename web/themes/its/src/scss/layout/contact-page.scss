@@ -1,0 +1,64 @@
+/**
+ * Styles the Contact page and map embeds
+ */
+
+@use "../abstracts" as *;
+
+#block-its-views-block-locations-block-1 {
+  .views-row {
+    margin-bottom: 5rem;
+  }
+
+  .views-field-title {
+    color: $primary-blue-500;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .views-field-field-map-link {
+    border: 2px solid $primary-blue-500;
+    border-radius: $radius-md;
+    overflow: hidden;
+    height: 20rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-200;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  iframe[src*="https://www.google.com"] {
+    box-sizing: border-box;
+    height: 30rem;
+    width: 100%;
+  }
+}
+
+.field--name-field-map-link {
+  border: 2px solid $primary-blue-500;
+  border-radius: $radius-md;
+  overflow: hidden;
+  height: 20rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-200;
+
+  p {
+    margin: 0;
+  }
+}
+
+@include breakpoint(sm) {
+  #block-its-views-block-locations-block-1 {
+    .views-field-field-map-link {
+      height: 30rem;
+    }
+
+    iframe[src*="https://www.google.com"] {
+      height: 40rem;
+      margin: 0 auto;
+    }
+  }
+
+  .field--name-field-map-link {
+    height: 30rem;
+  }
+}

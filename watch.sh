@@ -14,12 +14,12 @@ touch "$lockfile"
 
 # Define the directories
 # This is where the SCSS and CSS folders can be changed if needed 
-scssDirectory="web/themes/humber/src/scss"
-cssDirectory="web/themes/humber/css"
+scssDirectory="web/themes/its/src/scss"
+cssDirectory="web/themes/its/css"
 
 # Check if scssDirectory exists
 if [ ! -d "$scssDirectory" ]; then
-  echo "$scssDirectory does not exist. Make sure you imported the Humber theme into web/themes correctly and try again."
+  echo "$scssDirectory does not exist. Make sure the ITS theme is in web/themes/its and try again."
   rm "$lockfile" # Remove the lock file before exiting
   exit 1
 fi

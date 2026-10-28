@@ -1,0 +1,25 @@
+uuid: b7024955-2898-4029-9b1d-794268bf4ee7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9bbd46e1-4b58-44f6-8805-1db73272517e'
+  module:
+    - block_content
+  theme:
+    - its
+id: its_corporatefooter2
+theme: its
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:9bbd46e1-4b58-44f6-8805-1db73272517e'
+settings:
+  id: 'block_content:9bbd46e1-4b58-44f6-8805-1db73272517e'
+  label: 'Corporate Footer 2'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

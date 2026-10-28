@@ -1,0 +1,30 @@
+uuid: 208695b8-3da7-4662-960f-1f2e869d756a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:750f5fc2-96c3-4519-8cac-6023c1e3eca9'
+  module:
+    - block_content
+    - system
+  theme:
+    - its
+id: its_whitespace
+theme: its
+region: content
+weight: 8
+provider: null
+plugin: 'block_content:750f5fc2-96c3-4519-8cac-6023c1e3eca9'
+settings:
+  id: 'block_content:750f5fc2-96c3-4519-8cac-6023c1e3eca9'
+  label: 'White Space'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /software-licensing-deployment

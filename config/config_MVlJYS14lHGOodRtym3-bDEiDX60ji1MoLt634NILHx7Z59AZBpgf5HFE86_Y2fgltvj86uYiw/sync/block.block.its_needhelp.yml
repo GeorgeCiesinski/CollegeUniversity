@@ -1,0 +1,30 @@
+uuid: 4bdb0e43-10c4-4a00-af35-107879adf326
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6d86c6e6-c4f1-446a-b46b-03b18e26cf46'
+  module:
+    - block_content
+    - system
+  theme:
+    - its
+id: its_needhelp
+theme: its
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:6d86c6e6-c4f1-446a-b46b-03b18e26cf46'
+settings:
+  id: 'block_content:6d86c6e6-c4f1-446a-b46b-03b18e26cf46'
+  label: 'Need Help?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/startup/students\r\n/startup/staff\r\n/its-security\r\n/artificial-intelligence"

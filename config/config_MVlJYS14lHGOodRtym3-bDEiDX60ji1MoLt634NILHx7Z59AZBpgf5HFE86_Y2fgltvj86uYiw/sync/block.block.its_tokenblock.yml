@@ -1,0 +1,28 @@
+uuid: 17c2f45b-37ad-48d3-9326-065b9f8da580
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - token_block
+  theme:
+    - its
+id: its_tokenblock
+theme: its
+region: content
+weight: 9
+provider: null
+plugin: token_block
+settings:
+  id: token_block
+  label: 'Token Block'
+  label_display: '0'
+  provider: token_block
+  body:
+    value: '<div class="button-footer-container"><a class="button report-button" href="[site:base-url]/form/report-an-accessibility-problem?page_url=[current-page:url]" id="report-website-problem">Report a Website Problem</a></div>'
+    format: full_html
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /form/report-an-accessibility-problem

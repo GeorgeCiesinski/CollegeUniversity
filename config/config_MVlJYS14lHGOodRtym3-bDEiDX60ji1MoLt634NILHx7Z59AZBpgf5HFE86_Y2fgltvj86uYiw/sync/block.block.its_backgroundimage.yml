@@ -1,0 +1,20 @@
+uuid: cdd364b1-708b-4e86-a63c-009285768e6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - background_image
+  theme:
+    - its
+id: its_backgroundimage
+theme: its
+region: background_image
+weight: -19
+provider: null
+plugin: background_image
+settings:
+  id: background_image
+  label: 'Background Image'
+  label_display: ''
+  provider: background_image
+visibility: {  }
