@@ -20,8 +20,8 @@
       $(once('faqDropdown', '.faq-heading', context)).each(function () {
         $(this).on('click', function(e) {
           e.stopPropagation(); // Prevent click from bubbling up
-          spanElement = $(this).find('.material-symbols-rounded');
-          faqDropdown = $(this).next('.faq-dropdown')
+          var spanElement = $(this).find('.material-symbols-rounded');
+          var faqDropdown = $(this).next('.faq-dropdown');
           faqDropdown.toggleClass('active');
           if (spanElement.text() === 'visibility') {
             spanElement.text('visibility_off');

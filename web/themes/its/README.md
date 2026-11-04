@@ -12,6 +12,7 @@ From the project root, with DDEV running:
 ddev npm --prefix web/themes/its ci
 ddev npm --prefix web/themes/its run build
 ddev npm --prefix web/themes/its run dev
+ddev npm --prefix web/themes/its test
 ```
 
 Or from the project root `package.json` proxies:
@@ -19,12 +20,14 @@ Or from the project root `package.json` proxies:
 ```bash
 ddev npm run build
 ddev npm run dev
+ddev npm run test
 ```
 
 | Command | What it does |
 | --- | --- |
 | `build` | Writes production files to `dist/` and slick overrides |
 | `dev` | Starts the Vite HMR server (port 5173) |
+| `test` | Runs theme JS unit tests in jsdom (not the live Drupal page) |
 
 `dist/` is committed so the site works without Node. After SCSS/JS changes, run `build` if you are not using `dev`.
 
