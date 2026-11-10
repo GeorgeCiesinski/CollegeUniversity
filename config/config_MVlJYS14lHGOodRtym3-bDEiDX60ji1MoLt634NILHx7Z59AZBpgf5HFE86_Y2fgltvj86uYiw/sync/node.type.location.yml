@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Location
 type: location
-description: "Humber location information.\r\n\r\nThis contains information about Campus Locations.\r\n\r\nAppears on the Contact page."
+description: "Campus location information.\r\n\r\nThis contains information about Campus Locations.\r\n\r\nAppears on the Contact page. Addresses and maps are demo-only."
 help: null
 new_revision: true
 preview_mode: 1

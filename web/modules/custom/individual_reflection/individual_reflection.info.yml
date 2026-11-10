@@ -2,4 +2,4 @@ name: Individual Reflection
 type: module
 description: Client-side Digital Fluency Individual Reflection.
 core_version_requirement: ^10
-package: 'Humber ITS'
+package: 'ITS'

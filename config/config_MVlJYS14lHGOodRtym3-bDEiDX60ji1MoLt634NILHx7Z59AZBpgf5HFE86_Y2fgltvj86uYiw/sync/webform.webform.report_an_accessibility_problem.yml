@@ -28,7 +28,7 @@ elements: |-
   information:
     '#type': fieldset
     '#title': Information
-    '#description': '<p><strong>IMPORTANT: This form is for reporting website related issues to the web developer.&nbsp;</strong></p><p>Do not submit support requests (login issues, access to MyHumber or Blackboard) as these will be deleted.</p><p>Please visit the <a href="/its/contact">Contact</a> page or click the Chat Now button to speak to an agent.</p>'
+    '#description': '<p><strong>IMPORTANT: This form is for reporting website related issues to the web developer.&nbsp;</strong></p><p>Do not submit support requests (login issues, access to Portal or Blackboard) as these will be deleted.</p><p>Please visit the <a href="/its/contact">Contact</a> page or click the Chat Now button to speak to an agent.</p>'
     page_url:
       '#type': url
       '#title': 'Page URL'
@@ -44,7 +44,7 @@ elements: |-
     '#title': Acknowledgement
     '#options':
       'I understand that this form is for submitting website problems, not to request tech support.': 'I understand that this form is for submitting website problems, not to request tech support.'
-      'I understand that requests for support such as login issues, or inability to access other sites like MyHumber and Blackboard, will be deleted.': 'I understand that requests for support such as login issues, or inability to access other sites like MyHumber and Blackboard, will be deleted.'
+      'I understand that requests for support such as login issues, or inability to access other sites like Portal and Blackboard, will be deleted.': 'I understand that requests for support such as login issues, or inability to access other sites like Portal and Blackboard, will be deleted.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -52,7 +52,7 @@ elements: |-
       enabled:
         ':input[name="acknowledgement[I understand that this form is for submitting website problems, not to request tech support.]"]':
           checked: true
-        ':input[name="acknowledgement[I understand that requests for support such as login issues, or inability to access other sites like MyHumber and Blackboard, will be deleted.]"]':
+        ':input[name="acknowledgement[I understand that requests for support such as login issues, or inability to access other sites like Portal and Blackboard, will be deleted.]"]':
           checked: true
 css: ''
 javascript: ''

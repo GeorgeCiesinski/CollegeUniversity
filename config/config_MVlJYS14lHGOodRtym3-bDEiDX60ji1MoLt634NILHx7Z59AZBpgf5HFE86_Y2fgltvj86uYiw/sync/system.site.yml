@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 4757d2e9-4b98-436e-98d4-0b8e490058f2
 name: 'Information Technology Services'
-mail: george.ciesinski@humber.ca
+mail: demo@example.com
 slogan: ''
 page:
   403: ''

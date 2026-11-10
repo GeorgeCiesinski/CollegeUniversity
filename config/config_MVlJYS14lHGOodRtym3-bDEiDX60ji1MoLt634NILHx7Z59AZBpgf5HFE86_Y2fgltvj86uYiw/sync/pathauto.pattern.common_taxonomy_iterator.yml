@@ -7,7 +7,7 @@ dependencies:
 id: common_taxonomy_iterator
 label: 'Common Taxonomy Iterator'
 type: 'canonical_entities:taxonomy_term'
-pattern: '[term:vocabulary]/[term:name]'
+pattern: '/[term:vocabulary]/[term:name]'
 selection_criteria:
   6ad69b65-6720-4008-be2a-ff924f8ad0a6:
     id: 'entity_bundle:taxonomy_term'

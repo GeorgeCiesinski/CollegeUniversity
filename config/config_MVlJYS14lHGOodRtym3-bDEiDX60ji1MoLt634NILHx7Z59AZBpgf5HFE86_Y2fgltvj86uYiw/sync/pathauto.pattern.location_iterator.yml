@@ -7,7 +7,7 @@ dependencies:
 id: location_iterator
 label: 'Location Iterator'
 type: 'canonical_entities:node'
-pattern: '[node:content-type]/[node:title]'
+pattern: '/[node:content-type]/[node:title]'
 selection_criteria:
   5602342b-ad17-4f02-91f5-b07503203b56:
     id: 'entity_bundle:node'

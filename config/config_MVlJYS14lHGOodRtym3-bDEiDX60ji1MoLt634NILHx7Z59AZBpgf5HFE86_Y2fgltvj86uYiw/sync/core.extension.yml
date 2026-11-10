@@ -47,6 +47,7 @@ module:
   honeypot: 0
   iframe: 0
   image: 0
+  individual_reflection: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
@@ -89,8 +90,8 @@ module:
   toolbar: 0
   update: 0
   user: 0
-  vite: 0
   views_ui: 0
+  vite: 0
   webform: 0
   webform_attachment: 0
   webform_ui: 0
