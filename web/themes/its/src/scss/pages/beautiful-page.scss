@@ -205,7 +205,7 @@ START - BEAUTIFUL PAGE GUIDES
   .user-account-security-item, 
   #block-its-cybersecuritytips, 
   #block-its-deviceupdates {
-    background: linear-gradient(to right, rgb(21, 13, 60) 2px, rgba(255, 255, 255, 0.5) 4px, rgba(255, 255, 255, 0.25) 6px, rgba(255, 255, 255, 0.25) 8px, transparent 10px, transparent 14px, rgba(255, 255, 255, 0.25) 15px, transparent 20px);
+    background: linear-gradient(to right, #{$primary-blue-900} 2px, rgba(255, 255, 255, 0.5) 4px, rgba(255, 255, 255, 0.25) 6px, rgba(255, 255, 255, 0.25) 8px, transparent 10px, transparent 14px, rgba(255, 255, 255, 0.25) 15px, transparent 20px);
     background-color: $primary-blue-500;
     border-radius: $radius-sm;
     position: relative;

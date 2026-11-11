@@ -26,26 +26,20 @@
  * }
  */
 /**
- * ITS Brand Colors and Palettes
- * 
- * These are the base colors used to generate tailwind style color palettes for each color.
- * 
- * Generator: https://tailcolor.com/palettes/
+ * Predefined ITS color schemes.
+ *
+ * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated
+ * in Sass at build time — edit bases here, then rebuild.
  */
-/*
-ITS Brand Colors
-
-These are the base colors used to generate tailwind style color palettes for each color.
-
-Generator: https://tailcolor.com/palettes/
-*/
-/* 
-Palettes
-
-These colors should be used throughout the theme. 
-
-The -500 version of each color are the same as the primary and secondary colors defined above.
-*/
+/**
+ * ITS color tokens.
+ *
+ * Brand values come from CSS custom properties emitted by color-tokens.scss
+ * (see abstracts/_color-schemes.scss). Sass variables below bridge existing
+ * component styles to those runtime scheme variables.
+ *
+ * Fallback hexes match the default scheme (teal_coral).
+ */
 /**
  * Global Variables
  * 
@@ -148,8 +142,8 @@ The -500 version of each color are the same as the primary and secondary colors 
 
 .slide__link {
   display: inline-block;
-  background-color: #004b78;
-  border: 1px solid #99b7c9;
+  background-color: var(--its-primary-500, #0f766e);
+  border: 1px solid var(--its-primary-200, #9fc7c3);
   border-radius: 10px;
   margin: 0;
   padding: 0;
@@ -158,8 +152,8 @@ The -500 version of each color are the same as the primary and secondary colors 
 }
 .slide__link:hover {
   transform: translateX(15px);
-  background-color: #003c60;
-  filter: drop-shadow(3px 3px #99b7c9);
+  background-color: var(--its-primary-600, #0c5e58);
+  filter: drop-shadow(3px 3px var(--its-primary-200, #9fc7c3));
 }
 .slide__link a {
   display: block;
@@ -254,7 +248,7 @@ The -500 version of each color are the same as the primary and secondary colors 
 }
 .slick-arrow:hover::before {
   color: white;
-  filter: drop-shadow(2px 2px 2px #004b78);
+  filter: drop-shadow(2px 2px 2px var(--its-primary-500, #0f766e));
 }
 
 /**
@@ -295,7 +289,7 @@ The -500 version of each color are the same as the primary and secondary colors 
 }
 .slick-dots li button:hover::before {
   opacity: 100%;
-  filter: drop-shadow(2px 2px 2px #004b78);
+  filter: drop-shadow(2px 2px 2px var(--its-primary-500, #0f766e));
 }
 
 /**

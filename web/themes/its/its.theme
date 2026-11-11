@@ -14,6 +14,18 @@ use Drupal\node\NodeInterface;
  * (beautiful_page, service_status) or by request path prefix.
  */
 function its_preprocess_html(array &$variables): void {
+  $allowed_schemes = [
+    'teal_coral',
+    'forest_amber',
+    'slate_terracotta',
+    'plum_sage',
+  ];
+  $color_scheme = theme_get_setting('color_scheme') ?? 'teal_coral';
+  if (!in_array($color_scheme, $allowed_schemes, TRUE)) {
+    $color_scheme = 'teal_coral';
+  }
+  $variables['html_attributes']['data-its-scheme'] = $color_scheme;
+
   $node = \Drupal::routeMatch()->getParameter('node');
   if (is_numeric($node)) {
     $node = \Drupal\node\Entity\Node::load($node);

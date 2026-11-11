@@ -1,0 +1,108 @@
+/**
+ * Predefined ITS color schemes.
+ *
+ * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated
+ * in Sass at build time — edit bases here, then rebuild.
+ */
+
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:map';
+
+// Default / first available scheme.
+$its-default-scheme: 'teal_coral';
+
+$its-color-schemes: (
+  'teal_coral': (
+    'label': 'Teal & Coral',
+    'primary': #0f766e,
+    'accent': #e07a5f,
+    'companion': #115e59,
+  ),
+  'forest_amber': (
+    'label': 'Forest & Amber',
+    'primary': #1b4332,
+    'accent': #d97706,
+    'companion': #2d6a4f,
+  ),
+  'slate_terracotta': (
+    'label': 'Slate & Terracotta',
+    'primary': #334155,
+    'accent': #c2410c,
+    'companion': #475569,
+  ),
+  'plum_sage': (
+    'label': 'Plum & Sage',
+    'primary': #6b3a6d,
+    'accent': #84a98c,
+    'companion': #5c4b6c,
+  ),
+);
+
+// Mix weights toward white (light) or black (dark), matching the old Tailcolor ramps.
+$its-shade-steps: (
+  50: (white, 90%),
+  100: (white, 80%),
+  200: (white, 60%),
+  300: (white, 40%),
+  400: (white, 20%),
+  500: null,
+  600: (black, 20%),
+  700: (black, 40%),
+  800: (black, 60%),
+  900: (black, 80%),
+);
+
+@function its-shade($base, $step) {
+  $mix: map.get($its-shade-steps, $step);
+  @if $mix == null {
+    @return $base;
+  }
+  @return color.mix(list.nth($mix, 1), $base, list.nth($mix, 2));
+}
+
+@function its-sky-base($primary) {
+  // Brighter, cooler companion derived from primary (replaces former secondary-sky).
+  @return color.mix(#22d3ee, $primary, 40%);
+}
+
+@mixin its-emit-ramp($prefix, $base) {
+  @each $step, $_ in $its-shade-steps {
+    --#{$prefix}-#{$step}: #{its-shade($base, $step)};
+  }
+}
+
+@mixin its-emit-scheme-vars($scheme) {
+  $primary: map.get($scheme, 'primary');
+  $accent: map.get($scheme, 'accent');
+  $companion: map.get($scheme, 'companion');
+  $sky: its-sky-base($primary);
+
+  @include its-emit-ramp('its-primary', $primary);
+  @include its-emit-ramp('its-accent', $accent);
+  @include its-emit-ramp('its-companion', $companion);
+  @include its-emit-ramp('its-sky', $sky);
+
+  --its-primary: #{$primary};
+  --its-accent: #{$accent};
+  --its-companion: #{$companion};
+  --its-sky: #{$sky};
+  --its-primary-overlay: #{color.change(its-shade($primary, 800), $alpha: 0.5)};
+}
+
+@mixin its-color-scheme-tokens {
+  $default: map.get($its-color-schemes, $its-default-scheme);
+
+  :root,
+  [data-its-scheme='#{$its-default-scheme}'] {
+    @include its-emit-scheme-vars($default);
+  }
+
+  @each $key, $scheme in $its-color-schemes {
+    @if $key != $its-default-scheme {
+      [data-its-scheme='#{$key}'] {
+        @include its-emit-scheme-vars($scheme);
+      }
+    }
+  }
+}

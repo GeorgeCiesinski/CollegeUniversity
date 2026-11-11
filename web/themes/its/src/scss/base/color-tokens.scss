@@ -1,0 +1,7 @@
+/**
+ * Emits CSS custom properties for every predefined ITS color scheme.
+ */
+
+@use '../abstracts/color-schemes' as *;
+
+@include its-color-scheme-tokens;

@@ -3,6 +3,7 @@
  * most pages. Page-only styles live in pages/ and are separate entries.
  */
 
+@use 'base/color-tokens';
 @use 'base/base';
 @use 'base/typography';
 @use 'components/background-image';

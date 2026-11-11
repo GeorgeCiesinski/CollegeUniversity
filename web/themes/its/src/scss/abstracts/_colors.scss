@@ -1,88 +1,69 @@
 /**
- * ITS Brand Colors and Palettes
- * 
- * These are the base colors used to generate tailwind style color palettes for each color.
- * 
- * Generator: https://tailcolor.com/palettes/
+ * ITS color tokens.
+ *
+ * Brand values come from CSS custom properties emitted by color-tokens.scss
+ * (see abstracts/_color-schemes.scss). Sass variables below bridge existing
+ * component styles to those runtime scheme variables.
+ *
+ * Fallback hexes match the default scheme (teal_coral).
  */
 
+// Primary (legacy name: blue)
+$primary-blue: var(--its-primary, #0f766e);
+$primary-blue-50: var(--its-primary-50, #e7f1f0);
+$primary-blue-100: var(--its-primary-100, #cfe3e1);
+$primary-blue-200: var(--its-primary-200, #9fc7c3);
+$primary-blue-300: var(--its-primary-300, #6faba5);
+$primary-blue-400: var(--its-primary-400, #3f9287);
+$primary-blue-500: var(--its-primary-500, #0f766e);
+$primary-blue-600: var(--its-primary-600, #0c5e58);
+$primary-blue-700: var(--its-primary-700, #094742);
+$primary-blue-800: var(--its-primary-800, #062f2c);
+$primary-blue-900: var(--its-primary-900, #031816);
 
-/*
-ITS Brand Colors
+// Accent (legacy name: yellow / gold)
+$primary-yellow: var(--its-accent, #e07a5f);
+$primary-yellow-50: var(--its-accent-50, #fdf2ef);
+$primary-yellow-100: var(--its-accent-100, #fbe5df);
+$primary-yellow-200: var(--its-accent-200, #f7cbc0);
+$primary-yellow-300: var(--its-accent-300, #f2b1a0);
+$primary-yellow-400: var(--its-accent-400, #ee9680);
+$primary-yellow-500: var(--its-accent-500, #e07a5f);
+$primary-yellow-600: var(--its-accent-600, #b3624c);
+$primary-yellow-700: var(--its-accent-700, #864939);
+$primary-yellow-800: var(--its-accent-800, #5a3126);
+$primary-yellow-900: var(--its-accent-900, #2d1813);
 
-These are the base colors used to generate tailwind style color palettes for each color.
+// Sky (derived from primary per scheme)
+$secondary-sky: var(--its-sky, #1f9d9c);
+$secondary-sky-50: var(--its-sky-50, #e8f5f5);
+$secondary-sky-100: var(--its-sky-100, #d2ebeb);
+$secondary-sky-200: var(--its-sky-200, #a5d7d7);
+$secondary-sky-300: var(--its-sky-300, #78c3c3);
+$secondary-sky-400: var(--its-sky-400, #4bafaf);
+$secondary-sky-500: var(--its-sky-500, #1f9d9c);
+$secondary-sky-600: var(--its-sky-600, #197e7d);
+$secondary-sky-700: var(--its-sky-700, #135e5e);
+$secondary-sky-800: var(--its-sky-800, #0c3f3e);
+$secondary-sky-900: var(--its-sky-900, #061f1f);
 
-Generator: https://tailcolor.com/palettes/
-*/
+// Companion (legacy name: darkgreen)
+$secondary-darkgreen: var(--its-companion, #115e59);
+$secondary-darkgreen-50: var(--its-companion-50, #e7efee);
+$secondary-darkgreen-100: var(--its-companion-100, #cfdfdd);
+$secondary-darkgreen-200: var(--its-companion-200, #9fbfbb);
+$secondary-darkgreen-300: var(--its-companion-300, #6f9f99);
+$secondary-darkgreen-400: var(--its-companion-400, #3f7e77);
+$secondary-darkgreen-500: var(--its-companion-500, #115e59);
+$secondary-darkgreen-600: var(--its-companion-600, #0e4b47);
+$secondary-darkgreen-700: var(--its-companion-700, #0a3835);
+$secondary-darkgreen-800: var(--its-companion-800, #072624);
+$secondary-darkgreen-900: var(--its-companion-900, #031312);
 
-// Primary
-$primary-blue: #004B78;
-$primary-yellow: #CC9900;
+// Overlay used for text-shadow / card shadows on photo backgrounds
+$transparent-blue: var(--its-primary-overlay, rgba(6, 47, 44, 0.5));
 
-// Secondary
-$secondary-sky: #009be0;
-$secondary-darkgreen: #006c5b;
-
-// Transparent
-$transparent-blue: rgba(0, 30, 48, 0.5);
-
-/* 
-Palettes
-
-These colors should be used throughout the theme. 
-
-The -500 version of each color are the same as the primary and secondary colors defined above.
-*/
-
-// Primary Blue
-$primary-blue-50: #e6edf2;
-$primary-blue-100: #ccdbe4;
-$primary-blue-200: #99b7c9;
-$primary-blue-300: #6693ae;
-$primary-blue-400: #336f93;
-$primary-blue-500: #004b78;
-$primary-blue-600: #003c60;
-$primary-blue-700: #002d48;
-$primary-blue-800: #001e30;
-$primary-blue-900: #000f18;
-
-// Primary Yellow
-$primary-yellow-50: #faf5e6;
-$primary-yellow-100: #f5ebcc;
-$primary-yellow-200: #ebd699;
-$primary-yellow-300: #e0c266;
-$primary-yellow-400: #d6ad33;
-$primary-yellow-500: #cc9900;
-$primary-yellow-600: #a37a00;
-$primary-yellow-700: #7a5c00;
-$primary-yellow-800: #523d00;
-$primary-yellow-900: #291f00;
-
-// Secondary Sky
-$secondary-sky-50: #e6f5fc;
-$secondary-sky-100: #ccebf9;
-$secondary-sky-200: #99d7f3;
-$secondary-sky-300: #66c3ec;
-$secondary-sky-400: #33afe6;
-$secondary-sky-500: #009be0;
-$secondary-sky-600: #007cb3;
-$secondary-sky-700: #005d86;
-$secondary-sky-800: #003e5a;
-$secondary-sky-900: #001f2d;
-
-// Secondary Green
-$secondary-darkgreen-50: #e6f0ef;
-$secondary-darkgreen-100: #cce2de;
-$secondary-darkgreen-200: #99c4bd;
-$secondary-darkgreen-300: #66a79d;
-$secondary-darkgreen-400: #33897c;
-$secondary-darkgreen-500: #006c5b;
-$secondary-darkgreen-600: #005649;
-$secondary-darkgreen-700: #004137;
-$secondary-darkgreen-800: #002b24;
-$secondary-darkgreen-900: #001612;
-
-// Indicative
+// Indicative (unused legacy; keep for compatibility)
 $orange: orange;
 $red: red;
 $blue: teal;

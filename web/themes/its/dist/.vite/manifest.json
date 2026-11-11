@@ -64,52 +64,52 @@
     "isEntry": true
   },
   "src/scss/global.scss": {
-    "file": "assets/global-CY7yxmWz.css",
+    "file": "assets/global-uURvUZrI.css",
     "src": "src/scss/global.scss",
     "isEntry": true
   },
   "src/scss/pages/beautiful-page.scss": {
-    "file": "assets/page-beautiful-Cdyul7lo.css",
+    "file": "assets/page-beautiful-sLJVvVhB.css",
     "src": "src/scss/pages/beautiful-page.scss",
     "isEntry": true
   },
   "src/scss/pages/careers.scss": {
-    "file": "assets/page-careers-D1B6R4vq.css",
+    "file": "assets/page-careers-g55-FyDP.css",
     "src": "src/scss/pages/careers.scss",
     "isEntry": true
   },
   "src/scss/pages/contact.scss": {
-    "file": "assets/page-contact-CENJ-aQk.css",
+    "file": "assets/page-contact-vA8JmxK3.css",
     "src": "src/scss/pages/contact.scss",
     "isEntry": true
   },
   "src/scss/pages/custom-modules.scss": {
-    "file": "assets/page-custom-modules-Ce6qYhhp.css",
+    "file": "assets/page-custom-modules-Bi9qrJnF.css",
     "src": "src/scss/pages/custom-modules.scss",
     "isEntry": true
   },
   "src/scss/pages/service-status.scss": {
-    "file": "assets/page-service-status-BgWtSRJL.css",
+    "file": "assets/page-service-status-BpxTMAJK.css",
     "src": "src/scss/pages/service-status.scss",
     "isEntry": true
   },
   "src/scss/pages/software-licensing.scss": {
-    "file": "assets/page-software-licensing-WwoAH6Se.css",
+    "file": "assets/page-software-licensing-aklUva2r.css",
     "src": "src/scss/pages/software-licensing.scss",
     "isEntry": true
   },
   "src/scss/pages/startup.scss": {
-    "file": "assets/page-startup-61P2TCYN.css",
+    "file": "assets/page-startup-CLhDeAc4.css",
     "src": "src/scss/pages/startup.scss",
     "isEntry": true
   },
   "src/scss/pages/tabbed-content.scss": {
-    "file": "assets/page-tabbed-5oDW43GZ.css",
+    "file": "assets/page-tabbed-FIpY1xlN.css",
     "src": "src/scss/pages/tabbed-content.scss",
     "isEntry": true
   },
   "src/scss/pages/whats-new.scss": {
-    "file": "assets/page-whats-new-DWdwFOCY.css",
+    "file": "assets/page-whats-new-C7ZzkIwd.css",
     "src": "src/scss/pages/whats-new.scss",
     "isEntry": true
   }

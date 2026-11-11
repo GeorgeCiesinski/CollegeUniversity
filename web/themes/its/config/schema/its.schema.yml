@@ -1,0 +1,16 @@
+# Schema for the configuration of the ITS theme.
+
+its.settings:
+  type: theme_settings
+  label: 'ITS settings'
+  mapping:
+    color_scheme:
+      type: string
+      label: 'Color scheme'
+      constraints:
+        Choice:
+          choices:
+            - teal_coral
+            - forest_amber
+            - slate_terracotta
+            - plum_sage
