@@ -32,11 +32,11 @@
         "drupal/extlink": "^1.7",
         "drupal/focal_point": "^2.1",
         "drupal/fullcalendar_view": "^5.1",
-        "drupal/gin": "^3.0@rc",
-        "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/gin": "^4.1.4",
+        "drupal/gin_toolbar": "^2.0",
         "drupal/honeypot": "^2.2",
-        "drupal/iframe": "^2.24",
-        "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/iframe": "^3.0",
+        "drupal/inline_entity_form": "^3.0",
         "drupal/linkit": "^7.0",
         "drupal/material_icons": "^2.0",
         "drupal/menu_block": "^1.10",
@@ -46,11 +46,11 @@
         "drupal/slick": "^3.0",
         "drupal/slick_extras": "^2.0",
         "drupal/slick_views": "^3.0",
-        "drupal/smart_date": "4.0.3",
+        "drupal/smart_date": "^4.0",
         "drupal/svg_image": "^3.0",
         "drupal/token_block": "^2.0",
         "drupal/vite": "^1.5",
-        "drupal/webform": "^6.3@beta",
+        "drupal/webform": "^6.3",
         "drush/drush": "^13",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
@@ -136,10 +136,6 @@
                 "      composer remove drupal/core-project-message"
             ]
         },
-        "patches": {
-            "drupal/smart_date": {
-                "Issue #3409287": "https://www.drupal.org/files/issues/2023-12-18/3409287.patch"
-            }
-        }
+        "patches": {}
     }
 }
