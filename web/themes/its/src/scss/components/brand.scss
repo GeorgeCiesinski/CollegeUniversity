@@ -9,7 +9,20 @@
   display: flex; 
   align-items: center;
   flex: 1;
+  gap: 0.75rem;
   padding: $nav-top-bottom 0 $nav-top-bottom 0;   
+}
+
+// SVG logos without root width/height collapse to 0px inside
+// `a { width: fit-content }` from base.scss — size the image explicitly.
+.site-logo {
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    height: 2.5rem;
+    width: auto;
+  }
 }
 
 .site-name > a {

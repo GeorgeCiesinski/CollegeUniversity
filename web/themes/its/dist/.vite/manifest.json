@@ -1,6 +1,6 @@
 {
   "src/js/global.js": {
-    "file": "assets/global-js-CotFQKpa.js",
+    "file": "assets/global-js-CmO9aTDJ.js",
     "name": "global-js",
     "src": "src/js/global.js",
     "isEntry": true
@@ -64,7 +64,7 @@
     "isEntry": true
   },
   "src/scss/global.scss": {
-    "file": "assets/global-BRi7oqyu.css",
+    "file": "assets/global-CY7yxmWz.css",
     "src": "src/scss/global.scss",
     "isEntry": true
   },
@@ -89,7 +89,7 @@
     "isEntry": true
   },
   "src/scss/pages/service-status.scss": {
-    "file": "assets/page-service-status-Ct6ftQoz.css",
+    "file": "assets/page-service-status-BgWtSRJL.css",
     "src": "src/scss/pages/service-status.scss",
     "isEntry": true
   },
