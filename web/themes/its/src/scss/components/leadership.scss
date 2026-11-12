@@ -66,9 +66,27 @@
 
   .field__item {
     img {
+      display: block;
+      width: 15rem;
+      height: 15rem;
+      max-width: 100%;
+      object-fit: cover;
       overflow: hidden;
       border-radius: 50%;
       border: 2px solid $primary-blue-500;
+    }
+  }
+}
+
+// Full leader page: keep portrait readable, not native image dimensions.
+.node--type-leader.node--view-mode-full {
+  .field--name-field-leader-image {
+    margin: 1rem auto;
+
+    img {
+      width: min(15rem, 100%);
+      height: auto;
+      aspect-ratio: 1;
     }
   }
 }

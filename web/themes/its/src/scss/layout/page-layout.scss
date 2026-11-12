@@ -17,7 +17,7 @@
 
 #block-its-page-title, #block-its-content {
   box-sizing: border-box;
-  width: 100%; 
+  width: 100%;
   margin: 0;
 
   article {
@@ -30,56 +30,36 @@
 #block-its-page-title {
   >h1 {
     margin: 3rem 0.5rem;
+
+    @include breakpoint(sm) {
+      width: $content-sm;
+      margin: 3rem auto;
+    }
+
+    @include breakpoint(md) {
+      width: $content-md;
+      margin: 3rem auto;
+    }
   }
 }
 
 #block-its-content {
-  .node__content, .search-bar, .view {
+  .node__content, .search-bar, .view, .taxonomy-term {
     margin: 0.5rem;
+
+    @include breakpoint(sm) {
+      width: $content-sm;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(md) {
+      width: $content-md;
+      margin: 0 auto;
+    }
   }
 }
 
 #block-its-whitespace {
   background-color: white;
   height: 7rem;
-}
-
-.region-content {
-  min-height: 60vh;
-}
-
-@include breakpoint(sm) {
-
-  #block-its-page-title {
-    >h1 {
-      width: $content-sm;
-      margin: 3rem auto;
-    }
-  }
-
-  #block-its-content {
-    .node__content, .search-bar, .view, .taxonomy-term {
-      width: $content-sm;
-      margin: 0 auto;
-    }
-  }
-
-}
-
-@include breakpoint(md) {
-
-  #block-its-page-title {
-    >h1 {
-      width: $content-md;
-      margin: 3rem auto;
-    }
-  }
-
-  #block-its-content {
-    .node__content, .search-bar, .view, .taxonomy-term {
-      width: $content-md;
-      margin: 0 auto;
-    }
-  }
-
 }

@@ -20,9 +20,9 @@ function its_preprocess_html(array &$variables): void {
     'slate_terracotta',
     'plum_sage',
   ];
-  $color_scheme = theme_get_setting('color_scheme') ?? 'teal_coral';
+  $color_scheme = theme_get_setting('color_scheme') ?? 'slate_terracotta';
   if (!in_array($color_scheme, $allowed_schemes, TRUE)) {
-    $color_scheme = 'teal_coral';
+    $color_scheme = 'slate_terracotta';
   }
   $variables['html_attributes']['data-its-scheme'] = $color_scheme;
 

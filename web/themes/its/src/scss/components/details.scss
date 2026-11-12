@@ -8,27 +8,18 @@
 
 @use '../abstracts' as *;
 
-details {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border: 1px solid $primary-blue-200;
-  border-radius: $radius-md
+.layout-container {
+  details {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid $primary-blue-200;
+    border-radius: $radius-md;
+  }
+  details > .details-wrapper {
+    padding: 0.5rem 0.75rem;
+  }
+  summary {
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+  }
 }
-details > .details-wrapper {
-  padding: 0.5rem 0.75rem;
-}
-/* 
-@todo Regression: The summary of uncollapsible details are no longer
-vertically aligned with the .details-wrapper in browsers without native
-details support. 
-*/
-summary {
-  padding: 0.2em 0.5em;
-  cursor: pointer;
-}
-
-// @include breakpoint(md) {
-//   details {
-//     border: none;
-//   }
-// }

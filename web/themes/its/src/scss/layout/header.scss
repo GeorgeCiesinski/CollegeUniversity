@@ -16,7 +16,8 @@ MOBILE
 }
 
 .sticky-header {
-    height: 4rem;
+    // Actual branded height is $sticky-header-offset; breadcrumb sticky top uses that.
+    min-height: 4rem;
     position: -webkit-sticky; // Safari
     position: sticky;
     top: var(--gin-toolbar-height, 0);  // Fallback value of 0 in case user is logged out and gin toolbar isn't instantiated

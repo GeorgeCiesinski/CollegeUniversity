@@ -198,50 +198,14 @@ START - BEAUTIFUL PAGE GUIDES
   margin: 0 $margin-sm;
   
   // Startup
-  .user-access-item, 
-  .microsoft-item, 
+  .user-access-item,
+  .microsoft-item,
   .computer-item,
   // ITS Security
-  .user-account-security-item, 
-  #block-its-cybersecuritytips, 
+  .user-account-security-item,
+  #block-its-cybersecuritytips,
   #block-its-deviceupdates {
-    background: linear-gradient(to right, #{$primary-blue-900} 2px, rgba(255, 255, 255, 0.5) 4px, rgba(255, 255, 255, 0.25) 6px, rgba(255, 255, 255, 0.25) 8px, transparent 10px, transparent 14px, rgba(255, 255, 255, 0.25) 15px, transparent 20px);
-    background-color: $primary-blue-500;
-    border-radius: $radius-sm;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 7rem;
-    height: 9rem;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all ease-in-out .2s;
-
-    a {
-      box-sizing: border-box;
-      position: absolute;
-      padding: 2rem 1rem;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    &:hover {
-      filter: drop-shadow(2px 2px $primary-blue-500) drop-shadow(5px 5px 5px $primary-blue-200);
-      box-shadow: 5px 3px floralwhite;
-      transform: translateY(-0.5rem);  // Raise button on hover
-      
-      a {
-        text-decoration: underline;
-      }
-    }
+    @include guide-tile;
   }
 }
 /*

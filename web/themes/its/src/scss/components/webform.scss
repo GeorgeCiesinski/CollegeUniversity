@@ -4,24 +4,25 @@
 
 @use '../abstracts' as *;
 
-.js-webform-checkboxes {
-
-  .form-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.layout-container {
+  .js-webform-checkboxes {
+    .form-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
   }
-}
 
-input {
-  &:disabled {
-    background-color: dimgrey;
-    border-color: dimgrey;
-    color: linen;
-    opacity: 1;
-
-    &:hover {
+  input {
+    &:disabled {
       background-color: dimgrey;
+      border-color: dimgrey;
+      color: linen;
+      opacity: 1;
+
+      &:hover {
+        background-color: dimgrey;
+      }
     }
   }
 }

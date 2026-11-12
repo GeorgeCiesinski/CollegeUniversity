@@ -1,11 +1,12 @@
 @use "../abstracts" as *;
 
-.block-views-exposed-filter-blocksearch-page-1 {
+// Nested under .layout-container so these beat generic button radius rules.
+.layout-container .block-views-exposed-filter-blocksearch-page-1 {
   .filters {
     display: flex;
     justify-content: flex-end;
     border: none;
-    padding: 0; 
+    padding: 0;
   }
 
   .form-wrapper {
@@ -16,11 +17,13 @@
     height: 2rem;
   }
 
-  .form-submit {
+  // Square left edge joins the search field; radius only on the right.
+  .form-submit,
+  input.form-submit,
+  input.button {
     width: fit-content;
-    float: 0;
-    background-color: $primary-blue-500;
     float: left;
+    background-color: $primary-blue-500;
     margin: 0;
     border-radius: 0 $radius-md $radius-md 0;
   }

@@ -1,24 +1,29 @@
 /**
  * Base style for regular elements
+ *
+ * Element rules are scoped under .layout-container so they do not
+ * affect Gin toolbar chrome on logged-in front-end pages.
  */
 
-article {
-  width: 100%;
-  max-width: fit-content;
-}
+.layout-container {
+  article {
+    width: 100%;
+    max-width: fit-content;
+  }
 
-ul {
-  padding-inline-start: 1rem;
+  ul {
+    padding-inline-start: 1rem;
+  }
+
+  a {
+    display: inline-block;
+    width: fit-content;
+  }
 }
 
 div.center-content {
   display: flex;
   justify-content: center;
-}
-
-a {
-  display: inline-block;
-  width: fit-content;
 }
 
 // Vertical padding - 2rem

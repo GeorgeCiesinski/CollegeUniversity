@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 4757d2e9-4b98-436e-98d4-0b8e490058f2
-name: 'Information Technology Services'
+name: 'College University'
 mail: demo@example.com
-slogan: ''
+slogan: 'Information Technology Services'
 page:
   403: ''
   404: ''

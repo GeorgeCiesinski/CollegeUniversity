@@ -27,6 +27,6 @@ function its_form_system_theme_settings_alter(array &$form, FormStateInterface $
       'slate_terracotta' => t('Slate & Terracotta'),
       'plum_sage' => t('Plum & Sage'),
     ],
-    '#default_value' => theme_get_setting('color_scheme') ?? 'teal_coral',
+    '#default_value' => theme_get_setting('color_scheme') ?? 'slate_terracotta',
   ];
 }

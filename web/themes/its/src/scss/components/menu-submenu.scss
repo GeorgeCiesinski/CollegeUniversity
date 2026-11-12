@@ -1,5 +1,7 @@
 /**
  * Style for Submenu / Dropdown menu
+ *
+ * Scoped under .nav-bar with the primary menu.
  */
 
 @use "../abstracts" as *;
@@ -7,28 +9,28 @@
 /*
 MOBILE
 */
-.sub-menu {
-  display: none;
-  gap: $menu-gap;
-  width: 100%;
-  background-color: $primary-blue-50;
-  border-radius: $radius-sm;
-  padding: $menu-gap;
-  
-
-  &.visible {
-    display: flex;
-  }
-
-  > li {
+.nav-bar {
+  .sub-menu {
+    display: none;
+    gap: $menu-gap;
     width: 100%;
-    font-size: 1.25rem;
-    padding: 0.5rem 0;
+    background-color: $primary-blue-50;
+    border-radius: $radius-sm;
+    padding: $menu-gap;
 
-    &:hover {
-      background-color: $primary-blue-100;
+    &.visible {
+      display: flex;
     }
-    
+
+    > li {
+      width: 100%;
+      font-size: 1.25rem;
+      padding: 0.5rem 0;
+
+      &:hover {
+        background-color: $primary-blue-100;
+      }
+    }
   }
 }
 
@@ -36,52 +38,54 @@ MOBILE
 SMALL DESKTOP
 */
 @include breakpoint(md) {
-  .sub-menu {
-    position: absolute;
-    top: 1rem;
-    left: 0rem;
-    width: 12rem;
-    flex-flow: column;
-    gap: 0rem;
-    margin-top: calc(2 * $menu-gap);  // Prevents first child from hugging parent too closely
-    padding: 0rem;
-    background-color: white;
-    filter: drop-shadow(2px 2px 4px $primary-blue-200);
-    
-    > li {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      font-size: 1rem;
-      padding: 0;
-      border-radius: 0px;
+  .nav-bar {
+    .sub-menu {
+      position: absolute;
+      top: 1rem;
+      left: 0rem;
+      width: 12rem;
+      flex-flow: column;
+      gap: 0rem;
+      margin-top: calc(2 * $menu-gap);  // Prevents first child from hugging parent too closely
+      padding: 0rem;
+      background-color: white;
+      filter: drop-shadow(2px 2px 4px $primary-blue-200);
 
-      &:first-child {
-        border-radius: $radius-sm $radius-sm 0 0;
-      }
-
-      &:last-child {
-        border-radius: 0 0 $radius-sm $radius-sm;
-      }
-
-      &:hover {
-        background-color: $primary-blue-50;
-      }
-
-      > span {
-        background-image: none;
-      }
-      
-      > a {
-        box-sizing: border-box;
+      > li {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
-        padding: 1rem;
-        background-image: none;
-        text-align: center;
+        font-size: 1rem;
+        padding: 0;
+        border-radius: 0px;
+
+        &:first-child {
+          border-radius: $radius-sm $radius-sm 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 $radius-sm $radius-sm;
+        }
 
         &:hover {
-          scale: none;
+          background-color: $primary-blue-50;
+        }
+
+        > span {
+          background-image: none;
+        }
+
+        > a {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 1rem;
+          background-image: none;
+          text-align: center;
+
+          &:hover {
+            scale: none;
+          }
         }
       }
     }

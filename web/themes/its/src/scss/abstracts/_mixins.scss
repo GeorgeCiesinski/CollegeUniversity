@@ -1,0 +1,99 @@
+/**
+ * Shared layout and visual mixins for the ITS theme.
+ */
+
+@use "breakpoints" as *;
+@use "variables" as *;
+@use "colors" as *;
+
+/// Constrain an element to the site content column and center it.
+@mixin content-width($mb: 0) {
+  width: 100%;
+
+  @include breakpoint(sm) {
+    width: $content-sm;
+    margin: 0 auto $mb;
+  }
+
+  @include breakpoint(md) {
+    width: $content-md;
+    margin: 0 auto $mb;
+  }
+}
+
+/// Shared border treatment for form controls.
+@mixin form-control {
+  border: 1px solid $primary-blue-500;
+  border-radius: $radius-md;
+}
+
+/// Striped guide / quick-link tile used on guidebook and beautiful pages.
+@mixin guide-tile {
+  background: linear-gradient(
+    to right,
+    #{$primary-blue-900} 2px,
+    rgba(255, 255, 255, 0.5) 4px,
+    rgba(255, 255, 255, 0.25) 6px,
+    rgba(255, 255, 255, 0.25) 8px,
+    transparent 10px,
+    transparent 14px,
+    rgba(255, 255, 255, 0.25) 15px,
+    transparent 20px
+  );
+  background-color: $primary-blue-500;
+  border-radius: $radius-sm;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  height: 9rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+
+  a {
+    box-sizing: border-box;
+    position: absolute;
+    padding: 2rem 1rem;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &:hover {
+    filter: drop-shadow(2px 2px $primary-blue-500) drop-shadow(5px 5px 5px $primary-blue-200);
+    box-shadow: 5px 3px floralwhite;
+    transform: translateY(-0.5rem);
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+/// Solid primary card (taxonomy / news list items).
+@mixin card-primary {
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  background-color: $primary-blue-500;
+  border-radius: $radius-md;
+  box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-300;
+  padding: 0.5rem;
+}
+
+/// Ghostwhite bordered card (events).
+@mixin card-bordered {
+  background-color: ghostwhite;
+  border: 1px solid $primary-blue-500;
+  border-radius: $radius-md;
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-200;
+}

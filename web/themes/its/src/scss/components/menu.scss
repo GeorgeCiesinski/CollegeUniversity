@@ -1,5 +1,7 @@
 /**
  * Styling for root menu and menu lists
+ *
+ * Scoped under .nav-bar so Gin toolbar .menu-item--expanded is unaffected.
  */
 
 @use "../abstracts" as *;
@@ -8,78 +10,76 @@
 MOBILE
 */
 
-// Menu - Level 0
-.menu {
-  background-color: white;
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  gap: $menu-gap;
-  margin: 0;
-  padding: 0;
-  list-style: none outside;
-  text-align: left; /* LTR */
-  border-radius: $radius-sm;
-
-  > li {
-    font-size: 1.25rem;
-    padding: 0.5rem 0;
+.nav-bar {
+  // Menu - Level 0
+  .menu {
+    background-color: white;
     box-sizing: border-box;
-    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    width: 100%;
-    list-style-type: none;
+    gap: $menu-gap;
     margin: 0;
+    padding: 0;
+    list-style: none outside;
+    text-align: left; /* LTR */
     border-radius: $radius-sm;
 
-    &:hover {
-      background-color: $primary-blue-50;
-    }
-
-    > a, > span {
+    > li {
+      font-size: 1.25rem;
       padding: 0.5rem 0;
-    }
-
-    > a {
-      display: inline-block;
-      color: $primary-blue-500;
-      text-decoration: none;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 100%;
-      height: 100%;
-      text-align: center;
+      list-style-type: none;
+      margin: 0;
+      border-radius: $radius-sm;
 
-      &.is-active {
-        font-weight: 700;
+      &:hover {
+        background-color: $primary-blue-50;
+      }
+
+      > a, > span {
+        padding: 0.5rem 0;
+      }
+
+      > a {
+        display: inline-block;
+        color: $primary-blue-500;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        &.is-active {
+          font-weight: 700;
+        }
       }
     }
-
-  }
-}
-
-.menu-item--expanded {
-  cursor: pointer;
-  list-style-type: none;
-  color: $primary-blue-500;
-  
-  > span {
-    &::after {
-      content: " ▾"; // Default closed state symbol
-    }
   }
 
-  // dropdown-active font & background color when not hovering
-  &.dropdown-active {
+  .menu-item--expanded {
+    cursor: pointer;
+    list-style-type: none;
+    color: $primary-blue-500;
 
     > span {
-      font-weight: 700;
       &::after {
-        content: " ▴"; // Symbol when dropdown is open
+        content: " ▾"; // Default closed state symbol
       }
     }
 
+    &.dropdown-active {
+      > span {
+        font-weight: 700;
+        &::after {
+          content: " ▴"; // Symbol when dropdown is open
+        }
+      }
+    }
   }
 }
 
@@ -87,33 +87,34 @@ MOBILE
 SMALL DESKTOP
 */
 @include breakpoint(md) {
+  .nav-bar {
+    .menu {
+      gap: calc(2 * $menu-gap);
+      flex-flow: row;
 
-  .menu {
-    gap: calc(2 * $menu-gap);
-    flex-flow: row;
+      > li {
+        width: auto;
+        font-size: 1rem;
+        padding: 0;
 
-    > li {
-      width: auto;
-      font-size: 1rem;
-      padding: 0;
+        &:hover {
+          background-color: transparent;  // Hides mobile hover effect
+        }
 
-      &:hover {
-        background-color: transparent;  // Hides mobile hover effect
-      }
-
-      > a, > span {
-        padding: 0.3rem 0 0.3rem 0;
-        background-image: linear-gradient($primary-yellow 0 0);
-        background-position: 0 100%; /* Bottom Left */
-        background-size: 0% 4px;
-        background-repeat: no-repeat;
-        transition:
-          background-size 0.3s,
-          background-position 0s 0.3s; /* Change immediately after size */
-      }
-      > a:hover, span:hover {
-        background-position: 100% 100%; /* Bottom Right */
-        background-size: 100% 4px;
+        > a, > span {
+          padding: 0.3rem 0 0.3rem 0;
+          background-image: linear-gradient($primary-yellow 0 0);
+          background-position: 0 100%; /* Bottom Left */
+          background-size: 0% 4px;
+          background-repeat: no-repeat;
+          transition:
+            background-size 0.3s,
+            background-position 0s 0.3s; /* Change immediately after size */
+        }
+        > a:hover, span:hover {
+          background-position: 100% 100%; /* Bottom Right */
+          background-size: 100% 4px;
+        }
       }
     }
   }

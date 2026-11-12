@@ -38,12 +38,15 @@
  * (see abstracts/_color-schemes.scss). Sass variables below bridge existing
  * component styles to those runtime scheme variables.
  *
- * Fallback hexes match the default scheme (teal_coral).
+ * Fallback hexes match the default scheme (slate_terracotta).
  */
 /**
  * Global Variables
  * 
  * These variables are used throughout the ITS theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ */
+/**
+ * Shared layout and visual mixins for the ITS theme.
  */
 .slick-wrapper,
 .slick,
@@ -128,8 +131,9 @@
   content: "";
 }
 
-.slide__title {
-  color: #FFF;
+.layout-container .slide__title,
+.slide__caption .slide__title {
+  color: #fff;
   display: inline-block;
   margin: 0.5rem 0;
   line-height: 1.2rem;
@@ -280,12 +284,21 @@
 }
 .slick-dots li button {
   padding: 0;
+  width: 1rem;
+  height: 1rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .slick-dots li button::before {
   color: white;
   font-size: 1rem;
   position: relative;
   opacity: 60%;
+}
+.slick-dots li button:hover {
+  background: transparent;
 }
 .slick-dots li button:hover::before {
   opacity: 100%;

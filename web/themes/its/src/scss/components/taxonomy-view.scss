@@ -7,11 +7,15 @@
 
 .taxonomy-view {
   padding-bottom: 6rem;
-  width: calc(100% - 1rem); 
+  width: calc(100% - 1rem);
 
   h2 {
     width: 100%;
     margin: 0 $margin-xs 1rem $margin-xs;
+  }
+
+  h2, .taxonomy-list {
+    @include content-width(1.5rem);
   }
 }
 
@@ -27,17 +31,10 @@
   list-style-type: none;
   padding: 0;
   flex-wrap: wrap;
-  // margin: 0 $margin-xs;
 }
 
 .taxonomy-item {
-  width: 100%;
-  box-sizing: border-box;
-  color: white;
-  background-color: $primary-blue-500;
-  border-radius: $radius-md;
-  box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-300;
-  padding: 0.5rem;
+  @include card-primary;
 
   h2 {
     width: 100%;
@@ -55,7 +52,7 @@
 
   p {
     width: calc(100% - 1rem);
-    
+
     &::after {
       content: "...";
     }
@@ -64,24 +61,6 @@
   .node__content {
     h2 {
       margin: 1rem 0;
-    }
-  }
-}
-
-@include breakpoint(sm) {
-  .taxonomy-view {
-    h2, .taxonomy-list {
-      width: $content-sm;
-      margin: 0 auto 1.5rem;
-    }
-  }
-}
-
-@include breakpoint(md) {
-  .taxonomy-view {
-    h2, .taxonomy-list {
-      width: $content-md;
-      margin: 0 auto 1.5rem;
     }
   }
 }

@@ -1,53 +1,78 @@
 /**
  * Styles Buttons
- * 
+ *
  * Including button style links
  */
 
 @use "../abstracts" as *;
 
-button, input.button, a.button {
-  cursor: pointer;
-  position: relative;
-  padding: 0.25rem;
-  width: 7rem;
-  color: white;
-  background-color: $primary-blue-500;
-  border: 1px solid $primary-blue-500;
-  border-radius: $radius-sm;
-
-  &:hover {
-    background-color: $primary-blue-400;
-    border-color: $primary-blue-400;
-  }
-}
-
-a.button {
-  text-decoration: none;
-}
-
-span {
-  &.file {
-    width: fit-content;
+.layout-container {
+  // Exclude slick carousel arrows and pagination-dot buttons.
+  // Dot buttons have no class; :not(.slick-dots *) drops descendants of .slick-dots.
+  button:not(.slick-arrow):not(.slick-prev):not(.slick-next):not(.slick-dots *),
+  input.button,
+  a.button {
+    cursor: pointer;
+    position: relative;
+    padding: 0.25rem;
+    width: 7rem;
+    color: white;
     background-color: $primary-blue-500;
     border: 1px solid $primary-blue-500;
     border-radius: $radius-sm;
-    padding: 0.25rem;
-
-    > a {
-      text-decoration: none;
-      width: fit-content;
-      color: white;
-      padding-left: 1rem;
-    }
 
     &:hover {
       background-color: $primary-blue-400;
       border-color: $primary-blue-400;
+    }
+  }
+
+  // Explicit reset — higher specificity than the generic button rule above.
+  .slick-dots li button:not(.slick-arrow):not(.slick-prev):not(.slick-next) {
+    position: absolute;
+    padding: 0;
+    width: 1rem;
+    height: 1rem;
+    color: transparent;
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:hover {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  a.button {
+    text-decoration: none;
+  }
+
+  span {
+    &.file {
+      width: fit-content;
+      background-color: $primary-blue-500;
+      border: 1px solid $primary-blue-500;
+      border-radius: $radius-sm;
+      padding: 0.25rem;
 
       > a {
-        text-decoration: underline;
+        text-decoration: none;
+        width: fit-content;
+        color: white;
+        padding-left: 1rem;
+      }
+
+      &:hover {
+        background-color: $primary-blue-400;
+        border-color: $primary-blue-400;
+
+        > a {
+          text-decoration: underline;
+        }
       }
     }
   }
-} 
+}

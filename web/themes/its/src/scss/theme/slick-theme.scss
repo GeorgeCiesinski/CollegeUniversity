@@ -110,8 +110,10 @@
   content: "";
 }
  
-.slide__title {
-  color: #FFF;
+// Beat .layout-container h2 color from global typography.
+.layout-container .slide__title,
+.slide__caption .slide__title {
+  color: #fff;
   display: inline-block;
   margin: 0.5rem 0;
   line-height: 1.2rem;
@@ -280,6 +282,12 @@
 
     button {
       padding: 0;
+      width: 1rem;
+      height: 1rem;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
       // Base dot
       &::before {
         color: white;
@@ -289,6 +297,7 @@
       }
       // Dot hover effect
       &:hover {
+        background: transparent;
         &::before {
           opacity: 100%;
           filter: drop-shadow(2px 2px 2px $primary-blue-500);

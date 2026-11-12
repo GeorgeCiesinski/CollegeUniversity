@@ -5,6 +5,7 @@
 @use '../abstracts' as *;
 
 .filters {
+  @include content-width(2rem);
   box-sizing: border-box;
   display: block;  // Display none to enable
   border: 1px solid $primary-yellow-500;
@@ -13,6 +14,10 @@
 
   select {
     width: 10rem;
+
+    @include breakpoint(sm) {
+      width: 20rem;
+    }
   }
 
   // Overrides fieldset styling within the filters class
@@ -85,23 +90,5 @@
 
   &.visible {
     display: block;
-  }
-}
-
-@include breakpoint(sm) {
-  .filters {
-    width: $content-sm;
-    margin: 0 auto 2rem auto;
-
-    select {
-      width: 20rem;
-    }
-  }
-}
-
-@include breakpoint(md) {
-  .filters {
-    width: $content-md;
-    margin: 0 auto 2rem auto;
   }
 }

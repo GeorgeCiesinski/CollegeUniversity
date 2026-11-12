@@ -1,5 +1,8 @@
 /**
  * Styles the padding for main content elements
+ *
+ * Region chrome is scoped under .layout-container so Gin toolbar
+ * (which also uses .region-breadcrumb) is not restyled.
  */
 
 @use "../abstracts" as *;
@@ -8,25 +11,28 @@
   position: absolute;
 }
 
-.region-content, .region-breadcrumb, .region-highlighted {
-  width: 100%;
-}
+.layout-container {
+  .region-content,
+  .region-breadcrumb,
+  .region-highlighted {
+    width: 100%;
+  }
 
-// Excludes gin breadcrumb
-.gin-breadcrumb-wrapper {
+  .region-breadcrumb,
   .region-highlighted {
     background-color: white;
   }
-}
 
-.region-breadcrumb, .region-highlighted {
-  background-color: white;
-}
+  // Sticky site breadcrumb under Gin toolbar + site header.
+  .region-breadcrumb {
+    filter: drop-shadow(0 0.5rem 0.5rem $primary-blue-200);
+    position: -webkit-sticky; // Safari
+    position: sticky;
+    top: calc(var(--gin-toolbar-height, 0rem) + #{$sticky-header-offset});
+    z-index: 101;
+  }
 
-.region-breadcrumb {
-  filter: drop-shadow(0 0.5rem 0.5rem $primary-blue-200);
-  position: -webkit-sticky; // Safari
-  position: sticky;
-  top: calc(var(--gin-toolbar-height, 0rem) + 4rem);  // Fallback value of 0 in case user is logged out and gin toolbar isn't instantiated
-  z-index: 101;
+  .region-content {
+    min-height: 60vh;
+  }
 }

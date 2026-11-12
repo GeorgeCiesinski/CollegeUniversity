@@ -61,7 +61,7 @@ function individual_reflection_preprocess_individual_reflection_page(array &$var
         ],
         [
           'id' => 'cybersecurity-guidelines',
-          'question' => "How familiar are you with Humber's cybersecurity and safety guidelines?",
+          'question' => "How familiar are you with the college's cybersecurity and safety guidelines?",
           'options' => ['very familiar', 'somewhat familiar', 'not familiar'],
           'course' => 'Cybersecurity',
         ],
@@ -139,9 +139,9 @@ function individual_reflection_preprocess_individual_reflection_page(array &$var
         ],
         [
           'id' => 'resources-interest',
-          'question' => 'Would you like to be more knowledgeable about Humber’s digital resources and support services?',
+          'question' => 'Would you like to be more knowledgeable about the college’s digital resources and support services?',
           'options' => ['yes', 'no'],
-          'course' => 'Resources and Links Specific to Humber Polytechnic',
+          'course' => 'Institution-Specific Resources',
         ],
       ],
     ],

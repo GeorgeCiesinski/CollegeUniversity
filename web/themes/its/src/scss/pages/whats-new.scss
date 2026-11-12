@@ -2,7 +2,7 @@
  * Styles the Whats-new page
  */
 
- @use "../abstracts" as *;
+@use "../abstracts" as *;
 
 .whats-new-page {
 
@@ -17,13 +17,7 @@
   }
 
   .news-item {
-    width: 100%;
-    box-sizing: border-box;
-    color: white;
-    background-color: $primary-blue-500;
-    border-radius: $radius-md;
-    box-shadow: 0.5rem 0.5rem 0.5rem $primary-blue-300;
-    padding: 0.5rem;
+    @include card-primary;
 
     h2 {
       width: 100%;
@@ -41,7 +35,7 @@
 
     p {
       width: calc(100% - 1rem);
-      
+
       &::after {
         content: "...";
       }
@@ -55,20 +49,8 @@
   }
 }
 
-@include breakpoint(sm) {
-  .news-wrapper {
-    h2, .news-list {
-      width: $content-sm;
-      margin: 0 auto 1.5rem;
-    }
-  }
-}
-
-@include breakpoint(md) {
-  .news-wrapper {
-    h2, .news-list {
-      width: $content-md;
-      margin: 0 auto 1.5rem;
-    }
+.news-wrapper {
+  h2, .news-list {
+    @include content-width(1.5rem);
   }
 }

@@ -5,11 +5,11 @@
  * (see abstracts/_color-schemes.scss). Sass variables below bridge existing
  * component styles to those runtime scheme variables.
  *
- * Fallback hexes match the default scheme (teal_coral).
+ * Fallback hexes match the default scheme (slate_terracotta).
  */
 
 // Primary (legacy name: blue)
-$primary-blue: var(--its-primary, #0f766e);
+$primary-blue: var(--its-primary, #334155);
 $primary-blue-50: var(--its-primary-50, #e7f1f0);
 $primary-blue-100: var(--its-primary-100, #cfe3e1);
 $primary-blue-200: var(--its-primary-200, #9fc7c3);

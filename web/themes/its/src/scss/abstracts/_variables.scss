@@ -32,6 +32,8 @@ $content-xxl: 120rem;
 // Spacing
 $menu-gap: 0.5rem;
 $nav-top-bottom: 1rem;
+// Sticky header height with branding (logo 3rem + $nav-top-bottom × 2).
+$sticky-header-offset: 5.25rem;
 
 $nav-xs: 0.5rem;
 $nav-sm: 3rem;

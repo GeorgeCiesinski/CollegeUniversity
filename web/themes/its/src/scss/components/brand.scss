@@ -4,13 +4,28 @@
 
 @use "../abstracts" as *;
 
-// Container for site-name
+// Header brand region wrapping the system branding block.
 .brand {
-  display: flex; 
+  display: flex;
   align-items: center;
   flex: 1;
+  min-width: 0;
+  padding: $nav-top-bottom 0 $nav-top-bottom 0;
+}
+
+// Logo beside name + slogan stack.
+.site-branding {
+  display: flex;
+  align-items: center;
   gap: 0.75rem;
-  padding: $nav-top-bottom 0 $nav-top-bottom 0;   
+  min-width: 0;
+}
+
+.site-branding__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
 }
 
 // SVG logos without root width/height collapse to 0px inside
@@ -20,16 +35,28 @@
 
   img {
     display: block;
-    height: 2.5rem;
+    height: 3rem;
     width: auto;
   }
 }
 
+.site-name {
+  line-height: 1.2;
+}
+
 .site-name > a {
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
 }
 .site-name > a:link, .site-name > a:visited {
   color: $primary-blue-500;
+}
+
+.site-slogan {
+  color: $primary-blue-500;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
 }

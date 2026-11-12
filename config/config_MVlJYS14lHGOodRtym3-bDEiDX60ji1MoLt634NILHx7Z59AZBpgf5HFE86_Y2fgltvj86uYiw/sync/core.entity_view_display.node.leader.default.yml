@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.leader.field_office
     - field.field.node.leader.field_phone
     - field.field.node.leader.field_title
+    - image.style.media_embed_medium_300x300
     - node.type.leader
   module:
     - svg_image
@@ -49,7 +50,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: media_embed_medium_300x300
       image_loading:
         attribute: lazy
       svg_attributes:

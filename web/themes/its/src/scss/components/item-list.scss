@@ -3,23 +3,24 @@
  * Visual styles for item list.
  */
 
-
 /**
- * List style starts as decimal. 
- * First nested list is lower alphabetical. 
- * Second nested list and following are lower roman. 
+ * List style starts as decimal.
+ * First nested list is lower alphabetical.
+ * Second nested list and following are lower roman.
  */
-ol {
-  display: block;
-  max-width: 100%;
-  list-style-type: decimal;
-  padding-inline-start: 1.5rem;
-
+.layout-container {
   ol {
-    list-style-type: lower-alpha;
+    display: block;
+    max-width: 100%;
+    list-style-type: decimal;
+    padding-inline-start: 1.5rem;
 
     ol {
-      list-style-type: lower-roman;
+      list-style-type: lower-alpha;
+
+      ol {
+        list-style-type: lower-roman;
+      }
     }
   }
 }

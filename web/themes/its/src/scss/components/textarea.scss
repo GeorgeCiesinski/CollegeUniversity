@@ -4,14 +4,15 @@
 
 @use "../abstracts" as *;
 
-.form-textarea-wrapper {
-  textarea {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    border: 1px solid $primary-blue-500;
-    border-radius: $radius-md;
-    padding: 0.5rem;
+.layout-container {
+  .form-textarea-wrapper {
+    textarea {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0;
+      @include form-control;
+      padding: 0.5rem;
+    }
   }
 }
