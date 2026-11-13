@@ -1,14 +1,9 @@
 /**
- * Map of breakpoints
- * Mixin which can be included in other files to add breakpoint functionality. 
- * 
- * Breakpoints can be added to other sass files with:
- * 
- * @include breakpoint(md) {
- *   (style)
- * }
+ * @file
+ * Breakpoint map and mixin for responsive styles.
+ *
+ * Include in other Sass files with: @include breakpoint(md) { … }.
  */
-
 
 @use "sass:map";
 

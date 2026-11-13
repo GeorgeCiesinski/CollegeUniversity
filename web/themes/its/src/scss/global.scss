@@ -1,6 +1,8 @@
 /**
- * Sitewide Vite CSS entry: chrome, typography, and components used on
- * most pages. Page-only styles live in pages/ and are separate entries.
+ * @file
+ * Sitewide Vite CSS entry for chrome, typography, and shared components.
+ *
+ * Page-only styles live in pages/ and are separate Vite entries.
  */
 
 @use 'base/color-tokens';

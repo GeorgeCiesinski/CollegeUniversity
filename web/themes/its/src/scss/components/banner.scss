@@ -1,8 +1,9 @@
 /**
- * Styling for message banner
+ * @file
+ * Styling for message banner.
  */
 
- @use "../abstracts" as *;
+@use "../abstracts" as *;
 
 #message-banner {
   box-sizing: border-box;

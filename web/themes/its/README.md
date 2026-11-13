@@ -1,8 +1,12 @@
+# College University ITS Website
+
+Drupal 10 demo website inspired by the website I built when I  worked at a post-secondary institution.
+
 # ITS Theme
 
-Drupal 10 front-end theme for this site. Stable 9 subtheme. CSS and JavaScript are built with [Vite](https://vitejs.dev). Drupal still renders the pages; Vite only compiles assets.
+Stable 9 subtheme. CSS and JavaScript are built with [Vite](https://vitejs.dev). 
 
-Browse the site at **https://its-website.ddev.site**. Do not open `localhost:5173`.
+Drupal still renders the pages; Vite only compiles assets.
 
 ## Commands
 
@@ -25,17 +29,38 @@ ddev npm run test
 
 | Command | What it does |
 | --- | --- |
+| `ci` / install | Installs theme Node deps **inside DDEV** (required so native packages match Linux) |
 | `build` | Writes production files to `dist/` and slick overrides |
 | `dev` | Starts the Vite HMR server (port 5173) |
 | `test` | Runs theme JS unit tests in jsdom (not the live Drupal page) |
 
-`dist/` is committed so the site works without Node. After SCSS/JS changes, run `build` if you are not using `dev`.
+`dist/` is committed so the site works without Node. After SCSS/JS changes, run `build` if you are not using `dev`. Commit the updated `dist/` assets with those source changes.
 
-## Local HMR
+**Note:** Always install or reinstall theme packages with `ddev npm …`, not host `npm`. Host installs can miss Linux-native Rollup binaries and break `ddev npm run dev`.
 
-1. `ddev start`
-2. `ddev npm run dev`
-3. Keep https://its-website.ddev.site open
+## Local development
+
+### Start DDEV
+
+```bash
+ddev start
+```
+
+Browse the site at **https://its-website.ddev.site**. Without Vite running, Drupal serves the committed `dist/` assets.
+
+### Start Vite and enable HMR
+
+Do not open the `localhost:5173` / `192.168…` URLs Vite prints — those are the Vite process inside the DDEV container, not the Drupal site.
+
+1. With DDEV already running: `ddev npm run dev` (leave it running)
+2. **Once:** `ddev drush cr` so Drupal switches from `dist/` CSS/JS to the Vite server
+3. Open https://its-website.ddev.site and hard-refresh if needed
+
+After that, SCSS and theme JS edits hot-reload. 
+
+Run `ddev drush cr` again if you stop Vite, restart it later, or the page falls back to hashed files under `/themes/its/dist/assets/`. Confirm HMR in DevTools: stylesheet/script URLs should point at `https://its-website.ddev.site:5173/…`, not `dist/assets/…`.
+
+### Local settings
 
 `web/sites/default/settings.local.php` should include:
 
@@ -45,9 +70,9 @@ $settings['vite'] = [
 ];
 ```
 
-If the Vite process is not running, Drupal uses `dist/.vite/manifest.json`.
+Keep CSS/JS aggregation off locally (`css.preprocess` / `js.preprocess` false in `settings.local.php`) so HMR stays easy to debug.
 
-Keep CSS/JS aggregation off locally (`css.preprocess` / `js.preprocess` false in `settings.local.php`) so HMR and unhashed source maps stay easy to debug.
+If the Vite process is not running, Drupal uses `dist/.vite/manifest.json`.
 
 Twig, PHP, and CMS content still need Drupal's usual cache/Twig debug workflow. Vite only hot-reloads CSS and theme JS.
 
@@ -63,7 +88,7 @@ dist/                    production build
 overrides/               slick and fieldgroup replacements
 ```
 
-Page CSS/JS is attached in `its.theme` from node type or path (beautiful pages, contact, careers, startup, tabbed AI, service status, software licensing, what's new, individual reflection).
+Page CSS/JS is attached in `its.theme` from node type or path (beautiful pages, contact, careers, startup, tabbed content, service status, software licensing, what's new, custom modules).
 
 ## Breakpoints
 

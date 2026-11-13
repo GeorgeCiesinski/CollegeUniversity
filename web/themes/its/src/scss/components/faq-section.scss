@@ -1,8 +1,9 @@
 /**
- * Styling for FAQ dropdown in guides
+ * @file
+ * Styling for FAQ dropdown in guides.
  */
 
- @use "../abstracts" as *;
+@use "../abstracts" as *;
 
 .faq-heading {
   cursor: pointer;

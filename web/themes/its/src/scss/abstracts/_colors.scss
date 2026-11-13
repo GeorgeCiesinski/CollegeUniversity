@@ -1,10 +1,8 @@
 /**
- * ITS color tokens.
+ * @file
+ * ITS color token Sass variables bridged to CSS custom properties.
  *
- * Brand values come from CSS custom properties emitted by color-tokens.scss
- * (see abstracts/_color-schemes.scss). Sass variables below bridge existing
- * component styles to those runtime scheme variables.
- *
+ * Brand values come from CSS custom properties emitted by color-tokens.scss.
  * Fallback hexes match the default scheme (slate_terracotta).
  */
 

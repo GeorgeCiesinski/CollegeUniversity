@@ -1,8 +1,9 @@
 /**
- * Predefined ITS color schemes.
+ * @file
+ * Predefined ITS color schemes and shade ramp generators.
  *
- * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated
- * in Sass at build time — edit bases here, then rebuild.
+ * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated in
+ * Sass at build time — edit bases here, then rebuild.
  */
 
 @use 'sass:color';

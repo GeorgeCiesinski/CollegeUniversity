@@ -1,8 +1,9 @@
 /**
- * Styles embedded remote videos
+ * @file
+ * Styles embedded remote videos.
  */
 
- @use "../abstracts" as *;
+@use "../abstracts" as *;
 
 .media--type-remote-video, .field--name-field-media-oembed-video {
   width: 100%;

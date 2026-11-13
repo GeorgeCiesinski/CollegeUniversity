@@ -1,10 +1,11 @@
 /**
- * Styling for background image
- * 
- * Requires background image module
+ * @file
+ * Styling for background image.
+ *
+ * Requires background image module.
  */
 
- @use "../abstracts" as *;
+@use "../abstracts" as *;
 
 // Main Background Image Container
 .background-image-wrapper {

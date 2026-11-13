@@ -1,8 +1,9 @@
 /**
- * Styles the padding for main content elements
+ * @file
+ * Styles the padding for main content elements.
  *
- * Region chrome is scoped under .layout-container so Gin toolbar
- * (which also uses .region-breadcrumb) is not restyled.
+ * Region chrome is scoped under .layout-container so Gin toolbar (which also
+ * uses .region-breadcrumb) is not restyled.
  */
 
 @use "../abstracts" as *;

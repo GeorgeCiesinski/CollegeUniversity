@@ -1,8 +1,10 @@
 /**
- * Styling for quick action block, student services block, staff services block, and visitor services block
+ * @file
+ * Styling for quick action block, student services block, staff services block,
+ * and visitor services block.
  */
 
- @use "../abstracts" as *;
+@use "../abstracts" as *;
 
 .block-views-blockquick-actions-block-1, 
 .block-views-blockduplicate-of-student-services-block-1,

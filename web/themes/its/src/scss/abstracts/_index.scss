@@ -1,9 +1,6 @@
 /**
- * Forwards stylesheets in this directory
- *  
- * Use abstracts in other stylesheets using:
- * 
- * @use '../abstracts' as *;
+ * @file
+ * Forwards all abstracts for @use "../abstracts" as *.
  */
 
 @forward './breakpoints';
