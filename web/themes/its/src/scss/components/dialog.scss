@@ -8,6 +8,7 @@
   z-index: 1260;
   overflow: visible;
   padding: 0;
+  width: 92%;
   color: #000;
   border: solid 1px #ccc;
   background: #fff;
@@ -48,12 +49,6 @@
     background-image: url(/themes/its/images/icons/loading-small.gif);
     background-repeat: no-repeat;
     background-position: center center;
-  }
-}
-
-@media all and (max-width: 48em) { /* 768px */
-  .ui-dialog {
-    width: 92% !important;
   }
 }
 

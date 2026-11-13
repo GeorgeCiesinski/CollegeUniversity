@@ -22,15 +22,29 @@
   width: 100%;
 
   .fc-toolbar {
+    // Stack until lg — month/week/list + nav overflow content width at md.
     flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
 
-    .fc-left {
+    .fc-left,
+    .fc-right {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 0.5rem;
     }
 
     .fc-center {
-      margin: 0.5rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    // FullCalendar joins sibling buttons flush; space them out.
+    .fc-button-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
   }
 
@@ -96,6 +110,18 @@
 
   .fc-day {
     background-color: $primary-blue-50;
+  }
+
+  // Other-month days stay muted but meet WCAG AA (~4.5:1) on cell bg
+  // across color schemes (incl. slate primary-100). Do not use opacity
+  // alone — audits still fail effective contrast.
+  .fc-other-month {
+    background-color: $primary-blue-100;
+
+    .fc-day-number {
+      color: #4b5563;
+      opacity: 1;
+    }
   }
 
   // Table
@@ -207,16 +233,53 @@
     right: 0 !important;
     width: 100% !important;
   }
+
+  // List view (default on mobile): readable spacing and focus.
+  .fc-list-view {
+    .fc-list-heading td {
+      background-color: $primary-blue-100;
+      color: $primary-blue-800;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .fc-list-item {
+      td {
+        padding: 0.65rem 0.75rem;
+        vertical-align: middle;
+      }
+
+      &:hover td {
+        background-color: $primary-blue-50;
+      }
+
+      &:focus-within td {
+        outline: 2px solid $primary-blue-500;
+        outline-offset: -2px;
+      }
+    }
+
+    .fc-list-item-title a {
+      color: $primary-blue-800;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+
+      &:hover,
+      &:focus {
+        color: $primary-blue-600;
+      }
+    }
+
+    .fc-event-dot {
+      border-radius: 50%;
+    }
+  }
 }
 
 @include breakpoint(md) {
   .block-views-blockevent-calendar-block-1 {
     width: $content-sm;
     margin: 0 auto;
-
-    .fc-toolbar {
-      flex-direction: row;
-    }
   }
 }
 
@@ -224,6 +287,17 @@
   .block-views-blockevent-calendar-block-1 {
     width: $content-md;
     margin: 0 auto;
+
+    .fc-toolbar {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .fc-left,
+      .fc-right {
+        justify-content: flex-start;
+      }
+    }
   }
 }
 

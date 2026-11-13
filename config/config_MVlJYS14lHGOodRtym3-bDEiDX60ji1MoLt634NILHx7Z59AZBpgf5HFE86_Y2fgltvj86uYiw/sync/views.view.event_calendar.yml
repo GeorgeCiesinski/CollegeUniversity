@@ -334,10 +334,10 @@ display:
           end: field_date
           title: title
           left_buttons: 'prev,next today'
-          right_buttons: 'dayGridMonth,timeGridWeek'
+          right_buttons: 'dayGridMonth,timeGridWeek,listWeek'
           default_view: dayGridMonth
-          default_mobile_view: dayGridMonth
-          mobile_width: '768'
+          default_mobile_view: listWeek
+          mobile_width: '1024'
           firstDay: '0'
           nav_links: 0
           timeFormat: 'hh:mm a'
@@ -377,16 +377,16 @@ display:
           maxTime: '23:59:59'
           bundle_type: event
           classes: event-calendar
-          fetchGoogleHolidays: 0
+          fetchGoogleHolidays: false
           googleHolidaysSettings:
             googleCalendarAPIKey: ''
             googleCalendarGroup: ''
-            renderGoogleHolidaysAsBackground: 0
+            renderGoogleHolidaysAsBackground: false
           color_taxonomies:
             36: '#6b218a'
             38: '#1e3a8a'
             37: '#047857'
-            39: '#d97706'
+            39: '#b45309'
             4: '#b91c1c'
       row:
         type: fields

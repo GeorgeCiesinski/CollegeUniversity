@@ -1,0 +1,13 @@
+uuid: 8394a456-1005-4f22-a22d-ab0f97ec8cee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
+  description: 'College University Information Technology Services — get support, explore campus services, and stay up to date on IT news and events.'
+  title: '[site:name] | [site:slogan]'

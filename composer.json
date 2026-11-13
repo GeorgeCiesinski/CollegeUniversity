@@ -41,6 +41,7 @@
         "drupal/material_icons": "^2.0",
         "drupal/menu_block": "^1.10",
         "drupal/message_banner": "^2.0",
+        "drupal/metatag": "^2.2",
         "drupal/pathauto": "^1.11",
         "drupal/search_api_autocomplete": "^1.9",
         "drupal/slick": "^3.0",

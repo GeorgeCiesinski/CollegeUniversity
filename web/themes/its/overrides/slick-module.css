@@ -1,12 +1,45 @@
+@charset "UTF-8";
 /**
  * @file
  * Provided basic layout for the Slick based on custom settings.
  */
 /**
+ * @file
+ * Forwards all abstracts for @use "../abstracts" as *.
+ */
+/**
+ * @file
+ * Breakpoint map and mixin for responsive styles.
+ *
+ * Include in other Sass files with: @include breakpoint(md) { … }.
+ */
+/**
+ * @file
+ * Predefined ITS color schemes and shade ramp generators.
+ *
+ * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated in
+ * Sass at build time — edit bases here, then rebuild.
+ */
+/**
+ * @file
+ * ITS color token Sass variables bridged to CSS custom properties.
+ *
+ * Brand values come from CSS custom properties emitted by color-tokens.scss.
+ * Fallback hexes match the default scheme (slate_terracotta).
+ */
+/**
+ * @file
+ * Global Sass variables for the ITS theme.
+ */
+/**
+ * @file
+ * Shared layout and visual mixins for the ITS theme.
+ */
+/**
  * Complex layout needs custom refinement for mobile, hence it is reasonable
  * to apply for Desktop up. Adjust mobile version accordingly.
  */
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   /* Fixed FireFox draggable issue, avoid asNavFor thumbnails. */
   .slick--main .slick__slide img {
     pointer-events: none;
