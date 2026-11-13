@@ -73,3 +73,21 @@ function its_preprocess_image_widget(array &$variables) {
     unset($data['preview']);
   }
 }
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * background_image still declares core/underscore, which was removed in
+ * Drupal 10.3+. Remap to core/internal.underscore so RuntimeCss can call
+ * _.extend without a console TypeError.
+ */
+function its_library_info_alter(array &$libraries, string $extension): void {
+  if ($extension !== 'background_image' || !isset($libraries['runtime.css']['dependencies'])) {
+    return;
+  }
+  foreach ($libraries['runtime.css']['dependencies'] as &$dependency) {
+    if ($dependency === 'core/underscore') {
+      $dependency = 'core/internal.underscore';
+    }
+  }
+}

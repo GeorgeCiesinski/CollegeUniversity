@@ -34,7 +34,9 @@ ddev npm run test
 | `dev` | Starts the Vite HMR server (port 5173) |
 | `test` | Runs theme JS unit tests in jsdom (not the live Drupal page) |
 
-`dist/` is committed so the site works without Node. After SCSS/JS changes, run `build` if you are not using `dev`. Commit the updated `dist/` assets with those source changes.
+`dist/` is committed so the site works without Node. 
+
+After SCSS/JS changes, run `build` if you are not using `dev`.
 
 **Note:** Always install or reinstall theme packages with `ddev npm …`, not host `npm`. Host installs can miss Linux-native Rollup binaries and break `ddev npm run dev`.
 

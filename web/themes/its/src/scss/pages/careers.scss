@@ -78,9 +78,16 @@
     h4, span {
       background-color: $primary-yellow-600;
     }
+    // Interactive control (role=button via JS); keep listitem on the li.
     h4 {
       padding: 0.5rem;
       max-height: 4rem;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px solid $primary-blue-500;
+        outline-offset: 2px;
+      }
     }
     span {
       display: block;
