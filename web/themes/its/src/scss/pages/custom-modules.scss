@@ -5,14 +5,14 @@
 
 @use "../abstracts" as *;
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
     #individual-reflection-page {
         width: $content-sm;
         margin: 0 auto;
     }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
     #individual-reflection-page {
         width: $content-md;
     }

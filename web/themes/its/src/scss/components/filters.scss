@@ -16,7 +16,7 @@
   select {
     width: 10rem;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       width: 20rem;
     }
   }

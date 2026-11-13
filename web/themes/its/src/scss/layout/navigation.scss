@@ -37,7 +37,7 @@ MOBILE
 /*
 SMALL DESKTOP
 */
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .region-primary-menu, .region-secondary-menu {
     flex-grow: 1;
     width: auto;

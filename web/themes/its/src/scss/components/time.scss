@@ -47,7 +47,7 @@ td>time.datetime, fieldset time.datetime {
   border-radius: $radius-md;
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   fieldset {
     time {
       &.datetime {

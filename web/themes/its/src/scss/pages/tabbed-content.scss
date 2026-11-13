@@ -110,7 +110,7 @@
     }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
     #block-its-views-block-tabbed-ai-block-1 {
         .content-list {
             padding: 0;
@@ -138,7 +138,7 @@
     }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
     #block-its-views-block-tabbed-ai-block-1 {
         ul:not(.contextual-links) {
             width: $content-md;

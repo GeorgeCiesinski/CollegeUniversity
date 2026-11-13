@@ -41,7 +41,7 @@
     margin-right: 0;
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     .breadcrumb {
       padding: 0.5rem $nav-sm;
     }

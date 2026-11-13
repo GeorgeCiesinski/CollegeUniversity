@@ -11,12 +11,12 @@
 @mixin content-width($mb: 0) {
   width: 100%;
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     width: $content-sm;
     margin: 0 auto $mb;
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     width: $content-md;
     margin: 0 auto $mb;
   }

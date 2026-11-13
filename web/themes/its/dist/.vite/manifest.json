@@ -64,17 +64,17 @@
     "isEntry": true
   },
   "src/scss/global.scss": {
-    "file": "assets/global-DW1nWGnU.css",
+    "file": "assets/global-2bxITZDR.css",
     "src": "src/scss/global.scss",
     "isEntry": true
   },
   "src/scss/pages/beautiful-page.scss": {
-    "file": "assets/page-beautiful-sLJVvVhB.css",
+    "file": "assets/page-beautiful-CFVxPGXq.css",
     "src": "src/scss/pages/beautiful-page.scss",
     "isEntry": true
   },
   "src/scss/pages/careers.scss": {
-    "file": "assets/page-careers-g55-FyDP.css",
+    "file": "assets/page-careers-6tpNiwmv.css",
     "src": "src/scss/pages/careers.scss",
     "isEntry": true
   },
@@ -84,17 +84,17 @@
     "isEntry": true
   },
   "src/scss/pages/custom-modules.scss": {
-    "file": "assets/page-custom-modules-Bi9qrJnF.css",
+    "file": "assets/page-custom-modules-CHTxCEcC.css",
     "src": "src/scss/pages/custom-modules.scss",
     "isEntry": true
   },
   "src/scss/pages/service-status.scss": {
-    "file": "assets/page-service-status-BpxTMAJK.css",
+    "file": "assets/page-service-status-ArO2tW-w.css",
     "src": "src/scss/pages/service-status.scss",
     "isEntry": true
   },
   "src/scss/pages/software-licensing.scss": {
-    "file": "assets/page-software-licensing-aklUva2r.css",
+    "file": "assets/page-software-licensing-CGpMozwR.css",
     "src": "src/scss/pages/software-licensing.scss",
     "isEntry": true
   },
@@ -104,12 +104,12 @@
     "isEntry": true
   },
   "src/scss/pages/tabbed-content.scss": {
-    "file": "assets/page-tabbed-FIpY1xlN.css",
+    "file": "assets/page-tabbed-B-okuXmP.css",
     "src": "src/scss/pages/tabbed-content.scss",
     "isEntry": true
   },
   "src/scss/pages/whats-new.scss": {
-    "file": "assets/page-whats-new-D4QeHqzc.css",
+    "file": "assets/page-whats-new-CaVxUeJ-.css",
     "src": "src/scss/pages/whats-new.scss",
     "isEntry": true
   }

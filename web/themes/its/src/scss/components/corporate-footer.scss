@@ -1,28 +1,15 @@
 /**
  * @file
- * Styles ITS chatbot.
+ * Styles for the corporate footer block.
  */
 
 @use "../abstracts" as *;
 
-// Button container
-#block-its-chatbutton {
-  position: fixed;
-  bottom: 10rem;
-  right: 2rem;
-  z-index: 100;
-
-  >.text-formatted {
-    margin: 0;
-  }
-}
-
-// Copyright message
 #block-its-corporatefooter2 {
   box-sizing: border-box;
   color: white;
   background-color: $primary-blue-800;
-  padding: 1rem 0.5rem 5rem 0.5rem;
+  padding: 1rem 0.5rem;
 
   .text-formatted {
     margin: 0 auto;
@@ -33,14 +20,26 @@
       margin: 0 auto;
     }
   }
+
+  // Default link blue disappears on this dark footer; keep links light and underlined.
+  a {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+
+    &:link,
+    &:visited {
+      color: white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $primary-blue-100;
+    }
+  }
 }
 
-iframe[src*="8x8"] { 
-  right: 0 !important; 
-}
-
-@include breakpoint(sm) {
-  
+@include breakpoint(md) {
   #block-its-corporatefooter2 {
     p {
       width: $content-sm;
@@ -48,21 +47,12 @@ iframe[src*="8x8"] {
   }
 }
 
-@include breakpoint(md) {
-
+@include breakpoint(lg) {
   #block-its-corporatefooter2 {
+    padding: 1rem 0;
+
     p {
       width: $content-md;
     }
-  }
-}
-
-@include breakpoint(lg) {
-  #block-its-chatbutton {
-    bottom: 2rem;
-  }
-
-  #block-its-corporatefooter2 {
-    padding: 1rem 0;
   }
 }

@@ -41,7 +41,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .background-image-wrapper {
     height: 300px;
   }
@@ -54,7 +54,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .background-image-text {
     h2, h3, h4, h5, h6 {
       width: $content-md;

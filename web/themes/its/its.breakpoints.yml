@@ -1,39 +1,21 @@
-its.xs:
-  label: xs
+its.sm:
+  label: 'Small (mobile)'
   mediaQuery: ''
   weight: 0
   multipliers:
     - 1x
     - 2x
-its.sm:
-  label: sm
+its.md:
+  label: 'Medium (tablet)'
   mediaQuery: 'all and (min-width: 48rem)'
   weight: 1
   multipliers:
     - 1x
     - 2x
-its.md:
-  label: md
-  mediaQuery: 'all and (min-width: 61rem)'
+its.lg:
+  label: 'Large (desktop+)'
+  mediaQuery: 'all and (min-width: 64rem)'
   weight: 2
   multipliers:
     - 1x
     - 2x
-its.lg:
-  label: lg
-  mediaQuery: 'all and (min-width: 75rem)'
-  weight: 3
-  multipliers:
-    - 1x
-its.xl:
-  label: xl
-  mediaQuery: 'all and (min-width: 120rem)'
-  weight: 4
-  multipliers:
-    - 1x
-its.xxl:
-  label: xxl
-  mediaQuery: 'all and (min-width: 160rem)'
-  weight: 5
-  multipliers:
-    - 1x

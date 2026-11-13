@@ -72,7 +72,7 @@ MOBILE
 /*
 SMALL DESKTOP
 */
-@include breakpoint(md) {
+@include breakpoint(lg) {
   #navbar-toggle {
     display: none;  // Hide hamburger button on larger screens
   }

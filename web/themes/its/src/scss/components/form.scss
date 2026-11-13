@@ -26,12 +26,12 @@
       margin: 0.25rem 0;
     }
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       width: $content-sm;
       margin: 0 auto 2rem;
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       width: $content-md;
       margin: 0 auto 2rem;
     }

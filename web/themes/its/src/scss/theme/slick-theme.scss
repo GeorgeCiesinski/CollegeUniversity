@@ -313,10 +313,42 @@ img[data-lazy] {
   position: relative;
   overflow: hidden;
 }
- 
+
 /* Center the image to reduce gap at RHS with smaller image, larger container */
 .slick img.media__element {
   margin: 0 auto;
+}
+
+/*
+ * Hero section: full-bleed image with a stable desktop height.
+ * Crop styles alone can't both span wide viewports and keep caption room;
+ * object-fit covers the frame without distorting the photo.
+ */
+.slick--view--hero-section {
+  .slide__media,
+  .media--slick,
+  picture {
+    display: block;
+    width: 100%;
+  }
+
+  img.media__element,
+  picture img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    height: auto;
+  }
+
+  @include breakpoint(lg) {
+    img.media__element,
+    picture img {
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }
  
 /** @todo: Remove temp fix for when total <= slidesToShow at 1.6.1+. */
@@ -334,7 +366,7 @@ img[data-lazy] {
   vertical-align: top;
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
 
   .slick__arrow {
     display: block;
@@ -354,7 +386,7 @@ img[data-lazy] {
 
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .slide__caption {
     top: 10%; 
     left: calc((100vw - $content-md)/2);

@@ -32,12 +32,12 @@
   >h1 {
     margin: 3rem 0.5rem;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       width: $content-sm;
       margin: 3rem auto;
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       width: $content-md;
       margin: 3rem auto;
     }
@@ -48,12 +48,12 @@
   .node__content, .search-bar, .view, .taxonomy-term {
     margin: 0.5rem;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       width: $content-sm;
       margin: 0 auto;
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       width: $content-md;
       margin: 0 auto;
     }

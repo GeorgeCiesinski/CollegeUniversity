@@ -21,7 +21,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   #block-its-helpsupportblock {
     h2, .clearfix {
       width: $content-sm;
@@ -38,7 +38,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   #block-its-helpsupportblock {
     h2, .clearfix {
       width: $content-md;

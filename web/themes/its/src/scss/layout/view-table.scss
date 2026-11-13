@@ -13,7 +13,7 @@
   overflow-x: scroll;
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
 
   .views-table {
     table-layout: auto;

@@ -43,7 +43,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   #message-banner {
     .message-banner__content {
       margin: 0 $nav-sm;

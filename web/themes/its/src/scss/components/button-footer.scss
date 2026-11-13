@@ -27,7 +27,7 @@
   padding: 1rem;
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .button-footer-container {
     display: block;
     width: $content-sm;
@@ -35,7 +35,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .button-footer-container {
     width: $content-md;
     margin: 0 auto;

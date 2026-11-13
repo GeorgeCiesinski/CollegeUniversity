@@ -7,26 +7,24 @@
 
 @use "sass:map";
 
-// The breakpoints and their corresponding size is based on 16px default font size
+// Mobile-first. Small is the default (no query). Values assume 16px root.
 $breakpoints: (
-  "xs": "",                    // Mobile Phone
-  "sm": "min-width: 48rem",    // Tablet        - 768px
-  "md": "min-width: 61rem",    // Laptop        - 976px
-  "lg": "min-width: 75rem",   // Desktop       - 1200px
-  "xl": "min-width: 120rem",   // TV            - 1920px
-  "xxl": "min-width: 160rem"   // Ultrawide     - 2560px
+  "sm": "",                     // Small / mobile
+  "md": "min-width: 48rem",     // Medium / tablet  - 768px
+  "lg": "min-width: 64rem",     // Large / desktop+ - 1024px
 );
 
-// Attempts to retreive the media query - outputs error if not found
 @mixin breakpoint($user-value) {
-  $my-map: map.get($breakpoints, $user-value);
-  @if $my-map {
-    @media (#{$my-map}) {
-      @content;
-    }
-  } @else {
+  $query: map.get($breakpoints, $user-value);
+
+  @if $query == null {
     @error "Unfortunately, no value could be retrieved from `#{$user-value}`. "
       + "Please make sure it is defined in `$breakpoints` map.";
+  } @else if $query == "" {
+    @content;
+  } @else {
+    @media (#{$query}) {
+      @content;
+    }
   }
 }
-

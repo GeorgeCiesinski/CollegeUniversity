@@ -38,7 +38,7 @@ MOBILE
 /*
 SMALL DESKTOP
 */
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .nav-bar {
     .sub-menu {
       position: absolute;

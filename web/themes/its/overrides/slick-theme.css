@@ -1,51 +1,38 @@
 @charset "UTF-8";
 /**
- * Overrides slick.theme.css
- * 
- * Styles the slider in the hero block
+ * @file
+ * Theme overrides for Slick slider (hero block).
  */
 /**
- * @file.
- * Provided basic styling for the Slick based on custom settings.
+ * @file
+ * Forwards all abstracts for @use "../abstracts" as *.
  */
 /**
- * Forwards stylesheets in this directory
- *  
- * Use abstracts in other stylesheets using:
- * 
- * @use '../abstracts' as *;
- */
-/**
- * Map of breakpoints
- * Mixin which can be included in other files to add breakpoint functionality. 
- * 
- * Breakpoints can be added to other sass files with:
- * 
- * @include breakpoint(md) {
- *   (style)
- * }
- */
-/**
- * Predefined ITS color schemes.
+ * @file
+ * Breakpoint map and mixin for responsive styles.
  *
- * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated
- * in Sass at build time — edit bases here, then rebuild.
+ * Include in other Sass files with: @include breakpoint(md) { … }.
  */
 /**
- * ITS color tokens.
+ * @file
+ * Predefined ITS color schemes and shade ramp generators.
  *
- * Brand values come from CSS custom properties emitted by color-tokens.scss
- * (see abstracts/_color-schemes.scss). Sass variables below bridge existing
- * component styles to those runtime scheme variables.
+ * Each scheme declares 2–3 base colors. Shade ramps (50–900) are generated in
+ * Sass at build time — edit bases here, then rebuild.
+ */
+/**
+ * @file
+ * ITS color token Sass variables bridged to CSS custom properties.
  *
+ * Brand values come from CSS custom properties emitted by color-tokens.scss.
  * Fallback hexes match the default scheme (slate_terracotta).
  */
 /**
- * Global Variables
- * 
- * These variables are used throughout the ITS theme. This stylesheet provides an easy way to make sweeping changes across the site by changing a variable.
+ * @file
+ * Global Sass variables for the ITS theme.
  */
 /**
+ * @file
  * Shared layout and visual mixins for the ITS theme.
  */
 .slick-wrapper,
@@ -323,6 +310,34 @@ img[data-lazy] {
   margin: 0 auto;
 }
 
+/*
+ * Hero section: full-bleed image with a stable desktop height.
+ * Crop styles alone can't both span wide viewports and keep caption room;
+ * object-fit covers the frame without distorting the photo.
+ */
+.slick--view--hero-section .slide__media,
+.slick--view--hero-section .media--slick,
+.slick--view--hero-section picture {
+  display: block;
+  width: 100%;
+}
+.slick--view--hero-section img.media__element,
+.slick--view--hero-section picture img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: auto;
+}
+@media (min-width: 64rem) {
+  .slick--view--hero-section img.media__element,
+  .slick--view--hero-section picture img {
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 /** @todo: Remove temp fix for when total <= slidesToShow at 1.6.1+. */
 /** @see https://github.com/kenwheeler/slick/issues/262 */
 .slick--less .slick-track {
@@ -353,7 +368,7 @@ img[data-lazy] {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 61rem) {
+@media (min-width: 64rem) {
   .slide__caption {
     top: 10%;
     left: calc((100vw - 58rem) / 2);

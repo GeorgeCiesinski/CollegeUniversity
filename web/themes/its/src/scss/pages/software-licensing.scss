@@ -144,7 +144,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .block-views-blockdownload-portals-block-1 {
     h2 {
       width: $content-sm;
@@ -158,7 +158,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .block-views-blockdownload-portals-block-1 {
     h2 {
       width: $content-md;

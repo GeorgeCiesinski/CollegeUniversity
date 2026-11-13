@@ -28,7 +28,7 @@ MOBILE
 /*
 SMALL DESKTOP
 */
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .main-header {
     justify-content: space-between;
     align-items: center;

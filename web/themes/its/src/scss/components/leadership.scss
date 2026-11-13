@@ -96,7 +96,7 @@
   font-weight: bold;
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
 
   .block-views-blockleadership-team-block-1 {
     width: $content-sm;
@@ -105,7 +105,7 @@
 
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
 
   .block-views-blockleadership-team-block-1 {
     width: $content-md;

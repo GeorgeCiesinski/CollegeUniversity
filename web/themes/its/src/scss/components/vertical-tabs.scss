@@ -21,7 +21,7 @@
     border-radius: 0; // Top left and bottom left radius
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     .vertical-tabs {
       border: 1px solid $primary-blue-200;
       border-radius: 0 $radius-md $radius-md $radius-md;  // All radius except top left

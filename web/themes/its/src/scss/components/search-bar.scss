@@ -65,7 +65,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .form-item-search-api-fulltext {
     padding-left: 35rem;
   }

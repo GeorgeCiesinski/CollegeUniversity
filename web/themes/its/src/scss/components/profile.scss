@@ -12,7 +12,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .profile {
     >div {
       width: $content-sm;
@@ -21,7 +21,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .profile {
     >div {
       width: $content-md;

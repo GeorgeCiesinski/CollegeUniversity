@@ -27,14 +27,15 @@
   }
 }
 
-.quick-action-list {
+.layout-container .quick-action-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: flex-start;
   gap: 2rem;
   list-style-type: none;
-  padding: 0 0 4rem 0;
+  padding: 0 0 4rem;
+  padding-inline-start: 0;
 }
 
 .quick-action-item {
@@ -79,7 +80,7 @@
   width: 4rem;
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .block-views-blockquick-actions-block-1, 
   .block-views-blockduplicate-of-student-services-block-1,
   .block-views-blockstudent-services-block-1,
@@ -92,7 +93,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .block-views-blockquick-actions-block-1, 
   .block-views-blockduplicate-of-student-services-block-1,
   .block-views-blockstudent-services-block-1,

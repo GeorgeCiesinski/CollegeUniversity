@@ -92,4 +92,12 @@ Page CSS/JS is attached in `its.theme` from node type or path (beautiful pages, 
 
 ## Breakpoints
 
-Six breakpoints (`xs`–`xxl`) in `its.breakpoints.yml` and `src/scss/abstracts/_breakpoints.scss`. Used by Responsive Image and Sass mixins.
+Three mobile-first breakpoints in `its.breakpoints.yml` and `src/scss/abstracts/_breakpoints.scss` (also used by Responsive Image):
+
+| Key | Label | Query |
+| --- | --- | --- |
+| `sm` | Small (mobile) | default / no media query |
+| `md` | Medium (tablet) | `min-width: 48rem` (768px) |
+| `lg` | Large (desktop+) | `min-width: 64rem` (1024px) |
+
+Write mobile styles in the base ruleset. Use `@include breakpoint(md)` / `@include breakpoint(lg)` for larger viewports.

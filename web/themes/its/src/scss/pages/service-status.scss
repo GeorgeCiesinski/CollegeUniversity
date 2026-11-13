@@ -101,14 +101,14 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .block-views-blockstatus-overview-block-1 {
     width: $content-sm;
     margin: 0 auto 4rem;
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .block-views-blockstatus-overview-block-1 {
     width: $content-md;
   }

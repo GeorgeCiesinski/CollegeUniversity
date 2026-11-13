@@ -3,12 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.hero_focal_md_1200_x_400
     - image.style.hero_focal_sm_976_x_400
     - image.style.hero_focal_xl_3000_x_400
     - image.style.hero_focal_xs_768_x_400
     - image.style.hero_lg_1920_x_400
-    - image.style.hero_xxl_4000_x_400
     - image.style.wide
   theme:
     - its
@@ -17,48 +15,33 @@ label: 'Hero - Omni'
 image_style_mappings:
   -
     image_mapping_type: image_style
-    image_mapping: hero_xxl_4000_x_400
-    breakpoint_id: its.xxl
-    multiplier: 1x
-  -
-    image_mapping_type: image_style
-    image_mapping: hero_focal_xl_3000_x_400
-    breakpoint_id: its.xl
-    multiplier: 1x
-  -
-    image_mapping_type: image_style
     image_mapping: hero_lg_1920_x_400
     breakpoint_id: its.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: hero_focal_md_1200_x_400
-    breakpoint_id: its.md
-    multiplier: 1x
-  -
-    image_mapping_type: image_style
-    image_mapping: hero_focal_md_1200_x_400
-    breakpoint_id: its.md
+    image_mapping: hero_focal_xl_3000_x_400
+    breakpoint_id: its.lg
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: hero_focal_sm_976_x_400
-    breakpoint_id: its.sm
+    breakpoint_id: its.md
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: hero_focal_sm_976_x_400
-    breakpoint_id: its.sm
+    breakpoint_id: its.md
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: hero_focal_xs_768_x_400
-    breakpoint_id: its.xs
+    breakpoint_id: its.sm
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: hero_focal_xs_768_x_400
-    breakpoint_id: its.xs
+    breakpoint_id: its.sm
     multiplier: 2x
 breakpoint_group: its
 fallback_image_style: wide

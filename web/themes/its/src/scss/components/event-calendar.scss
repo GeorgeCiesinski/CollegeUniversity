@@ -209,7 +209,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .block-views-blockevent-calendar-block-1 {
     width: $content-sm;
     margin: 0 auto;
@@ -220,7 +220,7 @@
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .block-views-blockevent-calendar-block-1 {
     width: $content-md;
     margin: 0 auto;

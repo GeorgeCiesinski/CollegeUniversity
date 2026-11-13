@@ -45,7 +45,7 @@
     @include guide-tile;
   }
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     justify-content: flex-start;
   }
 }

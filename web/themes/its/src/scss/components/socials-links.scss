@@ -24,7 +24,7 @@
     }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
     #block-its-socialmedia {
        .its-social-links, h2 {
             width: $content-sm;
@@ -33,7 +33,7 @@
     }
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
     #block-its-socialmedia {
         .its-social-links, h2 {
             width: $content-md;

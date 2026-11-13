@@ -87,7 +87,7 @@ MOBILE
 /*
 SMALL DESKTOP
 */
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .nav-bar {
     .menu {
       gap: calc(2 * $menu-gap);
