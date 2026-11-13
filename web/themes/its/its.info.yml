@@ -28,3 +28,15 @@ libraries-override:
         /core/themes/stable9/css/system/components/fieldgroup.module.css: overrides/fieldgroup.css
 core_version_requirement: ^10
 generator: 'starterkit_theme:10.1.2'
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  background_image: 'Background image'
+  help: Help
+  content: Content
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  footer: Footer

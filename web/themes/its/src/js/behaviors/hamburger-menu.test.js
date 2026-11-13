@@ -4,15 +4,15 @@ import './hamburger-menu.js';
 describe('hamburgerBehavior', () => {
   beforeEach(() => {
     document.body.innerHTML = `
-      <button id="navbar-toggle" aria-expanded="false">Menu</button>
-      <nav class="nav-bar"></nav>
+      <button id="navbar-toggle" aria-controls="navbar-menu" aria-expanded="false">Menu</button>
+      <nav class="nav-bar" id="navbar-menu"></nav>
     `;
     Drupal.behaviors.hamburgerBehavior.attach(document, {});
   });
 
-  it('toggles aria-expanded and .nav-bar.active on click', () => {
+  it('toggles aria-expanded and #navbar-menu.active on click', () => {
     const toggle = document.querySelector('#navbar-toggle');
-    const nav = document.querySelector('.nav-bar');
+    const nav = document.querySelector('#navbar-menu');
 
     toggle.click();
     expect(toggle.getAttribute('aria-expanded')).toBe('true');

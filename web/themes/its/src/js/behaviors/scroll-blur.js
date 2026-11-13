@@ -2,10 +2,10 @@
  * @file
  * Blurs beautiful-page background images as the user scrolls.
  *
- * Overrides default scroll behavior from the Background Images module.
+ * Overrides default scroll behavior from the Background Images module (The built-in scroll is bugged).
  */
 
-(function ($, Drupal) {
+(function ($, Drupal, once) {
   /**
    * Applies a scroll-linked blur filter to .background-image.
    *
@@ -13,21 +13,33 @@
    *
    * @prop {Drupal~behaviorAttach} attach
    *   Increases blur up to 50px over the first viewport of scroll.
+   * @prop {Drupal~behaviorDetach} detach
+   *   Removes the namespaced scroll handler when the context is unloaded.
    */
   Drupal.behaviors.scrollBlur = {
     attach: function (context, settings) {
-      // Target the window
-      $(window).on('scroll', function () {
-        var scrollTop = $(window).scrollTop(); // Get the current scroll position
-        var maxBlur = 50; // Maximum blur value (pixels)
-        var viewportHeight = $(window).height(); // Height of the viewport
+      // Bind the window scroll listener once per page load.
+      if (!once('scrollBlur', 'html', context).length) {
+        return;
+      }
 
-        // Calculate the blur amount based on the scroll position relative to the viewport height.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+
+      $(window).on('scroll.scrollBlur', function () {
+        var scrollTop = $(window).scrollTop();
+        var maxBlur = 50;
+        var viewportHeight = $(window).height();
         var blurAmount = (scrollTop <= viewportHeight) ? (scrollTop / viewportHeight) * maxBlur : maxBlur;
-
-        // Apply the blur effect to the background-image class using jQuery's css() method.
         $('.background-image').css('filter', 'blur(' + blurAmount + 'px)');
       });
+    },
+    detach: function (context, settings, trigger) {
+      if (trigger === 'unload') {
+        $(window).off('scroll.scrollBlur');
+        once.remove('scrollBlur', 'html');
+      }
     }
   };
 })(jQuery, Drupal, once);

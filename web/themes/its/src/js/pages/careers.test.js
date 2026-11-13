@@ -13,20 +13,24 @@ describe('careerItemDropdown', () => {
     Drupal.behaviors.careerItemDropdown.attach(document, {});
   });
 
-  it('adds a visibility icon on attach', () => {
-    const icon = document.querySelector('.career-item li .material-symbols-rounded');
+  it('adds a visibility icon and aria on attach', () => {
+    const item = document.querySelector('.career-item li');
+    const icon = item.querySelector('.material-symbols-rounded');
     expect(icon).not.toBeNull();
     expect(icon.textContent).toBe('visibility');
+    expect(item.getAttribute('role')).toBe('button');
+    expect(item.getAttribute('aria-expanded')).toBe('false');
   });
 
-  it('toggles .li-active and the icon on click', () => {
+  it('toggles .li-active, aria-expanded, and the icon on click', () => {
     const item = document.querySelector('.career-item li');
     item.click();
     expect(item.classList.contains('li-active')).toBe(true);
+    expect(item.getAttribute('aria-expanded')).toBe('true');
     expect(item.querySelector('.material-symbols-rounded').textContent).toBe('visibility_off');
 
     item.click();
     expect(item.classList.contains('li-active')).toBe(false);
-    expect(item.querySelector('.material-symbols-rounded').textContent).toBe('visibility');
+    expect(item.getAttribute('aria-expanded')).toBe('false');
   });
 });

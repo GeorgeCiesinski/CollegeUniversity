@@ -32,7 +32,8 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('menu') }}>
     {% else %}
-      <ul{{ attributes.addClass('sub-menu') }}>
+      {# Fresh class list — do not mutate the parent attributes object. #}
+      <ul class="menu sub-menu">
     {% endif %}
     {% for item in items %}
       {%
