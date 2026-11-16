@@ -1,8 +1,8 @@
 # College University ITS Website
 
-Drupal 10 demo site inspired by work at a post-secondary institution. Local development uses [DDEV](https://ddev.com/) and [OrbStack](https://orbstack.dev/) (or another Docker provider DDEV supports).
+Drupal 10 demo site inspired by my work at a post-secondary institution. Local development uses [DDEV](https://ddev.com/) and [OrbStack](https://orbstack.dev/) (or another Docker provider DDEV supports).
 
-The custom theme (`web/themes/its`) is a Stable 9 subtheme. CSS and JavaScript are built with [Vite](https://vitejs.dev). Drupal still renders the pages.
+The custom theme (`web/themes/its`) is a Stable 9 subtheme. CSS and JavaScript are built with [Vite](https://vitejs.dev). 
 
 ## Prerequisites
 
