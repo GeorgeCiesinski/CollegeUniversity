@@ -5,7 +5,7 @@
  * Scoped under .nav-bar so Gin toolbar .menu-item--expanded is unaffected.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /*
 MOBILE
@@ -43,7 +43,8 @@ MOBILE
         background-color: $primary-blue-50;
       }
 
-      > a, > span {
+      > a,
+      > span {
         padding: 0.5rem 0;
       }
 
@@ -69,7 +70,7 @@ MOBILE
 
     > span {
       &::after {
-        content: " ▾"; // Default closed state symbol
+        content: ' ▾'; // Default closed state symbol
       }
     }
 
@@ -77,7 +78,7 @@ MOBILE
       > span {
         font-weight: 700;
         &::after {
-          content: " ▴"; // Symbol when dropdown is open
+          content: ' ▴'; // Symbol when dropdown is open
         }
       }
     }
@@ -99,10 +100,11 @@ SMALL DESKTOP
         padding: 0;
 
         &:hover {
-          background-color: transparent;  // Hides mobile hover effect
+          background-color: transparent; // Hides mobile hover effect
         }
 
-        > a, > span {
+        > a,
+        > span {
           padding: 0.3rem 0 0.3rem 0;
           background-image: linear-gradient($primary-yellow 0 0);
           background-position: 0 100%; /* Bottom Left */
@@ -112,7 +114,8 @@ SMALL DESKTOP
             background-size 0.3s,
             background-position 0s 0.3s; /* Change immediately after size */
         }
-        > a:hover, span:hover {
+        > a:hover,
+        span:hover {
           background-position: 100% 100%; /* Bottom Right */
           background-size: 100% 4px;
         }

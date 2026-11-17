@@ -1,15 +1,17 @@
 # Backups
 
-This Drupal 10 site has three parts that must be saved before a risky change. Git tracks code. DDEV snapshots the database. Uploaded files live outside both.
+This Drupal 10 site has three parts that should be saved before a risky change. 
 
-| What | Where it lives | How to back it up |
-| --- | --- | --- |
-| Code, config, custom modules/theme | This repo | Git commit (and optional tag) |
-| Database (content, users, config in DB) | DDEV MariaDB 10.11 | `ddev snapshot` |
-| Public files (images, documents) | `web/sites/default/files/` | `tar` archive in `backups/` |
-| `settings.php` | `web/sites/default/` | Left on disk; **not in Git** (contains credentials) |
+Git tracks code. DDEV snapshots the database. Uploaded files live outside both.
 
-`backups/` and `.ddev/db_snapshots/` are gitignored. Keep those folders on this machine (or copy them somewhere safe) if you need a fallback.
+| What                                    | Where it lives             | How to back it up                                         |
+| --------------------------------------- | -------------------------- | --------------------------------------------------------- |
+| Code, config, custom modules/theme      | This repo                  | `git commit`                                              |
+| Database (content, users, config in DB) | DDEV MariaDB 10.11         | `ddev snapshot`                                           |
+| Public files (images, documents)        | `web/sites/default/files/` | `tar` archive in `backups/`                               |
+| `settings.php`                          | `web/sites/default/`       | Left on disk; **not in Git** as this contains credentials |
+
+I kept `backups/` and `.ddev/db_snapshots/` in the project folder and added them to `.gitignore` so they aren't included in the repo. 
 
 ## Before a major change
 
@@ -28,24 +30,24 @@ git commit -m "Checkpoint before major change"
 git tag -a pre-major-change -m "Working site before major change"
 ```
 
-Use a unique tag name if `pre-major-change` already exists, for example `pre-major-change-2026-10-28`.
+Use a unique tag name, for example `pre-major-change-2026-10-28`.
 
 ### 2. Snapshot the database with DDEV
 
 This is the fastest rollback for content and configuration stored in the database. Snapshots are stored in `.ddev/db_snapshots/`.
 
 ```bash
-ddev snapshot --name=pre-major-change
+ddev snapshot --name=pre-major-change-2026-10-28
 ddev snapshot --list
 ```
 
-Omit `--name` to let DDEV add a timestamp. Named snapshots are easier to restore.
+Omit `--name` to let DDEV add a timestamp on its own. Named snapshots are easier to restore.
 
 A snapshot is a binary copy of this project's MariaDB 10.11 data. It will not restore into a different database type or version.
 
 ### 3. Archive uploaded files
 
-DDEV snapshots do **not** include `web/sites/default/files/`.
+DDEV snapshots do **not** include `web/sites/default/files/`, so these must be zipped and backed up manually:
 
 ```bash
 mkdir -p backups
@@ -61,7 +63,7 @@ Use this if you want a dump you can import into another MySQL/MariaDB, not only 
 
 ```bash
 mkdir -p backups
-ddev export-db --file=backups/db-pre-major-change.sql.gz
+ddev export-db --file=backups/backup-name.sql.gz
 ```
 
 ## Restore
@@ -81,14 +83,14 @@ If Composer-managed packages are missing after a reset:
 
 ```bash
 ddev composer install
-npm install
+ddev npm --prefix web/themes/its ci
 ```
 
 ### Restore the database from a DDEV snapshot
 
 ```bash
 ddev start
-ddev snapshot restore pre-major-change
+ddev snapshot restore snapshot-name
 ```
 
 Restore the most recent snapshot without naming it:
@@ -118,7 +120,7 @@ tar -xzf backups/files-pre-major-change.tar.gz -C web/sites/default
 ### Rebuild caches
 
 ```bash
-ddev drush cache:rebuild
+ddev drush cr
 ```
 
 Then open https://its-website.ddev.site and confirm the site loads.
@@ -128,4 +130,3 @@ Then open https://its-website.ddev.site and confirm the site loads.
 - `web/sites/default/settings.php` is gitignored because it contains database credentials. DDEV overrides those on start via `settings.ddev.php` (also gitignored). Keep the working copy of `settings.php` on disk.
 - `ddev delete` removes project containers and can remove snapshots unless you keep `.ddev/db_snapshots/`. Prefer `ddev snapshot restore` over deleting the project.
 - After a successful restore you no longer need old snapshots. Remove them with `ddev snapshot --cleanup` only when you are sure you do not need them.
-- Time Machine (or another whole-disk backup) is still useful, but it is not a consistent database backup. Use `ddev snapshot` or `ddev export-db` for the database.

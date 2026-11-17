@@ -53,6 +53,7 @@
         "drupal/vite": "^1.5",
         "drupal/webform": "^6.3",
         "drush/drush": "^13",
+        "pantheon-systems/drupal-integrations": "^10",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
@@ -69,7 +70,11 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "php-http/discovery": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "symfony/runtime": true
+        },
+        "platform": {
+            "php": "8.3.0"
         },
         "sort-packages": true
     },
@@ -79,7 +84,10 @@
                 "web-root": "web/"
             },
             "file-mapping": {
-                "[web-root]/sites/example.settings.local.php": false
+                "[web-root]/sites/example.settings.local.php": false,
+                "[project-root]/.editorconfig": false,
+                "[project-root]/.gitattributes": false,
+                "[project-root]/pantheon.upstream.yml": false
             }
         },
         "merge-plugin": {
@@ -114,6 +122,9 @@
             ],
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
+            ],
+            "web/private/scripts/quicksilver/{$name}/": [
+                "type:quicksilver-script"
             ]
         },
         "drupal-core-project-message": {

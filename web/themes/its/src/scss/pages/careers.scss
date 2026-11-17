@@ -3,8 +3,7 @@
  * Styling for career's page.
  */
 
-@use "../abstracts" as *;
-
+@use '../abstracts' as *;
 
 .block-views-blockcareers-block-1 {
   overflow: hidden;
@@ -13,7 +12,7 @@
 
 .career-wrapper {
   margin: 0.5rem 0.5rem 5rem 0.5rem;
-  
+
   // All unordered lists, not just career-list
   ul {
     list-style: none;
@@ -60,11 +59,14 @@
     overflow: hidden;
     text-align: center;
     &:hover {
-      h4, span {
+      h4,
+      span {
         background-color: $primary-yellow-700;
       }
     }
-    h4, p, span {
+    h4,
+    p,
+    span {
       color: white;
       margin: 0;
     }
@@ -75,7 +77,8 @@
       background-color: $primary-yellow-600;
       font-weight: bold;
     }
-    h4, span {
+    h4,
+    span {
       background-color: $primary-yellow-600;
     }
     // Interactive control (role=button via JS); keep listitem on the li.
@@ -95,7 +98,8 @@
     }
   }
   .li-active {
-    h4, span {
+    h4,
+    span {
       background-color: $primary-yellow-600;
     }
     p {
@@ -118,7 +122,7 @@
 }
 
 .testimonial-wrapper {
-  margin: 0 $beautiful-margin; 
+  margin: 0 $beautiful-margin;
 }
 
 .layout-container .testimonial-list {
@@ -155,7 +159,8 @@
     margin: 0;
   }
 
-  .views-field-title, .views-field-field-job-title {
+  .views-field-title,
+  .views-field-field-job-title {
     color: $primary-blue-500;
   }
 
@@ -170,7 +175,7 @@
 
 @include breakpoint(md) {
   .block-views-blockcareers-block-1 {
-    >div {
+    > div {
       width: $content-sm;
       margin: 0 auto;
     }
@@ -196,7 +201,7 @@
 
 @include breakpoint(lg) {
   .block-views-blockcareers-block-1 {
-    >div {
+    > div {
       width: $content-md;
     }
   }

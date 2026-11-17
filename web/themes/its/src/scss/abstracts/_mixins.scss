@@ -3,9 +3,9 @@
  * Shared layout and visual mixins for the ITS theme.
  */
 
-@use "breakpoints" as *;
-@use "variables" as *;
-@use "colors" as *;
+@use 'breakpoints' as *;
+@use 'variables' as *;
+@use 'colors' as *;
 
 /// Constrain an element to the site content column and center it.
 @mixin content-width($mb: 0) {

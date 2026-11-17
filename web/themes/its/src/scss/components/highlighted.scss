@@ -3,10 +3,11 @@
  * Styles for highlighted region.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .layout-container {
-  nav.tabs, .messages__wrapper {
+  nav.tabs,
+  .messages__wrapper {
     width: 100%;
   }
 
@@ -34,7 +35,8 @@
         display: block;
         padding: 0.2em 1em;
         text-decoration: none;
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           background-color: $primary-blue-50;
         }
         &.is-active {
@@ -45,7 +47,8 @@
     }
   }
 
-  nav.tabs, .messages__wrapper {
+  nav.tabs,
+  .messages__wrapper {
     @include content-width;
   }
 }

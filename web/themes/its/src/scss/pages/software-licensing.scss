@@ -3,7 +3,7 @@
  * Styling for software licensing page.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .block-views-blockdownload-portals-block-1 {
   overflow: hidden;
@@ -45,11 +45,11 @@
   border-radius: $radius-md;
   perspective: 1000px;
 
-  >div {
+  > div {
     box-sizing: border-box;
     text-align: center;
     width: 100%;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out 0.5s;
     transform-style: preserve-3d;
     position: absolute;
     backface-visibility: hidden; /* Hide the backside */
@@ -74,7 +74,7 @@
     z-index: 1;
     overflow: hidden;
     filter: drop-shadow(5px 5px $primary-blue-200);
-    
+
     img {
       border-radius: $radius-md;
     }
@@ -118,7 +118,7 @@
   .views-field-field-portal-link {
     transform: rotateY(-180deg);
   }
-  
+
   &:hover {
     .views-field-title,
     .views-field-field-portal-image {
@@ -126,7 +126,7 @@
     }
 
     .views-field-body,
-    .views-field-field-portal-link{
+    .views-field-field-portal-link {
       transform: rotateY(0deg);
     }
   }

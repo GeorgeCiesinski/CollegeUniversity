@@ -1,0 +1,66 @@
+name: Deploy to Pantheon
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/themes/its/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefix web/themes/its
+
+      - name: Validate
+        run: npm run validate --prefix web/themes/its
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: validate
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Push to Pantheon Dev
+        uses: pantheon-systems/push-to-pantheon@0.9.7
+        with:
+          ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
+          machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+          site: ${{ vars.PANTHEON_SITE }}
+          skip_build_tools: true
+
+      - name: Install Terminus
+        uses: pantheon-systems/terminus-github-actions@v1
+        with:
+          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
+      - name: Deploy Dev to Test
+        run: terminus env:deploy "${{ vars.PANTHEON_SITE }}.test" --note="GitHub Actions ${{ github.sha }} (${{ github.ref_name }})" --yes
+
+      # Production only after merge to main (after Test has been used for QA from develop).
+      - name: Deploy Test to Live
+        if: github.ref == 'refs/heads/main'
+        run: terminus env:deploy "${{ vars.PANTHEON_SITE }}.live" --note="GitHub Actions ${{ github.sha }}" --yes

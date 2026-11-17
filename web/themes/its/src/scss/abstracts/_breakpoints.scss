@@ -5,13 +5,15 @@
  * Include in other Sass files with: @include breakpoint(md) { … }.
  */
 
-@use "sass:map";
+@use 'sass:map';
 
 // Mobile-first. Small is the default (no query). Values assume 16px root.
 $breakpoints: (
-  "sm": "",                     // Small / mobile
-  "md": "min-width: 48rem",     // Medium / tablet  - 768px
-  "lg": "min-width: 64rem",     // Large / desktop+ - 1024px
+  'sm': '',
+  // Small / mobile
+  'md': 'min-width: 48rem',
+  // Medium / tablet  - 768px
+  'lg': 'min-width: 64rem', // Large / desktop+ - 1024px
 );
 
 @mixin breakpoint($user-value) {
@@ -20,7 +22,7 @@ $breakpoints: (
   @if $query == null {
     @error "Unfortunately, no value could be retrieved from `#{$user-value}`. "
       + "Please make sure it is defined in `$breakpoints` map.";
-  } @else if $query == "" {
+  } @else if $query == '' {
     @content;
   } @else {
     @media (#{$query}) {

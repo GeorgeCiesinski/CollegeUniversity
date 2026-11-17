@@ -20,14 +20,14 @@
       $(once('faqDropdown', '.faq-heading', context)).each(function (index) {
         var $heading = $(this);
         var $panel = $heading.next('.faq-dropdown');
-        var panelId = $panel.attr('id') || ('faq-panel-' + index);
+        var panelId = $panel.attr('id') || 'faq-panel-' + index;
 
         $panel.attr('id', panelId);
         $heading.attr({
           role: 'button',
           tabindex: '0',
           'aria-expanded': $panel.hasClass('active') ? 'true' : 'false',
-          'aria-controls': panelId
+          'aria-controls': panelId,
         });
 
         function toggleFaq() {
@@ -50,6 +50,6 @@
           }
         });
       });
-    }
+    },
   };
 })(jQuery, Drupal, once);

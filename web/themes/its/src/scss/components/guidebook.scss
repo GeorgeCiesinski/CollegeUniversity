@@ -3,7 +3,7 @@
  * Styles the resource centre / guide book views block.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .block-views-blockguide-book-block-1 {
   display: flex;
@@ -22,7 +22,8 @@
     text-transform: capitalize;
   }
 
-  h2, .guide-list {
+  h2,
+  .guide-list {
     @include content-width;
   }
 }

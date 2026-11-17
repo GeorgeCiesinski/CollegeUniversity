@@ -14,10 +14,8 @@
 }
 
 @include breakpoint(lg) {
-
   .views-table {
     table-layout: auto;
     max-width: 100%;
   }
-
 }

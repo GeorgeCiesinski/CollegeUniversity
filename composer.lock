@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5e2020f64d991789583b99b3a7a6ccd",
+    "content-hash": "ebc685098a2698b09df317d335797223",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5691,6 +5691,53 @@
             "time": "2025-12-06T11:56:16+00:00"
         },
         {
+            "name": "pantheon-systems/drupal-integrations",
+            "version": "10.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pantheon-systems/drupal-integrations.git",
+                "reference": "29f6556183faa72f08366f03099384199cf6c1cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pantheon-systems/drupal-integrations/zipball/29f6556183faa72f08366f03099384199cf6c1cd",
+                "reference": "29f6556183faa72f08366f03099384199cf6c1cd",
+                "shasum": ""
+            },
+            "conflict": {
+                "drupal/core": "<10 || >=11"
+            },
+            "type": "project",
+            "extra": {
+                "drupal-scaffold": {
+                    "file-mapping": {
+                        "[web-root]/sites/default/settings.php": {
+                            "mode": "replace",
+                            "path": "assets/initial.settings.php",
+                            "overwrite": false
+                        },
+                        "[web-root]/sites/default/settings.pantheon.php": "assets/settings.pantheon.php",
+                        "[web-root]/sites/default/default.services.pantheon.preproduction.yml": "assets/default.services.pantheon.preproduction.yml"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pantheon\\Integrations\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Add this project to any Drupal distribution based on drupal/core-composer-scaffold to enable it for use on Pantheon.",
+            "support": {
+                "issues": "https://github.com/pantheon-systems/drupal-integrations/issues",
+                "source": "https://github.com/pantheon-systems/drupal-integrations/tree/10.1.0"
+            },
+            "time": "2025-02-04T21:22:49+00:00"
+        },
+        {
             "name": "pear/archive_tar",
             "version": "1.6.1",
             "source": {
@@ -9740,5 +9787,8 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
+    "platform-overrides": {
+        "php": "8.3.0"
+    },
     "plugin-api-version": "2.9.0"
 }

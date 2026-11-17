@@ -3,7 +3,7 @@
  * Styles the site search exposed filter and results list.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 // Nested under .layout-container so these beat generic button radius rules.
 .layout-container .block-views-exposed-filter-blocksearch-page-1 {
@@ -18,7 +18,8 @@
     width: fit-content;
   }
 
-  .form-submit, .ui-autocomplete-input {
+  .form-submit,
+  .ui-autocomplete-input {
     height: 2rem;
   }
 
@@ -55,7 +56,7 @@
     margin-bottom: 1.5rem;
 
     &:first-child {
-      margin-top: 1.5rem; 
+      margin-top: 1.5rem;
     }
   }
 

@@ -17,13 +17,13 @@
     width: 30px;
     padding-right: 0; /* LTR */
   }
-  [dir="rtl"] form .field-multiple-table .field-multiple-drag {
+  [dir='rtl'] form .field-multiple-table .field-multiple-drag {
     padding-left: 0;
   }
   form .field-multiple-table .field-multiple-drag .tabledrag-handle {
     padding-right: 0.5em; /* LTR */
   }
-  [dir="rtl"] form .field-multiple-table .field-multiple-drag .tabledrag-handle {
+  [dir='rtl'] form .field-multiple-table .field-multiple-drag .tabledrag-handle {
     padding-right: 0;
     padding-left: 0.5em;
   }
@@ -68,8 +68,8 @@
   .form-type-checkbox .description {
     margin-left: 2.4em; /* LTR */
   }
-  [dir="rtl"] .form-type-radio .description,
-  [dir="rtl"] .form-type-checkbox .description {
+  [dir='rtl'] .form-type-radio .description,
+  [dir='rtl'] .form-type-checkbox .description {
     margin-right: 2.4em;
     margin-left: 0;
   }
@@ -81,7 +81,7 @@
     width: 6px;
     height: 6px;
     margin: 0 0.3em;
-    content: "";
+    content: '';
     vertical-align: super;
     /* Use a background image to prevent screen readers from announcing the text. */
     background-image: url(/themes/its/images/icons/required.svg);
@@ -103,7 +103,7 @@
     display: inline-block;
     width: 14px;
     height: 14px;
-    content: "";
+    content: '';
     vertical-align: sub;
     background: url(/themes/its/images/icons/error.svg) no-repeat;
     background-size: contain;

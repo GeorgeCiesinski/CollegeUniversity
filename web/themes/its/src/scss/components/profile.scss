@@ -3,10 +3,10 @@
  * Styling for profile Visible after logging in.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .profile {
-  >div {
+  > div {
     width: 100%;
     margin: 0;
   }
@@ -14,7 +14,7 @@
 
 @include breakpoint(md) {
   .profile {
-    >div {
+    > div {
       width: $content-sm;
       margin: 0 auto;
     }
@@ -23,7 +23,7 @@
 
 @include breakpoint(lg) {
   .profile {
-    >div {
+    > div {
       width: $content-md;
       margin: 0 auto;
     }

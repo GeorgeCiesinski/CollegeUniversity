@@ -4,17 +4,17 @@
  */
 
 // Animation
-$primary-transition: 0.25s;  // Primary transition time for elements
+$primary-transition: 0.25s; // Primary transition time for elements
 
 // Typography
 // As per 2023 HTML spec: https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings
-$font-size-base: 1rem;   // 16px if font root is 100% - this uses browser font settings allowing user to control the font size
-$font-size-h1: 2rem;     // 32px
-$font-size-h2: 1.5rem;   // 24px
-$font-size-h3: 1.17rem;  // 18.72px
-$font-size-h4: 1rem;     // 16px
-$font-size-h5: 0.83rem;  // 13.28px
-$font-size-h6: 0.67rem;  // 10.72px
+$font-size-base: 1rem; // 16px if font root is 100% - this uses browser font settings allowing user to control the font size
+$font-size-h1: 2rem; // 32px
+$font-size-h2: 1.5rem; // 24px
+$font-size-h3: 1.17rem; // 18.72px
+$font-size-h4: 1rem; // 16px
+$font-size-h5: 0.83rem; // 13.28px
+$font-size-h6: 0.67rem; // 10.72px
 
 // Checkboxes
 $checkbox-scale: 1.2;
@@ -26,7 +26,6 @@ $content-md: 58rem;
 $content-lg: 70rem;
 $content-xl: 100rem;
 $content-xxl: 120rem;
-
 
 // Spacing
 $menu-gap: 0.5rem;

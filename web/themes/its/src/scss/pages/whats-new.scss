@@ -3,10 +3,9 @@
  * Styles the Whats-new page.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .whats-new-page {
-
   .news-list {
     width: 100%;
     display: flex;
@@ -38,7 +37,7 @@
       width: calc(100% - 1rem);
 
       &::after {
-        content: "...";
+        content: '...';
       }
     }
 
@@ -51,7 +50,8 @@
 }
 
 .news-wrapper {
-  h2, .news-list {
+  h2,
+  .news-list {
     @include content-width(1.5rem);
   }
 }

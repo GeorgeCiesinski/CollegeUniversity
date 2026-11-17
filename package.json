@@ -7,6 +7,13 @@
     "dev": "npm run dev --prefix web/themes/its",
     "build": "npm run build --prefix web/themes/its",
     "watch": "npm run dev --prefix web/themes/its",
-    "test": "npm run test --prefix web/themes/its"
+    "test": "npm run test --prefix web/themes/its",
+    "lint": "npm run lint --prefix web/themes/its",
+    "lint:fix": "npm run lint:fix --prefix web/themes/its",
+    "format": "npm run format --prefix web/themes/its",
+    "format:fix": "npm run format:fix --prefix web/themes/its",
+    "check": "npm run check --prefix web/themes/its",
+    "check:fix": "npm run check:fix --prefix web/themes/its",
+    "validate": "npm run validate --prefix web/themes/its"
   }
 }

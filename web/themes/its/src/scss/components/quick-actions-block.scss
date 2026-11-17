@@ -4,9 +4,9 @@
  * and visitor services block.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
-.block-views-blockquick-actions-block-1, 
+.block-views-blockquick-actions-block-1,
 .block-views-blockduplicate-of-student-services-block-1,
 .block-views-blockstudent-services-block-1,
 .block-views-blockstaff-services-block-1,
@@ -54,7 +54,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  transition: all ease-in-out .1s;
+  transition: all ease-in-out 0.1s;
 
   a {
     color: rgba(255, 255, 255, 0);
@@ -68,25 +68,26 @@
   &:hover {
     text-decoration: underline;
     filter: drop-shadow(5px 5px $primary-blue-200);
-    transform: translateY(-0.5rem);  // Raise button on hover
+    transform: translateY(-0.5rem); // Raise button on hover
   }
 }
 
 // Sets icon size and both parent elements
-.views-field-field-quick-action-icon, 
-.views-field-field-quick-action-icon>div, 
+.views-field-field-quick-action-icon,
+.views-field-field-quick-action-icon > div,
 .views-field-field-quick-action-icon img {
   height: 4rem;
   width: 4rem;
 }
 
 @include breakpoint(md) {
-  .block-views-blockquick-actions-block-1, 
+  .block-views-blockquick-actions-block-1,
   .block-views-blockduplicate-of-student-services-block-1,
   .block-views-blockstudent-services-block-1,
   .block-views-blockstaff-services-block-1,
   .block-views-blockvisitor-services-block-1 {
-    h2, .quick-action-list {
+    h2,
+    .quick-action-list {
       width: $content-sm;
       margin: 0 auto;
     }
@@ -94,7 +95,7 @@
 }
 
 @include breakpoint(lg) {
-  .block-views-blockquick-actions-block-1, 
+  .block-views-blockquick-actions-block-1,
   .block-views-blockduplicate-of-student-services-block-1,
   .block-views-blockstudent-services-block-1,
   .block-views-blockstaff-services-block-1,
@@ -103,7 +104,7 @@
       width: $content-md;
       margin: 0 auto;
     }
-  
+
     .quick-action-list {
       width: $content-md;
       margin: 0 auto;
