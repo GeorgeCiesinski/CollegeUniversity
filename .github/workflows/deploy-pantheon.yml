@@ -62,10 +62,7 @@ jobs:
           # main/master → dev (and PRs → Multidev) and skips everything else.
           target_env: dev
           skip_build_tools: true
-<<<<<<< Updated upstream
-=======
           skip_terminus_install: true
->>>>>>> Stashed changes
 
       - name: Deploy Dev to Test
         run: terminus env:deploy "${{ vars.PANTHEON_SITE }}.test" --note="GitHub Actions ${{ github.sha }} (${{ github.ref_name }})" --yes
