@@ -3,7 +3,7 @@
  * Styling for message banner.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 #message-banner {
   box-sizing: border-box;
@@ -26,7 +26,7 @@
 }
 
 .message-banner__close-button {
-  >button {
+  > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,10 +34,10 @@
     height: 3rem;
     background-color: #800e12;
     border: none;
-    
+
     &:hover {
       background-color: #800e12;
-      transform: scale(1.1);  // Raise button on hover
+      transform: scale(1.1); // Raise button on hover
       font-weight: 600;
     }
   }

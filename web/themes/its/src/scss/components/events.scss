@@ -3,9 +3,10 @@
  * Styles events page & planned maintenance block.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
-.block-views-blockevents-block-1, .block-views-blockplanned-maintenance-block-1 {
+.block-views-blockevents-block-1,
+.block-views-blockplanned-maintenance-block-1 {
   padding-bottom: 6rem;
   width: 100%;
 
@@ -30,7 +31,8 @@
     }
   }
 
-  h2, .event-list {
+  h2,
+  .event-list {
     @include content-width(1.5rem);
   }
 }

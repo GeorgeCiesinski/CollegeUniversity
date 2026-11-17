@@ -3,17 +3,17 @@
  * Styles custom module front-end pages (e.g. individual reflection).
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 @include breakpoint(md) {
-    #individual-reflection-page {
-        width: $content-sm;
-        margin: 0 auto;
-    }
+  #individual-reflection-page {
+    width: $content-sm;
+    margin: 0 auto;
+  }
 }
 
 @include breakpoint(lg) {
-    #individual-reflection-page {
-        width: $content-md;
-    }
+  #individual-reflection-page {
+    width: $content-md;
+  }
 }

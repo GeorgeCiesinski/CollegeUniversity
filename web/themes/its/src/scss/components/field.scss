@@ -6,7 +6,7 @@
 @use '../abstracts' as *;
 
 .field {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .field__label {
@@ -15,23 +15,25 @@ margin-bottom: 1rem;
 }
 
 .field--label-inline {
-
-  .field__label, .field__items {
+  .field__label,
+  .field__items {
     float: left; /* LTR */
   }
 
-  .field__label, > .field__item, .field__items {
+  .field__label,
+  > .field__item,
+  .field__items {
     padding-right: 0.5em;
   }
 
   .field__label::after {
-    content: ":";
+    content: ':';
   }
-
 }
 
-[dir="rtl"] .field--label-inline {
-  .field__label, .field__items {
+[dir='rtl'] .field--label-inline {
+  .field__label,
+  .field__items {
     padding-right: 0;
     padding-left: 0.5em;
   }
@@ -41,7 +43,9 @@ margin-bottom: 1rem;
   width: 4rem;
 }
 
-.field--name-field-category, .field--name-field-target-audience-guides, .field--name-field-tags {
+.field--name-field-category,
+.field--name-field-target-audience-guides,
+.field--name-field-tags {
   // Entity reference field width
   width: fit-content;
 

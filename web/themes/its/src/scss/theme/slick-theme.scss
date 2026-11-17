@@ -3,7 +3,7 @@
  * Theme overrides for Slick slider (hero block).
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .slick-wrapper,
 .slick,
@@ -29,14 +29,14 @@
     height: auto;
   }
 }
- 
+
 /* Prevents overflowing nested slides. */
 .slick,
 .slick-wrapper {
   position: relative;
   max-width: 100%;
 }
- 
+
 /**
 * Misc overrides core slick.
 */
@@ -45,16 +45,17 @@
 }
 
 .slick__slider {
-  &::before, &::after {
+  &::before,
+  &::after {
     display: table;
-    content: "";
+    content: '';
   }
 
   &::after {
     clear: both;
   }
 }
- 
+
 /** Visibility fix for stacking slides during initialization. */
 .slick__slide {
   position: absolute;
@@ -66,14 +67,13 @@
     position: relative;
   }
 }
- 
- 
+
 .unslick .slick__slide,
 .slick-initialized .slick__slide {
   position: relative;
   visibility: visible;
 }
- 
+
 /* Fix for Chrome blue outline */
 .slick__slide {
   &:focus {
@@ -85,11 +85,11 @@
 .unslick .slick__slide {
   width: 100%;
 }
- 
+
 .slick-current {
   z-index: 4;
 }
- 
+
 /**
 * Slide layouts, adjust accordingly per actual container slide.
 */
@@ -101,9 +101,9 @@
 .slide__content::after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
- 
+
 // Beat .layout-container h2 color from global typography.
 .layout-container .slide__title,
 .slide__caption .slide__title {
@@ -117,7 +117,7 @@
   color: white;
   margin: 1rem 0rem;
 }
- 
+
 // Link div
 .slide__link {
   display: inline-block;
@@ -143,7 +143,7 @@
     padding: 1rem;
 
     &::after {
-      content: " ❯❯";
+      content: ' ❯❯';
     }
   }
 }
@@ -152,18 +152,18 @@
 .slide__caption {
   cursor: pointer;
   position: absolute;
-  top: 0.5rem; 
+  top: 0.5rem;
   right: 0.5rem;
   bottom: 2rem;
   left: 0.5rem;
   background-color: rgba(50, 50, 50, 0.8);
   font-weight: bold;
-  backdrop-filter: blur(3px);  // Blurs content behind background
+  backdrop-filter: blur(3px); // Blurs content behind background
   border-radius: $radius-md;
   width: auto;
   padding: 1rem;
 }
- 
+
 /* Only display when JS is ready. */
 .slick__arrow,
 .is-loading .slide__caption {
@@ -174,11 +174,11 @@
 .slick--initialized .slick__arrow {
   visibility: visible;
 }
- 
+
 .slick--main .slide__caption {
   z-index: 3;
 }
- 
+
 /**
 * Skins.
 * Arrows contained/wrapped within slick__arrow for easy moves.
@@ -191,7 +191,7 @@
 .slick-next {
   right: 0;
 }
- 
+
 .slick__arrow {
   display: none;
   position: absolute;
@@ -205,7 +205,7 @@
   transform: translateY(-50%);
   pointer-events: none;
 }
- 
+
 /** Keeps decent fallback for when slick-theme.css is disabled, even if dup. */
 .slick-arrow {
   position: absolute;
@@ -219,12 +219,14 @@
   border-radius: 0;
   font-size: 0;
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     outline: 0;
     box-shadow: none;
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     pointer-events: none;
   }
 
@@ -237,7 +239,7 @@
     &::before {
       color: white;
       // Arrow shadow to prevent erasure over white background
-      filter: drop-shadow(2px 2px 2px $primary-blue-500);  
+      filter: drop-shadow(2px 2px 2px $primary-blue-500);
     }
   }
 }
@@ -251,16 +253,18 @@
 .slick--thumbnail .slick__slide img {
   pointer-events: auto;
 }
- 
+
 /* Provides decent dots if core slick-theme.css is disabled. */
 .slick-dots {
   bottom: 0;
 
-  li, li button, li button::before {
+  li,
+  li button,
+  li button::before {
     height: 1rem;
     width: 1rem;
   }
-  
+
   li {
     display: inline-block;
     margin: 0.5rem;
@@ -308,7 +312,7 @@
 img[data-lazy] {
   display: none;
 }
- 
+
 .slide__media {
   position: relative;
   overflow: hidden;
@@ -350,7 +354,7 @@ img[data-lazy] {
     }
   }
 }
- 
+
 /** @todo: Remove temp fix for when total <= slidesToShow at 1.6.1+. */
 /** @see https://github.com/kenwheeler/slick/issues/262 */
 .slick--less .slick-track {
@@ -367,29 +371,27 @@ img[data-lazy] {
 }
 
 @include breakpoint(md) {
-
   .slick__arrow {
     display: block;
   }
 
   .slide__caption {
     width: auto;
-    top: 15%; 
+    top: 15%;
     right: 50%;
     bottom: auto;
     left: calc((100vw - $content-sm));
   }
-  
+
   .slide__link {
     font-size: 1.5rem;
   }
-
 }
 
 @include breakpoint(lg) {
   .slide__caption {
-    top: 10%; 
-    left: calc((100vw - $content-md)/2);
+    top: 10%;
+    left: calc((100vw - $content-md) / 2);
     right: 50%;
   }
 }

@@ -3,7 +3,7 @@
  * Styles the basic elements of a page such as titles, paragraphs, etc.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .block-system-main-block {
   display: flex;
@@ -16,7 +16,8 @@
   }
 }
 
-#block-its-page-title, #block-its-content {
+#block-its-page-title,
+#block-its-content {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
@@ -29,7 +30,7 @@
 }
 
 #block-its-page-title {
-  >h1 {
+  > h1 {
     margin: 3rem 0.5rem;
 
     @include breakpoint(md) {
@@ -45,7 +46,10 @@
 }
 
 #block-its-content {
-  .node__content, .search-bar, .view, .taxonomy-term {
+  .node__content,
+  .search-bar,
+  .view,
+  .taxonomy-term {
     margin: 0.5rem;
 
     @include breakpoint(md) {

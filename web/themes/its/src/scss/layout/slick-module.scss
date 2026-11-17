@@ -3,14 +3,13 @@
  * Provided basic layout for the Slick based on custom settings.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /**
  * Complex layout needs custom refinement for mobile, hence it is reasonable
  * to apply for Desktop up. Adjust mobile version accordingly.
  */
 @include breakpoint(lg) {
-
   /* Fixed FireFox draggable issue, avoid asNavFor thumbnails. */
   .slick--main .slick__slide img {
     pointer-events: none;
@@ -128,7 +127,7 @@
     max-height: none;
   }
 
-  div[class*="slick-wrapper--tn"] .slick__slider::after {
+  div[class*='slick-wrapper--tn'] .slick__slider::after {
     clear: none;
   }
 }

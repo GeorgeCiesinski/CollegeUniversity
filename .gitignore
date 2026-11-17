@@ -18,10 +18,12 @@
 
 # Sensitive and local Drupal settings
 # Keep default.settings.php and default.services.yml tracked.
+# settings.php / settings.local.php / settings.ddev.php stay ignored (credentials).
 /web/sites/*/settings*.php
 !/web/sites/*/default.settings.php
 /web/sites/*/*services*.yml
 !/web/sites/*/default.services.yml
+!/web/sites/*/services.pantheon.*.yml
 
 # Environment files and secrets
 .env

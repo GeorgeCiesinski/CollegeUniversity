@@ -3,12 +3,13 @@
  * Styles embedded remote videos.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
-.media--type-remote-video, .field--name-field-media-oembed-video {
+.media--type-remote-video,
+.field--name-field-media-oembed-video {
   width: 100%;
 }
-	
+
 /* Then style the iframe to fit in the container div with full height and width */
 .media-oembed-content {
   width: 100%;

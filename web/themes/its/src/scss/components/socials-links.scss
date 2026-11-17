@@ -3,41 +3,44 @@
  * Styles the social media block.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 #block-its-socialmedia {
-    background-color: white;
+  background-color: white;
 
-    .clearfix {
-        margin: 0;
-    }
+  .clearfix {
+    margin: 0;
+  }
 
-    .its-social-links, h2 {
+  .its-social-links,
+  h2 {
     margin: 0 $margin-xs;
     padding: 1rem 0;
-}
+  }
 
-    .its-social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
+  .its-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
 @include breakpoint(md) {
-    #block-its-socialmedia {
-       .its-social-links, h2 {
-            width: $content-sm;
-            margin: auto;
-        } 
+  #block-its-socialmedia {
+    .its-social-links,
+    h2 {
+      width: $content-sm;
+      margin: auto;
     }
+  }
 }
 
 @include breakpoint(lg) {
-    #block-its-socialmedia {
-        .its-social-links, h2 {
-            width: $content-md;
-            margin: auto;
-        }
+  #block-its-socialmedia {
+    .its-social-links,
+    h2 {
+      width: $content-md;
+      margin: auto;
     }
+  }
 }

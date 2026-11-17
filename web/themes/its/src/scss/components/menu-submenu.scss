@@ -5,7 +5,7 @@
  * Scoped under .nav-bar with the primary menu.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /*
 MOBILE
@@ -47,7 +47,7 @@ SMALL DESKTOP
       width: 12rem;
       flex-flow: column;
       gap: 0rem;
-      margin-top: calc(2 * $menu-gap);  // Prevents first child from hugging parent too closely
+      margin-top: calc(2 * $menu-gap); // Prevents first child from hugging parent too closely
       padding: 0rem;
       background-color: white;
       filter: drop-shadow(2px 2px 4px $primary-blue-200);

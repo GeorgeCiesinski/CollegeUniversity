@@ -39,7 +39,10 @@ export default defineConfig({
         'page-tabbed-js': path.resolve(themeRoot, 'src/js/pages/tabbed-content.js'),
         'page-service-status': path.resolve(themeRoot, 'src/scss/pages/service-status.scss'),
         'page-service-status-js': path.resolve(themeRoot, 'src/js/pages/service-status.js'),
-        'page-software-licensing': path.resolve(themeRoot, 'src/scss/pages/software-licensing.scss'),
+        'page-software-licensing': path.resolve(
+          themeRoot,
+          'src/scss/pages/software-licensing.scss',
+        ),
         'page-whats-new': path.resolve(themeRoot, 'src/scss/pages/whats-new.scss'),
         'page-custom-modules': path.resolve(themeRoot, 'src/scss/pages/custom-modules.scss'),
         dialog: path.resolve(themeRoot, 'src/scss/components/dialog.scss'),
@@ -68,7 +71,7 @@ export default defineConfig({
     strictPort: true,
     origin,
     cors: {
-      origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
+      origin: /https?:\/\/([A-Za-z0-9-.]+)?(\.ddev\.site)(?::\d+)?$/,
     },
   },
 });

@@ -3,7 +3,7 @@
  * Styles Event Calendar Legend.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .block-views-blocklegend-block-1 {
   padding: 0 0 4rem 0;
@@ -56,7 +56,7 @@
   .field {
     margin: 0;
   }
-  
+
   .views-field-field-icon {
     position: absolute;
     top: 0.2rem;
@@ -98,7 +98,6 @@
     column-gap: 3rem;
     justify-content: space-evenly;
     grid-template-columns: repeat(2, 1fr);
-
   }
 }
 

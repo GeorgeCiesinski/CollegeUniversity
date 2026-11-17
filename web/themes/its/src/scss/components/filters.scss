@@ -8,7 +8,7 @@
 .filters {
   @include content-width(2rem);
   box-sizing: border-box;
-  display: block;  // Display none to enable
+  display: block; // Display none to enable
   border: 1px solid $primary-yellow-500;
   border-radius: $radius-md;
   padding: 0.5rem 1rem;
@@ -73,7 +73,9 @@
   }
 
   .form-item {
-    label, select, input {
+    label,
+    select,
+    input {
       order: 1;
     }
 
