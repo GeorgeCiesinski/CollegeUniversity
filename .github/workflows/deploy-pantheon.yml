@@ -44,18 +44,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      # Install Terminus before push-to-pantheon so it stays on PATH for later
+      # env:deploy steps. push-to-pantheon alone skips Terminus on non-main
+      # branches (PANTHEON_DEPLOY_SKIPPED), and installing after it conflicts.
+      - name: Install Terminus
+        uses: pantheon-systems/terminus-github-actions@v1
+        with:
+          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
       - name: Push to Pantheon Dev
         uses: pantheon-systems/push-to-pantheon@0.9.7
         with:
           ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           site: ${{ vars.PANTHEON_SITE }}
+          # Required for develop: without this, push-to-pantheon only maps
+          # main/master → dev (and PRs → Multidev) and skips everything else.
+          target_env: dev
           skip_build_tools: true
-
-      - name: Install Terminus
-        uses: pantheon-systems/terminus-github-actions@v1
-        with:
-          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+          skip_terminus_install: true
 
       - name: Deploy Dev to Test
         run: terminus env:deploy "${{ vars.PANTHEON_SITE }}.test" --note="GitHub Actions ${{ github.sha }} (${{ github.ref_name }})" --yes
