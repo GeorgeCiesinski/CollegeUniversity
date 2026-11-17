@@ -3,7 +3,7 @@
  * Styles for breadcrumbs.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .layout-container {
   .block-system-breadcrumb-block {
@@ -27,7 +27,7 @@
       list-style-type: none;
 
       &::before {
-        content: " \BB ";
+        content: ' \BB ';
       }
 
       &:first-child::before {
@@ -36,7 +36,7 @@
     }
   }
 
-  [dir="rtl"] .breadcrumb ol {
+  [dir='rtl'] .breadcrumb ol {
     /* This is required to win over specificity of [dir="rtl"] ol */
     margin-right: 0;
   }

@@ -25,7 +25,7 @@
         const $tablist = $buttons.first().parent();
         $tablist.attr('role', 'tablist');
 
-        $buttons.each(function (index) {
+        $buttons.each(function (_index) {
           const $btn = $(this);
           const tab = String($btn.data('tab'));
           const panelId = 'tab-panel-' + tab;
@@ -35,14 +35,14 @@
             id: tabId,
             'aria-controls': panelId,
             'aria-selected': 'false',
-            tabindex: '-1'
+            tabindex: '-1',
           });
           const $panel = $contents.filter('[data-tab="' + tab + '"]');
           $panel.attr({
             role: 'tabpanel',
             id: panelId,
             'aria-labelledby': tabId,
-            hidden: true
+            hidden: true,
           });
         });
 
@@ -51,7 +51,10 @@
           $buttons.removeClass('active').attr({ 'aria-selected': 'false', tabindex: '-1' });
           $contents.removeClass('active').attr('hidden', true);
           $btn.addClass('active').attr({ 'aria-selected': 'true', tabindex: '0' });
-          $contents.filter('[data-tab="' + tab + '"]').addClass('active').removeAttr('hidden');
+          $contents
+            .filter('[data-tab="' + tab + '"]')
+            .addClass('active')
+            .removeAttr('hidden');
         }
 
         activateTab($buttons.first());
@@ -81,6 +84,6 @@
           list[i].focus();
         });
       });
-    }
+    },
   };
 })(jQuery, Drupal, once);

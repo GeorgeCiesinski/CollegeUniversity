@@ -3,7 +3,7 @@
  * Styles time element within tables.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 fieldset {
   time {
@@ -17,7 +17,7 @@ fieldset {
 }
 
 .field--type-daterange {
-  >.field__item {
+  > .field__item {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -25,7 +25,7 @@ fieldset {
 }
 
 td {
-  >time {
+  > time {
     &.datetime {
       display: block;
       text-wrap: nowrap;
@@ -39,7 +39,8 @@ td {
   }
 }
 
-td>time.datetime, fieldset time.datetime {
+td > time.datetime,
+fieldset time.datetime {
   font-weight: bold;
   color: white;
   background-color: $primary-yellow-500;

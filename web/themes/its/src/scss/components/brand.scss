@@ -3,7 +3,7 @@
  * Styles brand and site name.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 // Header brand region wrapping the system branding block.
 .brand {
@@ -51,7 +51,8 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-.site-name > a:link, .site-name > a:visited {
+.site-name > a:link,
+.site-name > a:visited {
   color: $primary-blue-500;
 }
 

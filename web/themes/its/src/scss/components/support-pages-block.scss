@@ -3,7 +3,7 @@
  * Styling for Services section.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .block-views-blocksupport-pages-block-block-1 {
   display: flex;
@@ -53,10 +53,10 @@
   align-items: center;
   text-align: center;
   gap: 1rem;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
 
   .views-field-title {
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out 0.2s;
   }
 
   a {
@@ -69,7 +69,7 @@
   }
 
   &:hover {
-    // font-size: 1.6rem;    
+    // font-size: 1.6rem;
     filter: drop-shadow(5px 5px $primary-yellow-300);
     transform: translateY(-0.5rem); // Raise button on hover
 
@@ -86,14 +86,16 @@
 }
 
 // Sets icon size and both parent elements
-.views-field-field-support-icon, .views-field-field-support-icon>div, .views-field-field-support-icon img {
+.views-field-field-support-icon,
+.views-field-field-support-icon > div,
+.views-field-field-support-icon img {
   height: 4rem;
   width: 4rem;
 }
 
 .views-field-field-support-icon img {
   box-sizing: border-box;
-  padding: .5rem;
+  padding: 0.5rem;
   border: 2px solid white;
   border-radius: 50%;
 }
@@ -117,7 +119,7 @@
       width: $content-md;
       margin: 0 auto;
     }
-  
+
     .support-pages-list {
       justify-content: space-between;
       gap: 3rem;

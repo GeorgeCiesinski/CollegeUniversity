@@ -31,7 +31,8 @@
         var scrollTop = $(window).scrollTop();
         var maxBlur = 50;
         var viewportHeight = $(window).height();
-        var blurAmount = (scrollTop <= viewportHeight) ? (scrollTop / viewportHeight) * maxBlur : maxBlur;
+        var blurAmount =
+          scrollTop <= viewportHeight ? (scrollTop / viewportHeight) * maxBlur : maxBlur;
         $('.background-image').css('filter', 'blur(' + blurAmount + 'px)');
       });
     },
@@ -40,6 +41,6 @@
         $(window).off('scroll.scrollBlur');
         once.remove('scrollBlur', 'html');
       }
-    }
+    },
   };
 })(jQuery, Drupal, once);

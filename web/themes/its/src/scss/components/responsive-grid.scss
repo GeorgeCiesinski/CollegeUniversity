@@ -3,7 +3,7 @@
  * Styling for responsive grid views.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .views-view-responsive-grid--horizontal {
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));

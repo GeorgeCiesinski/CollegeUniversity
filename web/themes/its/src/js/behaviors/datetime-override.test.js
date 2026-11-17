@@ -12,8 +12,12 @@ describe('datetimeLocalOverride', () => {
   });
 
   it('sets matching min/max inputs to datetime-local', () => {
-    expect(document.querySelector('[name="field_date_and_time_value[min]"]').type).toBe('datetime-local');
-    expect(document.querySelector('[name="field_date_and_time_value[max]"]').type).toBe('datetime-local');
+    expect(document.querySelector('[name="field_date_and_time_value[min]"]').type).toBe(
+      'datetime-local',
+    );
+    expect(document.querySelector('[name="field_date_and_time_value[max]"]').type).toBe(
+      'datetime-local',
+    );
     expect(document.querySelector('[name="other"]').type).toBe('date');
   });
 });

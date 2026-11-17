@@ -10,7 +10,8 @@ MOBILE
 */
 
 // Aligns nav-bar menus in parent divs
-.region-primary-menu, .region-secondary-menu {
+.region-primary-menu,
+.region-secondary-menu {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -21,7 +22,7 @@ MOBILE
 }
 
 .nav-bar {
-  display:none;
+  display: none;
   flex-basis: 100%;
   padding-bottom: $menu-gap;
 
@@ -38,7 +39,8 @@ MOBILE
 SMALL DESKTOP
 */
 @include breakpoint(lg) {
-  .region-primary-menu, .region-secondary-menu {
+  .region-primary-menu,
+  .region-secondary-menu {
     flex-grow: 1;
     width: auto;
 
@@ -50,12 +52,12 @@ SMALL DESKTOP
   .nav-bar {
     display: flex;
     flex-direction: row;
-    gap: calc(2 * $menu-gap);;
+    gap: calc(2 * $menu-gap);
     flex-basis: auto;
     padding-bottom: 0;
 
     &.active {
-      flex-flow: row;  // Fixes column after toggling hamburger and returning to desktop view
+      flex-flow: row; // Fixes column after toggling hamburger and returning to desktop view
     }
   }
 }

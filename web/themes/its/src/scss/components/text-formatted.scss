@@ -4,10 +4,12 @@
  */
 
 .text-formatted {
-
   width: 100%;
 
-  img, ul, ol, li {
+  img,
+  ul,
+  ol,
+  li {
     max-width: 100%;
     height: auto;
   }

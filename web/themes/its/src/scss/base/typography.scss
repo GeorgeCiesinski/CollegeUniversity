@@ -21,15 +21,16 @@
 
 html {
   -webkit-font-smoothing: antialiased;
-  font-family: "Open sans", Helvetica, Arial, sans-serif;
-  font-size: 100%;  // Uses browser's default font-size setting - allows users to control font size
+  font-family: 'Open sans', Helvetica, Arial, sans-serif;
+  font-size: 100%; // Uses browser's default font-size setting - allows users to control font size
 }
 
 .layout-container {
   blockquote {
     margin: 0;
     p {
-      &:before, &:after {
+      &:before,
+      &:after {
         color: $primary-blue-500;
         font-weight: bold;
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -44,12 +45,18 @@ html {
     }
   }
 
-  p, li {
+  p,
+  li {
     font-weight: 500;
     line-height: 1.4rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $primary-blue-500;
   }
 

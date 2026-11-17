@@ -31,7 +31,7 @@
         $h4.attr({
           role: 'button',
           tabindex: '0',
-          'aria-expanded': $item.hasClass('li-active') ? 'true' : 'false'
+          'aria-expanded': $item.hasClass('li-active') ? 'true' : 'false',
         });
 
         function toggleCareer() {
@@ -56,6 +56,6 @@
           }
         });
       });
-    }
+    },
   };
 })(jQuery, Drupal, once);

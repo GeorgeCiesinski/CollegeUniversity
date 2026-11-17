@@ -3,8 +3,7 @@
  * Styles the locations block.
  */
 
-@use "../abstracts" as *;
-
+@use '../abstracts' as *;
 
 .block-views-blocklocations-block-1 {
   box-sizing: border-box;
@@ -16,7 +15,7 @@
       text-decoration: none;
     }
   }
-  
+
   h2 {
     margin: 2rem 0;
   }
@@ -27,19 +26,15 @@
 }
 
 @include breakpoint(md) {
-
   .block-views-blocklocations-block-1 {
     width: $content-sm;
     margin: 0 auto;
   }
-
 }
 
 @include breakpoint(lg) {
-
   .block-views-blocklocations-block-1 {
     width: $content-md;
     margin: 0 auto;
   }
-
 }

@@ -8,7 +8,7 @@
 .layout-container {
   .vertical-tabs {
     border: none;
-    border-radius: 0;  // All radius except top left
+    border-radius: 0; // All radius except top left
   }
 
   .vertical-tabs__menu {
@@ -24,7 +24,7 @@
   @include breakpoint(lg) {
     .vertical-tabs {
       border: 1px solid $primary-blue-200;
-      border-radius: 0 $radius-md $radius-md $radius-md;  // All radius except top left
+      border-radius: 0 $radius-md $radius-md $radius-md; // All radius except top left
     }
 
     .vertical-tabs__menu {

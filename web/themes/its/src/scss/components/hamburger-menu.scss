@@ -3,7 +3,7 @@
  * Styling for the mobile hamburger menu.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /*
 MOBILE
@@ -29,8 +29,8 @@ MOBILE
   .icon-bar {
     display: block;
     width: 1.75rem;
-    height: .25rem;
-    margin: .15rem;
+    height: 0.25rem;
+    margin: 0.15rem;
     background-color: $primary-blue-500;
     -webkit-transition: $primary-transition ease-in-out;
     -moz-transition: $primary-transition ease-in-out;
@@ -39,7 +39,7 @@ MOBILE
   }
 
   // Transforms hamburger bars into X
-  &[aria-expanded="true"] {
+  &[aria-expanded='true'] {
     // Apply changes to first, middle and last bar
     .icon-bar {
       &:is(:first-child, :last-child) {
@@ -74,6 +74,6 @@ SMALL DESKTOP
 */
 @include breakpoint(lg) {
   #navbar-toggle {
-    display: none;  // Hide hamburger button on larger screens
+    display: none; // Hide hamburger button on larger screens
   }
 }

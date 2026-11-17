@@ -38,6 +38,6 @@
         $(document).off('click.dropdownBehavior');
         once.remove('dropdownDocumentClose', 'html');
       }
-    }
+    },
   };
 })(jQuery, Drupal, once);

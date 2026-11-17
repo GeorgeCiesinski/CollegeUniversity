@@ -24,6 +24,6 @@
           }
         });
       });
-    }
+    },
   };
 })(jQuery, Drupal, once);

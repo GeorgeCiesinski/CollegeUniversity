@@ -42,16 +42,43 @@ $its-color-schemes: (
 
 // Mix weights toward white (light) or black (dark), matching the old Tailcolor ramps.
 $its-shade-steps: (
-  50: (white, 90%),
-  100: (white, 80%),
-  200: (white, 60%),
-  300: (white, 40%),
-  400: (white, 20%),
+  50: (
+    white,
+    90%,
+  ),
+  100: (
+    white,
+    80%,
+  ),
+  200: (
+    white,
+    60%,
+  ),
+  300: (
+    white,
+    40%,
+  ),
+  400: (
+    white,
+    20%,
+  ),
   500: null,
-  600: (black, 20%),
-  700: (black, 40%),
-  800: (black, 60%),
-  900: (black, 80%),
+  600: (
+    black,
+    20%,
+  ),
+  700: (
+    black,
+    40%,
+  ),
+  800: (
+    black,
+    60%,
+  ),
+  900: (
+    black,
+    80%,
+  ),
 );
 
 @function its-shade($base, $step) {

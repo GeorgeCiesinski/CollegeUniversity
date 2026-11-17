@@ -3,7 +3,7 @@
  * Styling for form inputs.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .layout-container {
   // All inputs
@@ -13,7 +13,8 @@
     width: 100%;
 
     // Inputs with .form-text - Basically any single line text input
-    &.form-text, &.form-url {
+    &.form-text,
+    &.form-url {
       display: block;
       box-sizing: border-box;
       margin: 0.5rem 0;

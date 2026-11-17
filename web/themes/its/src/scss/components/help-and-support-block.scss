@@ -3,12 +3,13 @@
  * Styles help & support custom block.
  */
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 #block-its-helpsupportblock {
   margin: $margin-xs;
 
-  h2, >div {
+  h2,
+  > div {
     margin-bottom: $margin-xs;
   }
 
@@ -16,14 +17,15 @@
     width: 100%;
   }
 
-  >div {
+  > div {
     width: 100%;
   }
 }
 
 @include breakpoint(md) {
   #block-its-helpsupportblock {
-    h2, .clearfix {
+    h2,
+    .clearfix {
       width: $content-sm;
       margin: 0 auto;
     }
@@ -40,7 +42,8 @@
 
 @include breakpoint(lg) {
   #block-its-helpsupportblock {
-    h2, .clearfix {
+    h2,
+    .clearfix {
       width: $content-md;
     }
 
