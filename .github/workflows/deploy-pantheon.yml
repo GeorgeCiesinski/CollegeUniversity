@@ -52,11 +52,6 @@ jobs:
           site: ${{ vars.PANTHEON_SITE }}
           skip_build_tools: true
 
-      - name: Install Terminus
-        uses: pantheon-systems/terminus-github-actions@v1
-        with:
-          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
-
       - name: Deploy Dev to Test
         run: terminus env:deploy "${{ vars.PANTHEON_SITE }}.test" --note="GitHub Actions ${{ github.sha }} (${{ github.ref_name }})" --yes
 
