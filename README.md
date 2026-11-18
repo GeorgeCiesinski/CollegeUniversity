@@ -136,7 +136,8 @@ The easiest method for a one-time local dump is to use the Pantheon Dashboard to
 ```bash
 ddev start
 ddev export-db --file=/tmp/its.sql.gz
-tar -C web/sites/default -czf /tmp/its-files.tar.gz files
+# Archive contents of files/ (not a nested files/ folder). COPYFILE_DISABLE skips macOS ._ junk.
+COPYFILE_DISABLE=1 tar -C web/sites/default/files -czf /tmp/its-files.tar.gz .
 ```
 
 Once the backups have been generated, you can go to the Pantheon portal for your site and upload the database and files manually. I found this works better than using Terminus commands. 

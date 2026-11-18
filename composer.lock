@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68366ff3b48ebd5aab8f6592f8a0b31c",
+    "content-hash": "313ca16f8d49e6a3209f5b2d24d59380",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5370,6 +5370,21 @@
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.timepicker"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "kenwheeler/slick",
+            "version": "1.8.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kenwheeler/slick/archive/refs/tags/v1.8.1.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "slick"
             },
             "license": [
                 "MIT"
