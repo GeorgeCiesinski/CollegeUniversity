@@ -129,16 +129,22 @@ GitHub must have repository secrets `PANTHEON_MACHINE_TOKEN` and `PANTHEON_SSH_K
 
 ### One-time content import
 
-After the first successful code deploy to Dev, import local DB and files once:
+After the first successful code deploy to Dev (Integrated Composer build must be green), import local DB and files once.
+
+The easiest method for a one-time local dump is to use the Pantheon Dashboard to upload your database and files backups:
 
 ```bash
 ddev start
 ddev export-db --file=/tmp/its.sql.gz
-terminus import:database collegeuniversity.dev /tmp/its.sql.gz
+# Archive contents of files/ (not a nested files/ folder). COPYFILE_DISABLE skips macOS ._ junk.
+COPYFILE_DISABLE=1 tar -C web/sites/default/files -czf /tmp/its-files.tar.gz .
+```
 
-tar -C web/sites/default -czf /tmp/its-files.tar.gz files
-terminus import:files collegeuniversity.dev /tmp/its-files.tar.gz
+Once the backups have been generated, you can go to the Pantheon portal for your site and upload the database and files manually. I found this works better than using Terminus commands. 
 
+Then promote when Dev looks correct:
+
+```bash
 terminus env:deploy collegeuniversity.test --updatedb --note="Initial content" --yes
 terminus env:deploy collegeuniversity.live --updatedb --note="Initial content" --yes
 ```
