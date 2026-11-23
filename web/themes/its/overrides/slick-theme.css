@@ -256,7 +256,9 @@
 .slick-dots {
   bottom: 0;
 }
-.slick-dots li, .slick-dots li button, .slick-dots li button::before {
+.slick-dots li,
+.slick-dots li button,
+.slick-dots li button::before {
   height: 1rem;
   width: 1rem;
 }
