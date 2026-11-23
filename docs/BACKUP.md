@@ -2,16 +2,12 @@
 
 This Drupal 10 site has three parts that should be saved before a risky change. 
 
-Git tracks code. DDEV snapshots the database. Uploaded files live outside both.
-
-| What                                    | Where it lives             | How to back it up                                         |
+| What                                    | Where it lives             | How it is backed up                                       |
 | --------------------------------------- | -------------------------- | --------------------------------------------------------- |
 | Code, config, custom modules/theme      | This repo                  | `git commit`                                              |
 | Database (content, users, config in DB) | DDEV MariaDB 10.11         | `ddev snapshot`                                           |
 | Public files (images, documents)        | `web/sites/default/files/` | `tar` archive in `backups/`                               |
 | `settings.php`                          | `web/sites/default/`       | Left on disk; **not in Git** as this contains credentials |
-
-I kept `backups/` and `.ddev/db_snapshots/` in the project folder and added them to `.gitignore` so they aren't included in the repo. 
 
 ## Before a major change
 
@@ -34,7 +30,7 @@ Use a unique tag name, for example `pre-major-change-2026-10-28`.
 
 ### 2. Snapshot the database with DDEV
 
-This is the fastest rollback for content and configuration stored in the database. Snapshots are stored in `.ddev/db_snapshots/`.
+This is the fastest rollback for content and configuration stored in the database. Snapshots are stored in `.ddev/db_snapshots/` and ignored by git.
 
 ```bash
 ddev snapshot --name=pre-major-change-2026-10-28
@@ -43,15 +39,17 @@ ddev snapshot --list
 
 Omit `--name` to let DDEV add a timestamp on its own. Named snapshots are easier to restore.
 
-A snapshot is a binary copy of this project's MariaDB 10.11 data. It will not restore into a different database type or version.
+**Note:** A snapshot is a binary copy of this project's MariaDB 10.11 data. It will not restore into a different database type or version.
 
 ### 3. Archive uploaded files
 
-DDEV snapshots do **not** include `web/sites/default/files/`, so these must be zipped and backed up manually:
+DDEV snapshots do **not** include `web/sites/default/files/`, so these must be zipped and backed up manually.
+
+Pack the **contents** of `files/` (not a nested `files/` folder). That matches Pantheon Dashboard / `import:files` expectations and avoids landing files under `files/files/`. `COPYFILE_DISABLE=1` skips macOS AppleDouble (`._`*) junk:
 
 ```bash
 mkdir -p backups
-tar -czf backups/files-pre-major-change.tar.gz -C web/sites/default files
+COPYFILE_DISABLE=1 tar -czf backups/files-pre-major-change.tar.gz -C web/sites/default/files .
 cp web/sites/default/settings.php backups/settings.php-pre-major-change
 ```
 
@@ -113,8 +111,11 @@ ddev import-db --file=backups/db-pre-major-change.sql.gz
 
 ### Restore uploaded files
 
+Extract into `files/` (archive root is the files contents, not a `files/` directory):
+
 ```bash
-tar -xzf backups/files-pre-major-change.tar.gz -C web/sites/default
+mkdir -p web/sites/default/files
+tar -xzf backups/files-pre-major-change.tar.gz -C web/sites/default/files
 ```
 
 ### Rebuild caches
@@ -127,6 +128,6 @@ Then open https://its-website.ddev.site and confirm the site loads.
 
 ## Notes
 
-- `web/sites/default/settings.php` is gitignored because it contains database credentials. DDEV overrides those on start via `settings.ddev.php` (also gitignored). Keep the working copy of `settings.php` on disk.
+- `web/sites/default/settings.php` is gitignored because it contains database credentials. DDEV overrides those on start via `settings.ddev.php` (also gitignored). 
 - `ddev delete` removes project containers and can remove snapshots unless you keep `.ddev/db_snapshots/`. Prefer `ddev snapshot restore` over deleting the project.
 - After a successful restore you no longer need old snapshots. Remove them with `ddev snapshot --cleanup` only when you are sure you do not need them.
