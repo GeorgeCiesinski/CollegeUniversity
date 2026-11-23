@@ -54,7 +54,7 @@ Thumbs.db
 # DDEV database snapshots (created by `ddev snapshot`)
 /.ddev/db_snapshots/
 
-# Local backup archives (see BACKUP.md)
+# Local backup archives (see docs/BACKUP.md)
 /backups/
 /.tarballs/
 /*.sql
